@@ -1,0 +1,148 @@
+\chapter{Contando uma História}
+
+\begin{objetivos}
+\begin{itemize}
+\item Planejar uma história com começo, meio e fim;
+\item Montar cenas com atores e cenários;
+\item Usar mensagens para combinar quem fala em cada momento.
+\end{itemize}
+\end{objetivos}
+
+\section{Planejando antes de programar}
+
+Todo bom projeto começa no \textbf{papel}. Antes de arrastar blocos, responda:
+
+\begin{passos}
+\item \textbf{Quem} são os personagens (atores)?
+\item \textbf{Onde} a história acontece (cenários)?
+\item \textbf{O que} acontece no começo, no meio e no fim?
+\item \textbf{Quem fala} em cada momento?
+\end{passos}
+
+\begin{vocabulario}[Vocabulário: roteiro]
+\textbf{Roteiro} é o plano escrito da história: as cenas, as falas e a ordem em que tudo acontece. Programadores chamam isso de \textbf{planejamento}.
+\end{vocabulario}
+
+\section{Cenas e cenários}
+
+Uma \textbf{cena} é um momento da história em um mesmo lugar. Cada cena pode ter o seu cenário. Para trocar de cena, o Palco avisa os atores:
+
+\begin{codigo}[O Palco comanda as cenas]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{mude o cenário para \menu{cena 1}}
+\bk[scControl]{espere \entrada{6} segundos}
+\bk[scLooks]{mude o cenário para \menu{cena 2}}
+\bk[scEvents]{envie \menu{cena 2}}
+\end{pilha}
+\end{codigo}
+
+\begin{missao}[Missão 10: Uma história em duas cenas]
+Crie uma história curta com dois personagens. Na cena 1 eles se encontram e conversam. Na cena 2 eles se despedem.
+\end{missao}
+
+\begin{codigo}[Atores combinando as falas]
+Personagem A:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{diga \entrada{Oi, tudo bem?} por \entrada{2} segundos}
+\bk[scEvents]{envie \menu{resposta}}
+\end{pilha}
+Personagem B:
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{resposta}}
+\bk[scLooks]{diga \entrada{Tudo ótimo!} por \entrada{2} segundos}
+\bk[scEvents]{envie \menu{despedida}}
+\end{pilha}
+\end{codigo}
+
+\begin{dica}
+Dê nomes claros às mensagens, como \textbf{resposta} e \textbf{despedida}, em vez de ``mensagem1'' e ``mensagem2''. Fica bem mais fácil de entender depois!
+\end{dica}
+
+\section{Entrando e saindo de cena}
+
+Para um personagem aparecer só na hora certa, use \bloco[scLooks]{esconda} no começo e \bloco[scLooks]{mostre} quando chegar a vez dele:
+
+\begin{codigo}[Personagem que chega depois]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{esconda}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{cena 2}}
+\bk[scLooks]{mostre}
+\bk[scMotion]{deslize por \entrada{1} seg até x: \entrada{0} y: \entrada{0}}
+\end{pilha}
+\end{codigo}
+
+\begin{curiosidade}
+Os jogos e filmes usam a mesma ideia! Cada ``fase'' ou ``cena'' é uma parte da história que começa quando um aviso (como a sua mensagem) é enviado.
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[A história do gato e do cachorro]
+Crie um segundo ator e faça o gatinho dizer ``Olá, amigo!'' e depois o cachorro responder ``Au au! Oi!''. Use uma mensagem.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{diga \entrada{Olá, amigo!} por \entrada{2} segundos}
+\bk[scEvents]{envie \menu{resposta}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{resposta}}
+\bk[scLooks]{diga \entrada{Au au! Oi!} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Duas cenas]
+Troque o cenário depois de 5 segundos, e faça o gatinho dizer ``Chegamos à praia!'' quando a nova cena começar.
+\end{exercicio}
+
+\begin{solucao}
+No Palco:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scControl]{espere \entrada{5} segundos}
+\bk[scLooks]{mude o cenário para \menu{praia}}
+\bk[scEvents]{envie \menu{praia}}
+\end{pilha}
+No gatinho:
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{praia}}
+\bk[scLooks]{diga \entrada{Chegamos à praia!} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Chegou de surpresa]
+Faça um personagem começar escondido e aparecer escorregando para o centro quando receber a mensagem ``entrar''.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{esconda}
+\bk[scMotion]{vá para x: \entrada{200} y: \entrada{0}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{entrar}}
+\bk[scLooks]{mostre}
+\bk[scMotion]{deslize por \entrada{1} seg até x: \entrada{0} y: \entrada{0}}
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Minha história completa]
+Escreva e programe uma história com \textbf{três cenas}, \textbf{dois personagens} e \textbf{música de fundo}. Planeje no papel primeiro: quem fala, quando e em qual cenário. Desenhe pelo menos um dos atores você mesmo!
+\end{desafio}
+
+\begin{solucao}
+Não existe uma única resposta! Sugestão de estrutura:
+\begin{itemize}
+\item O Palco troca os cenários e envia uma mensagem a cada cena;
+\item Cada personagem reage às mensagens com \bloco[scEvents]{quando eu receber};
+\item Uma pilha separada com \bloco[scControl]{sempre} e \bloco[scSound]{toque o som \menu{música} até o fim} toca a música de fundo.
+\end{itemize}
+\end{solucao}

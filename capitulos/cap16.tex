@@ -1,0 +1,145 @@
+\chapter{Meus Blocos: Criando Comandos}
+
+\begin{objetivos}
+\begin{itemize}
+\item Entender por que criar os seus próprios blocos;
+\item Criar um bloco com e sem entradas;
+\item Organizar o código para ficar curto e fácil de ler.
+\end{itemize}
+\end{objetivos}
+
+\section{Por que criar um bloco?}
+
+Lembra de desenhar um quadrado repetindo \bloco[scMotion]{mova} e \bloco[scMotion]{gire}? E se você quiser desenhar quadrados em várias partes do projeto? Copiar tudo toda vez dá trabalho e causa erros. A solução: criar o \textbf{seu próprio bloco}, com um nome fácil de lembrar.
+
+\begin{pensaassim}[Pense assim: o atalho da receita]
+Ao pedir ``faça o café da manhã'', ninguém precisa repetir ``pegue o copo, esquente o leite, ponha o pão\ldots''. O nome \emph{café da manhã} já guarda todos os passos. Um bloco seu é um \textbf{nome para uma receita}: você ensina os passos uma vez e depois só chama pelo nome.
+\end{pensaassim}
+
+\begin{vocabulario}[Vocabulário: função]
+Um bloco criado por você é uma \textbf{função} (ou \textbf{procedimento}): um conjunto de ordens com um nome. Chamar o nome executa todas as ordens de uma vez.
+\end{vocabulario}
+
+\section{Criando o bloco}
+
+Em \bloco[scMyBlocks]{Meus Blocos}, clique em \textbf{Criar um bloco}, escreva o nome (por exemplo, \textbf{quadrado}) e confirme. Aparece um bloco \textbf{defina}, em rosa. Tudo que você encaixar embaixo dele é o que o bloco faz.
+
+\begin{codigo}[Definindo o bloco ``quadrado'']
+\begin{pilha}
+\bk[scMyBlocks]{defina \textbf{quadrado}}
+\sbc[scControl]{repita \entrada{4} vezes}
+\bk[scMotion]{mova \entrada{50} passos}
+\bk[scMotion]{gire \entrada{90} graus}
+\sbcend
+\end{pilha}
+\end{codigo}
+
+Agora o bloco \bloco[scMyBlocks]{quadrado} aparece na paleta, pronto para usar em qualquer pilha:
+
+\begin{codigo}[Usando o bloco]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scMyBlocks]{quadrado}
+\bk[scMotion]{mova \entrada{100} passos}
+\bk[scMyBlocks]{quadrado}
+\end{pilha}
+\end{codigo}
+
+\begin{missao}[Missão 16: Bloco com entrada]
+Crie um bloco \textbf{quadrado} que aceite o \textbf{tamanho} do lado, para desenhar quadrados pequenos e grandes.
+\end{missao}
+
+Ao criar o bloco, clique em \textbf{Adicionar uma entrada} e dê o nome \textbf{tamanho}. A entrada vira uma peça redonda que você pode usar dentro do bloco:
+
+\begin{codigo}[Quadrado de qualquer tamanho]
+\begin{pilha}
+\bk[scMyBlocks]{defina \textbf{quadrado} \variavel{tamanho}}
+\sbc[scControl]{repita \entrada{4} vezes}
+\bk[scMotion]{mova \variavel{tamanho} passos}
+\bk[scMotion]{gire \entrada{90} graus}
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{codigo}[Dois quadrados diferentes]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scMyBlocks]{quadrado \entrada{40}}
+\bk[scMyBlocks]{quadrado \entrada{100}}
+\end{pilha}
+\end{codigo}
+
+\begin{dica}
+Dê ao bloco um nome que \textbf{diga o que ele faz}: \textbf{pular}, \textbf{desenhar estrela}, \textbf{dar pontos}. Quem ler o código vai entender na hora, inclusive você, daqui a um mês!
+\end{dica}
+
+\begin{cuidado}
+Se você criar um bloco mas esquecer de usá-lo na pilha principal, nada acontece. O bloco \bloco[scMyBlocks]{defina} só \textbf{ensina} o que fazer; é preciso \textbf{chamar} o bloco para ele rodar.
+\end{cuidado}
+
+\begin{curiosidade}
+Programadores profissionais vivem criando funções! Um jogo grande pode ter milhares delas, cada uma com uma tarefa pequena e clara.
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Bloco pular]
+Crie o bloco \textbf{pular}: o gatinho sobe 50, espera meio segundo e desce 50. Use o bloco quando apertarem a seta para cima.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scMyBlocks]{defina \textbf{pular}}
+\bk[scMotion]{mude y em \entrada{50}}
+\bk[scControl]{espere \entrada{0.5} segundos}
+\bk[scMotion]{mude y em \entrada{$-50$}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta para cima} for pressionada}
+\bk[scMyBlocks]{pular}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Bloco triângulo]
+Crie o bloco \textbf{triângulo} que desenha um triângulo de lados iguais com lado de 80 passos.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scMyBlocks]{defina \textbf{triângulo}}
+\sbc[scControl]{repita \entrada{3} vezes}
+\bk[scMotion]{mova \entrada{80} passos}
+\bk[scMotion]{gire \entrada{120} graus}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Bloco dar pontos]
+Crie o bloco \textbf{dar pontos} com uma entrada \textbf{quantos}, que soma essa quantidade na variável \textbf{pontos}.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scMyBlocks]{defina \textbf{dar pontos} \variavel{quantos}}
+\bk[scVariables]{mude \menu{pontos} em \variavel{quantos}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando este ator for clicado}
+\bk[scMyBlocks]{dar pontos \entrada{5}}
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Polígono mágico]
+Crie o bloco \textbf{polígono} com duas entradas: \textbf{lados} e \textbf{tamanho}. Ele deve desenhar qualquer figura com lados iguais. Dica: o ângulo de giro é $360 \div \text{lados}$.
+\end{desafio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scMyBlocks]{defina \textbf{polígono} \variavel{lados} \variavel{tamanho}}
+\sbc[scControl]{repita \variavel{lados} vezes}
+\bk[scMotion]{mova \variavel{tamanho} passos}
+\bk[scMotion]{gire \reporter{\entrada{360} / \variavel{lados}} graus}
+\sbcend
+\end{pilha}
+Chamando \bloco[scMyBlocks]{polígono \entrada{5} \entrada{60}}, o gatinho desenha um pentágono.
+\end{solucao}

@@ -1,0 +1,154 @@
+\chapter{Controle: Esperar e Repetir}
+
+\begin{objetivos}
+\begin{itemize}
+\item Fazer o programa esperar e controlar o tempo;
+\item Usar \textbf{repita}, \textbf{sempre} e \textbf{repita até};
+\item Parar o programa na hora certa.
+\end{itemize}
+\end{objetivos}
+
+\section{Esperando}
+
+Os blocos laranja \bloco[scControl]{Controle} comandam o \textbf{ritmo} do programa. O mais simples é o \bloco[scControl]{espere \entrada{1} segundos}, que faz o programa dar uma pausa antes de seguir.
+
+\begin{dica}
+Use pausas pequenas, como \entrada{0.1} ou \entrada{0.5}, para criar animações suaves.
+\end{dica}
+
+\section{Três jeitos de repetir}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scControl]{repita \entrada{10} vezes} & repete um número exato de vezes \\
+\bloco[scControl]{sempre} & repete para sempre, até clicar em parar \\
+\bloco[scControl]{repita até que \booleano{...}} & repete até uma condição ficar verdadeira \\
+\end{tabular}
+\end{center}
+
+\begin{pensaassim}[Pense assim: três tipos de repetição na vida real]
+\begin{itemize}
+\item \textbf{repita 10 vezes}: ``dê 10 pulinhos''. Você sabe \emph{quantas} vezes vai fazer.
+\item \textbf{sempre}: o seu \emph{coração}, que bate sem parar enquanto você está vivo.
+\item \textbf{repita até que}: ``continue caminhando \emph{até} chegar na porta''. Você não sabe quantos passos serão, só sabe \emph{quando parar}.
+\end{itemize}
+\end{pensaassim}
+
+\begin{codigo}[Os três laços]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{4} vezes}
+\bk[scMotion]{mova \entrada{10} passos}
+\sbcend
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\bk[scMotion]{mova \entrada{10} passos}
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{vocabulario}[Vocabulário: laço infinito]
+Um laço com \bloco[scControl]{sempre} se chama \textbf{laço infinito}: ele nunca termina sozinho. É perfeito para jogos, em que algo precisa ser vigiado o tempo todo.
+\end{vocabulario}
+
+\begin{cuidado}[Cuidado: laço sem fim]
+Tudo o que fica \textbf{dentro} do laço se repete; o que fica \textbf{depois} dele só acontece quando o laço termina. Como o \bloco[scControl]{sempre} nunca termina, nenhum bloco colocado embaixo dele será executado!
+\end{cuidado}
+
+\begin{missao}[Missão 7: Gato guarda-noturno]
+Faça o gatinho andar de um lado para o outro do palco, sem parar.
+\end{missao}
+
+\begin{codigo}[Patrulha]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\bk[scMotion]{mova \entrada{10} passos}
+\bk[scMotion]{se tocar na borda, volte}
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+Dentro de um laço, o gatinho pode ficar de cabeça para baixo ao voltar! Para evitar, clique no gatinho e em \textbf{Direção}, escolha a opção ``só esquerda/direita'', ou use o bloco \bloco[scMotion]{defina o estilo de rotação \menu{esquerda-direita}}.
+\end{cuidado}
+
+\section{Repetindo até uma condição}
+
+O bloco \bloco[scControl]{repita até que} repete até que a pergunta lá dentro seja respondida com \textbf{verdadeiro}. Ele é como dizer ``continue andando \emph{até} chegar na parede''.
+
+\begin{codigo}[Andar até a parede]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita até que \booleano{tocando em \menu{borda}?}}
+\bk[scMotion]{mova \entrada{5} passos}
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\section{Parando}
+
+\bloco[scControl]{pare \menu{tudo}} encerra o programa na hora. Use quando o jogo acabar.
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Contagem regressiva]
+Faça o gatinho dizer ``3'', ``2'' e ``1'' (cada um por 1 segundo) e depois ``Já!''.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{diga \entrada{3} por \entrada{1} segundos}
+\bk[scLooks]{diga \entrada{2} por \entrada{1} segundos}
+\bk[scLooks]{diga \entrada{1} por \entrada{1} segundos}
+\bk[scLooks]{diga \entrada{Já!} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Gato girador]
+Faça o gatinho girar sem parar, 5 graus para a direita a cada 0.05 segundo.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\bk[scMotion]{gire \entrada{5} graus}
+\bk[scControl]{espere \entrada{0.05} segundos}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Cinco batidas]
+Faça o gatinho tocar o som de tambor exatamente 5 vezes, com meio segundo entre cada batida.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{5} vezes}
+\bk[scSound]{toque o tambor \menu{(1) Caixa} por \entrada{0.25} tempos}
+\bk[scControl]{espere \entrada{0.5} segundos}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Corrida até a parede]
+Faça o gatinho correr (mudando de fantasia a cada passo) até encostar na borda do palco e então dizer ``Cheguei!''.
+\end{desafio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita até que \booleano{tocando em \menu{borda}?}}
+\bk[scMotion]{mova \entrada{5} passos}
+\bk[scLooks]{próxima fantasia}
+\bk[scControl]{espere \entrada{0.1} segundos}
+\sbcend
+\bk[scLooks]{diga \entrada{Cheguei!} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}

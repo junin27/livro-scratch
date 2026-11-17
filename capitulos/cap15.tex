@@ -1,0 +1,145 @@
+\chapter{Clones: Fazendo Cópias}
+
+\begin{objetivos}
+\begin{itemize}
+\item Entender o que são clones;
+\item Criar e apagar clones com blocos de Controle;
+\item Fazer uma chuva de objetos usando um só ator.
+\end{itemize}
+\end{objetivos}
+
+\section{O que é um clone?}
+
+Imagine ter dez maçãs caindo do céu. Em vez de criar dez atores, você cria \textbf{um só} e manda o Scratch fazer \textbf{cópias} dele. Cada cópia é um \textbf{clone}.
+
+\begin{pensaassim}[Pense assim: a máquina de xerox]
+Quando você tira uma cópia de um desenho, ganha uma folha igual à original. Depois, pode riscar e pintar a cópia sem estragar o desenho de verdade. Clone é isso: uma cópia do ator que sai com o mesmo código e pode ir para outro lugar, sem atrapalhar o original.
+\end{pensaassim}
+
+\begin{vocabulario}[Vocabulário: clone]
+\textbf{Clone} é uma cópia temporária de um ator. Ele nasce com o mesmo código e a mesma aparência do original, mas passa a viver a sua própria vida. Quando o jogo para, todos os clones desaparecem.
+\end{vocabulario}
+
+\section{Os três blocos dos clones}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scControl]{crie um clone de \menu{mim mesmo}} & faz uma cópia \\
+\bloco[scControl]{quando eu começar como um clone} & código que só os clones obedecem \\
+\bloco[scControl]{apague este clone} & o clone some para sempre \\
+\end{tabular}
+\end{center}
+
+\begin{dica}
+Pense assim: o \textbf{original} é o criador de clones e os \textbf{clones} são os trabalhadores. O original fica no topo da tela, só criando; os clones é que se mexem.
+\end{dica}
+
+\begin{missao}[Missão 15: Chuva de maçãs]
+Faça maçãs caírem de lugares diferentes do topo do palco, a cada meio segundo, usando clones.
+\end{missao}
+
+Primeiro, o \textbf{original} fica escondido e cria clones sem parar:
+
+\begin{codigo}[Ator original: a fábrica de clones]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{esconda}
+\sbc[scControl]{sempre}
+\bk[scMotion]{vá para x: \reporter{número aleatório entre \entrada{$-200$} e \entrada{200}} y: \entrada{170}}
+\bk[scControl]{crie um clone de \menu{mim mesmo}}
+\bk[scControl]{espere \entrada{0.5} segundos}
+\sbcend
+\end{pilha}
+\end{codigo}
+
+Cada \textbf{clone} aparece, cai até o chão ($y$ menor que $-160$) e some:
+
+\begin{codigo}[Clone: a maçã que cai]
+\begin{pilha}
+\bk[scControl]{quando eu começar como um clone}
+\bk[scLooks]{mostre}
+\sbc[scControl]{repita até que \booleano{\variavel{y} $<$ \entrada{$-160$}}}
+\bk[scMotion]{mude y em \entrada{$-5$}}
+\sbcend
+\bk[scControl]{apague este clone}
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+Sempre dê um jeito de \textbf{apagar} os clones! Se eles se acumularem sem parar, o projeto fica pesado e o Scratch trava (o limite é de 300 clones ao mesmo tempo).
+\end{cuidado}
+
+\begin{curiosidade}
+Muitos jogos famosos usam clones para tiros, inimigos e moedas. Uma única ``bala'' desenhada vira centenas de tiros na tela!
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Dois clones]
+Faça o gatinho, ao ser clicado, criar um clone que gira 90 graus e anda 50 passos.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando este ator for clicado}
+\bk[scControl]{crie um clone de \menu{mim mesmo}}
+\end{pilha}
+\begin{pilha}
+\bk[scControl]{quando eu começar como um clone}
+\bk[scMotion]{gire \entrada{90} graus}
+\bk[scMotion]{mova \entrada{50} passos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Clone que some]
+Faça o clone do exercício anterior desaparecer (ser apagado) 3 segundos depois de nascer.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scControl]{quando eu começar como um clone}
+\bk[scMotion]{gire \entrada{90} graus}
+\bk[scMotion]{mova \entrada{50} passos}
+\bk[scControl]{espere \entrada{3} segundos}
+\bk[scControl]{apague este clone}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Estrelas piscando]
+Crie 5 clones de um ator, cada um em uma posição aleatória do palco.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{5} vezes}
+\bk[scMotion]{vá para x: \reporter{número aleatório entre \entrada{$-200$} e \entrada{200}} y: \reporter{número aleatório entre \entrada{$-150$} e \entrada{150}}}
+\bk[scControl]{crie um clone de \menu{mim mesmo}}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Pegando as maçãs]
+Combine a Missão 15 com uma variável \textbf{pontos}. Crie um ator \textbf{cesta} que anda com as setas. Quando uma maçã (clone) tocar na cesta, some e dá 1 ponto.
+\end{desafio}
+
+\begin{solucao}
+No clone da maçã, acrescente dentro do laço de queda:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scVariables]{defina \menu{pontos} para \entrada{0}}
+\end{pilha}
+\begin{pilha}
+\bk[scControl]{quando eu começar como um clone}
+\bk[scLooks]{mostre}
+\sbc[scControl]{repita até que \booleano{\variavel{y} $<$ \entrada{$-160$}}}
+\bk[scMotion]{mude y em \entrada{$-5$}}
+\sbc[scControl]{se \booleano{tocando em \menu{cesta}?} então}
+\bk[scVariables]{mude \menu{pontos} em \entrada{1}}
+\bk[scControl]{apague este clone}
+\sbcend
+\sbcend
+\bk[scControl]{apague este clone}
+\end{pilha}
+\end{solucao}

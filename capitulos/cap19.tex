@@ -1,0 +1,163 @@
+\chapter{Projeto 3: O Labirinto}
+
+\begin{objetivos}
+\begin{itemize}
+\item Desenhar um cenário com paredes e uma meta;
+\item Fazer o personagem andar sem atravessar as paredes;
+\item Detectar a vitória e medir o tempo.
+\end{itemize}
+\end{objetivos}
+
+\section{O plano do labirinto}
+
+Neste jogo o gatinho precisa \textbf{sair de um labirinto} sem encostar nas paredes. Se tocar numa parede, volta ao início. Se chegar à bandeira verde, ganha!
+
+\begin{definicao}[Roteiro do labirinto]
+\textbf{Cenário:} paredes \textbf{pretas} e uma meta \textbf{verde}.\\
+\textbf{Ator:} Gatinho pequeno (use \bloco[scLooks]{mude o tamanho para \entrada{30} \%}).\\
+\textbf{Regras:} tocar na cor preta reinicia; tocar na cor verde vence.
+\end{definicao}
+
+\begin{missao}[Missão 19: Escape do labirinto]
+Desenhe o labirinto e programe o gatinho para sair dele.
+\end{missao}
+
+\section{Passo 1: o cenário}
+
+No editor de desenho do Palco, use o pincel \textbf{preto} bem grosso para desenhar as paredes e pinte um quadrado \textbf{verde} no final do caminho. As cores são importantes, porque o programa vai reconhecê-las!
+
+\begin{dica}
+Deixe os corredores \textbf{mais largos} do que o gatinho. Se estiverem muito apertados, o jogo fica quase impossível.
+\end{dica}
+
+\section{Passo 2: o movimento}
+
+Use a técnica do capítulo de Animação, mas sem o laço de repetição, apenas um evento para cada seta:
+
+\begin{codigo}[Andando]
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta para cima} for pressionada}
+\bk[scMotion]{mude y em \entrada{5}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta para baixo} for pressionada}
+\bk[scMotion]{mude y em \entrada{$-5$}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta direita} for pressionada}
+\bk[scMotion]{mude x em \entrada{5}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta esquerda} for pressionada}
+\bk[scMotion]{mude x em \entrada{$-5$}}
+\end{pilha}
+\end{codigo}
+
+\section{Passo 3: paredes e meta}
+
+Um laço \bloco[scControl]{sempre} vigia as cores o tempo todo:
+
+\begin{codigo}[Vigiando as cores]
+\renewcommand{\sbw}{340pt}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{mude o tamanho para \entrada{30} \%}
+\bk[scMotion]{vá para x: \entrada{$-200$} y: \entrada{150}}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{tocando na cor \menu{preto}?} então}
+\bk[scMotion]{vá para x: \entrada{$-200$} y: \entrada{150}}
+\sbcend
+\sbc[scControl]{se \booleano{tocando na cor \menu{verde}?} então}
+\bk[scLooks]{diga \entrada{Venci!}}
+\bk[scControl]{pare \menu{tudo}}
+\sbcend
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+Para o Scratch reconhecer a cor, você precisa escolher \textbf{exatamente} a mesma cor que usou no desenho, usando o conta-gotas do bloco \bloco[scSensing]{tocando na cor}. Cuidado com tons parecidos!
+\end{cuidado}
+
+\section{Passo 4: o cronômetro}
+
+Para saber quanto tempo você levou, o Scratch tem o sensor \variavel{cronômetro}.
+
+\begin{codigo}[Medindo o tempo]
+\begin{pilha}
+\bk[scSensing]{zere o cronômetro}
+\bk[scLooks]{diga \reporter{junte \entrada{Tempo: } \variavel{cronômetro}} por \entrada{3} segundos}
+\end{pilha}
+\end{codigo}
+
+Coloque o \bloco[scSensing]{zere o cronômetro} no começo do jogo e o \bloco[scLooks]{diga} na vitória.
+
+\begin{curiosidade}
+Os melhores jogadores de labirinto de verdade treinam para decorar o caminho. Tente bater o seu próprio recorde!
+\end{curiosidade}
+
+\section{Melhorando o labirinto}
+
+\begin{exercicio}[Fantasma assustador]
+Adicione um ator ``fantasma'' que anda de um lado para o outro. Se o gatinho tocar nele, volta ao início.
+\end{exercicio}
+
+\begin{solucao}
+No fantasma:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\bk[scMotion]{mova \entrada{3} passos}
+\bk[scMotion]{se tocar na borda, volte}
+\sbcend
+\end{pilha}
+No gatinho, dentro do \bloco[scControl]{sempre}:
+\begin{pilha}
+\sbc[scControl]{se \booleano{tocando em \menu{Fantasma}?} então}
+\bk[scMotion]{vá para x: \entrada{$-200$} y: \entrada{150}}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Contador de tentativas]
+Conte quantas vezes o gatinho bateu na parede. Use a variável \textbf{batidas}.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scVariables]{defina \menu{batidas} para \entrada{0}}
+\sbc[scControl]{se \booleano{tocando na cor \menu{preto}?} então}
+\bk[scVariables]{mude \menu{batidas} em \entrada{1}}
+\bk[scMotion]{vá para x: \entrada{$-200$} y: \entrada{150}}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Segunda fase]
+Quando o gatinho chegar na meta, troque para um segundo cenário com outro labirinto.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\sbc[scControl]{se \booleano{tocando na cor \menu{verde}?} então}
+\bk[scLooks]{mude o cenário para \menu{labirinto 2}}
+\bk[scMotion]{vá para x: \entrada{$-200$} y: \entrada{150}}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Melhor tempo]
+Guarde o melhor tempo numa variável \textbf{recorde}. Ao vencer, se o cronômetro for menor que o recorde, atualize o recorde.
+\end{desafio}
+
+\begin{solucao}
+Comece com um valor grande, como 999:
+\begin{pilha}
+\bk[scVariables]{defina \menu{recorde} para \entrada{999}}
+\end{pilha}
+\begin{pilha}
+\sbc[scControl]{se \booleano{\variavel{cronômetro} $<$ \variavel{recorde}} então}
+\bk[scVariables]{defina \menu{recorde} para \variavel{cronômetro}}
+\sbcend
+\end{pilha}
+\end{solucao}

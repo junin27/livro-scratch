@@ -1,0 +1,139 @@
+\chapter{Som e Música}
+
+\begin{objetivos}
+\begin{itemize}
+\item Tocar sons e controlar o volume;
+\item Gravar ou escolher sons para os seus atores;
+\item Tocar notas e criar uma melodia simples.
+\end{itemize}
+\end{objetivos}
+
+\section{Adicionando sons}
+
+Cada ator guarda seus próprios sons. Na aba \textbf{Sons} (no alto, ao lado de \textbf{Código} e \textbf{Fantasias}), você pode:
+
+\begin{itemize}
+\item \textbf{escolher} um som da biblioteca (miau, tambor, risada\ldots);
+\item \textbf{gravar} a sua própria voz com o microfone;
+\item \textbf{enviar} um arquivo de som do computador.
+\end{itemize}
+
+\section{Os blocos de som}
+
+Os blocos rosa \bloco[scSound]{Som} fazem o seu projeto \textbf{falar} e \textbf{cantar}:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scSound]{toque o som \menu{Miau} até o fim} & espera o som terminar antes do próximo bloco \\
+\bloco[scSound]{inicie o som \menu{Miau}} & toca e já segue para o próximo bloco \\
+\bloco[scSound]{pare todos os sons} & silêncio! \\
+\bloco[scSound]{mude o volume em \entrada{$-10$}} & abaixa (ou aumenta) o volume \\
+\bloco[scSound]{defina o volume para \entrada{50} \%} & volume exato, de 0 a 100 \\
+\end{tabular}
+\end{center}
+
+\begin{dica}
+Qual a diferença entre \bloco[scSound]{toque o som \menu{Miau} até o fim} e \bloco[scSound]{inicie o som \menu{Miau}}? O primeiro \textbf{espera} o som acabar. O segundo \textbf{não espera}, então o gato pode andar e miar ao mesmo tempo!
+\end{dica}
+
+\begin{missao}[Missão 4: O gato que mia]
+Faça o gatinho miar e dizer ``Miau!'' ao mesmo tempo quando você clicar nele.
+\end{missao}
+
+\begin{codigo}[Gato que mia ao ser clicado]
+\begin{pilha}
+\bk[scEvents]{quando este ator for clicado}
+\bk[scSound]{inicie o som \menu{Miau}}
+\bk[scLooks]{diga \entrada{Miau!} por \entrada{1} segundos}
+\end{pilha}
+\end{codigo}
+
+\section{Tocando música}
+
+A extensão \textbf{Música} (botão azul no canto inferior esquerdo) traz blocos para tocar notas e batidas de bateria.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scSound]{toque a nota \entrada{60} por \entrada{0.5} tempos} & toca uma nota (60 é o dó central) \\
+\bloco[scSound]{toque o tambor \menu{(1) Caixa} por \entrada{0.25} tempos} & batida de bateria \\
+\bloco[scSound]{defina o instrumento como \menu{(1) Piano}} & troca o instrumento \\
+\bloco[scSound]{defina o andamento para \entrada{120}} & velocidade da música \\
+\end{tabular}
+\end{center}
+
+\begin{vocabulario}[Vocabulário: nota e tempo]
+\textbf{Nota} é cada som musical (dó, ré, mi\ldots), representada por um número: quanto maior o número, mais agudo o som. \textbf{Tempo} é a duração da nota, como uma batida do coração.
+\end{vocabulario}
+
+\begin{codigo}[Dó, ré, mi]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scSound]{toque a nota \entrada{60} por \entrada{0.5} tempos}
+\bk[scSound]{toque a nota \entrada{62} por \entrada{0.5} tempos}
+\bk[scSound]{toque a nota \entrada{64} por \entrada{0.5} tempos}
+\end{pilha}
+\end{codigo}
+
+\begin{curiosidade}
+A escada musical \textbf{dó, ré, mi, fá, sol, lá, si, dó} usa as notas \textbf{60, 62, 64, 65, 67, 69, 71, 72} no Scratch.
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Silêncio, por favor]
+Faça o gatinho tocar o som ``Miau'' até o fim, e só depois dizer ``Pronto!'' por 2 segundos.
+\end{exercicio}
+
+\begin{solucao}
+Use \bloco[scSound]{toque o som \menu{Miau} até o fim}, que espera o som acabar.
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scSound]{toque o som \menu{Miau} até o fim}
+\bk[scLooks]{diga \entrada{Pronto!} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Música para baixo]
+Faça o gatinho tocar o som ``Miau'' três vezes, abaixando o volume em 20 a cada vez.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scSound]{defina o volume para \entrada{100} \%}
+\sbc[scControl]{repita \entrada{3} vezes}
+\bk[scSound]{toque o som \menu{Miau} até o fim}
+\bk[scSound]{mude o volume em \entrada{$-20$}}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Parabéns a você]
+Toque as quatro primeiras notas de ``Parabéns a você'': sol, sol, lá, sol (notas 67, 67, 69, 67), cada uma por 0.5 tempo.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scSound]{toque a nota \entrada{67} por \entrada{0.5} tempos}
+\bk[scSound]{toque a nota \entrada{67} por \entrada{0.5} tempos}
+\bk[scSound]{toque a nota \entrada{69} por \entrada{0.5} tempos}
+\bk[scSound]{toque a nota \entrada{67} por \entrada{0.5} tempos}
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Dançando no ritmo]
+Faça o gatinho dançar (mudando de fantasia) enquanto toca o tambor 8 vezes. Dica: use \bloco[scControl]{repita \entrada{8} vezes} com \bloco[scSound]{toque o tambor \menu{(1) Caixa} por \entrada{0.25} tempos} e \bloco[scLooks]{próxima fantasia} dentro.
+\end{desafio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{8} vezes}
+\bk[scSound]{toque o tambor \menu{(1) Caixa} por \entrada{0.25} tempos}
+\bk[scLooks]{próxima fantasia}
+\sbcend
+\end{pilha}
+\end{solucao}

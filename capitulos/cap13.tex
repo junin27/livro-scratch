@@ -1,0 +1,152 @@
+\chapter{Variáveis: Guardando Informações}
+
+\begin{objetivos}
+\begin{itemize}
+\item Entender o que é uma variável, como uma caixinha com nome;
+\item Criar variáveis e mudar o valor delas;
+\item Fazer um contador de pontos.
+\end{itemize}
+\end{objetivos}
+
+\section{A caixinha com nome}
+
+Imagine uma caixinha com uma etiqueta escrita \textbf{pontos}. Dentro dela cabe um número. Você pode olhar o que tem dentro, trocar por outro ou somar 1. Essa caixinha é uma \textbf{variável}.
+
+\begin{vocabulario}[Vocabulário: variável]
+\textbf{Variável} é um espaço na memória do computador com um \textbf{nome} e um \textbf{valor}. O valor pode \textbf{variar} (mudar) durante o jogo, e daí vem o nome!
+\end{vocabulario}
+
+\begin{pensaassim}[Pense assim: o placar do jogo]
+O placar de um jogo de futebol começa em 0 a 0 e muda a cada gol. \textbf{Defina} é zerar o placar no começo da partida; \textbf{mude em 1} é marcar mais um gol. Se você esquecer de zerar no início, o placar da partida anterior continua lá!
+\end{pensaassim}
+
+\section{Criando uma variável}
+
+Na categoria \bloco[scVariables]{Variáveis}, clique em \textbf{Criar uma variável}, dê um nome (por exemplo, \textbf{pontos}) e escolha \textbf{para todos os atores}. Pronto! A variável aparece no palco e ganha novos blocos.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scVariables]{defina \menu{pontos} para \entrada{0}} & guarda um valor \\
+\bloco[scVariables]{mude \menu{pontos} em \entrada{1}} & soma (ou subtrai, se for negativo) \\
+\bloco[scVariables]{mostre a variável \menu{pontos}} & aparece no palco \\
+\bloco[scVariables]{esconda a variável \menu{pontos}} & some do palco \\
+\variavel{pontos} & o valor guardado \\
+\end{tabular}
+\end{center}
+
+\begin{dica}
+Dê nomes claros às variáveis: \textbf{pontos}, \textbf{vidas}, \textbf{tempo}. Evite \textbf{x1} ou \textbf{coisa}, pois daqui a uma semana você nem vai lembrar o que era!
+\end{dica}
+
+\section{Contando pontos}
+
+\begin{missao}[Missão 13: O contador de cliques]
+Crie a variável \textbf{pontos}. Cada vez que clicarem no gatinho, o placar sobe 1.
+\end{missao}
+
+\begin{codigo}[Placar de cliques]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scVariables]{defina \menu{pontos} para \entrada{0}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando este ator for clicado}
+\bk[scVariables]{mude \menu{pontos} em \entrada{1}}
+\bk[scSound]{inicie o som \menu{Miau}}
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+Sempre \textbf{zere} a variável quando o jogo começar, com \bloco[scVariables]{defina \menu{pontos} para \entrada{0}}. Senão o valor do jogo anterior continua lá!
+\end{cuidado}
+
+\section{Variável + condição = jogo}
+
+Variáveis ficam poderosas quando combinadas com decisões. Por exemplo, dar a vitória quando os pontos chegam a 10:
+
+\begin{codigo}[Ganhou!]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{\variavel{pontos} = \entrada{10}} então}
+\bk[scLooks]{diga \entrada{Você venceu!}}
+\bk[scControl]{pare \menu{tudo}}
+\sbcend
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{curiosidade}
+Existe também a \textbf{variável local}: ``somente para este ator''. Só aquele ator enxerga o valor. Já a variável ``para todos os atores'' é lida por todos os personagens do jogo.
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Vidas]
+Crie a variável \textbf{vidas}, começando com 3. Cada vez que o gatinho tocar na borda, perde 1 vida.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scVariables]{defina \menu{vidas} para \entrada{3}}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{tocando em \menu{borda}?} então}
+\bk[scVariables]{mude \menu{vidas} em \entrada{$-1$}}
+\bk[scControl]{espere \entrada{1} segundos}
+\sbcend
+\sbcend
+\end{pilha}
+O \bloco[scControl]{espere} evita que as vidas acabem num instante!
+\end{solucao}
+
+\begin{exercicio}[Contador regressivo]
+Crie a variável \textbf{tempo} começando em 10. A cada segundo, diminua 1, até chegar a zero.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scVariables]{defina \menu{tempo} para \entrada{10}}
+\sbc[scControl]{repita até que \booleano{\variavel{tempo} = \entrada{0}}}
+\bk[scControl]{espere \entrada{1} segundos}
+\bk[scVariables]{mude \menu{tempo} em \entrada{$-1$}}
+\sbcend
+\bk[scLooks]{diga \entrada{Acabou o tempo!}}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Soma da turma]
+Pergunte dois números e faça o gatinho dizer a \textbf{soma}. Use duas variáveis, \textbf{a} e \textbf{b}.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scSensing]{pergunte \entrada{Primeiro número?} e espere}
+\bk[scVariables]{defina \menu{a} para \variavel{resposta}}
+\bk[scSensing]{pergunte \entrada{Segundo número?} e espere}
+\bk[scVariables]{defina \menu{b} para \variavel{resposta}}
+\bk[scLooks]{diga \reporter{\variavel{a} + \variavel{b}} por \entrada{3} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Quem chega primeiro a 5?]
+Faça um jogo de apertar a barra de espaço: a cada aperto, a variável \textbf{pontos} sobe 1. Quando chegar a 5, o gatinho diz ``Vitória!'' e o jogo para.
+\end{desafio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scVariables]{defina \menu{pontos} para \entrada{0}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{espaço} for pressionada}
+\bk[scVariables]{mude \menu{pontos} em \entrada{1}}
+\sbc[scControl]{se \booleano{\variavel{pontos} = \entrada{5}} então}
+\bk[scLooks]{diga \entrada{Vitória!}}
+\bk[scControl]{pare \menu{tudo}}
+\sbcend
+\end{pilha}
+\end{solucao}

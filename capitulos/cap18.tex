@@ -1,0 +1,125 @@
+\chapter{Projeto 2: Jogo de Perguntas}
+
+\begin{objetivos}
+\begin{itemize}
+\item Criar um quiz com perguntas e respostas guardadas em listas;
+\item Conferir respostas com condições;
+\item Mostrar a pontuação final.
+\end{itemize}
+\end{objetivos}
+
+\section{O plano do quiz}
+
+Neste projeto o gatinho \textbf{faz perguntas} e o jogador digita as respostas. Cada acerto vale um ponto, e no final o gatinho diz quantos pontos você fez.
+
+\begin{definicao}[Roteiro do quiz]
+\textbf{Ator:} Gatinho (o apresentador).\\
+\textbf{Listas:} \textbf{perguntas} e \textbf{respostas} (a pergunta número 1 combina com a resposta número 1).\\
+\textbf{Variáveis:} \textbf{pontos} e \textbf{número}.
+\end{definicao}
+
+\begin{missao}[Missão 18: Monte o Quiz]
+Crie um quiz com 3 perguntas sobre o que quiser, usando listas.
+\end{missao}
+
+\section{Passo 1: preparando as listas}
+
+Crie as listas \textbf{perguntas} e \textbf{respostas}. No começo do jogo, apague tudo e cadastre as perguntas. A ordem importa!
+
+\begin{codigo}[Cadastrando as perguntas]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLists]{apague tudo de \menu{perguntas}}
+\bk[scLists]{apague tudo de \menu{respostas}}
+\bk[scLists]{adicione \entrada{Quanto é 2 + 2?} a \menu{perguntas}}
+\bk[scLists]{adicione \entrada{4} a \menu{respostas}}
+\bk[scLists]{adicione \entrada{Qual é a capital do Brasil?} a \menu{perguntas}}
+\bk[scLists]{adicione \entrada{Brasília} a \menu{respostas}}
+\bk[scLists]{adicione \entrada{Quantos dias tem a semana?} a \menu{perguntas}}
+\bk[scLists]{adicione \entrada{7} a \menu{respostas}}
+\end{pilha}
+\end{codigo}
+
+\section{Passo 2: fazendo as perguntas}
+
+Para cada pergunta, o gatinho pergunta, espera a resposta e compara com a resposta certa, que está \textbf{na mesma posição} da outra lista.
+
+\begin{codigo}[O jogo]
+\renewcommand{\sbw}{410pt}
+\begin{pilha}
+\bk[scVariables]{defina \menu{pontos} para \entrada{0}}
+\bk[scVariables]{defina \menu{número} para \entrada{1}}
+\sbc[scControl]{repita \reporter[scLists]{tamanho de \menu{perguntas}} vezes}
+\bk[scSensing]{pergunte \reporter[scLists]{item \variavel{número} de \menu{perguntas}} e espere}
+\sbc[scControl]{se \booleano{\variavel{resposta} = \reporter[scLists]{item \variavel{número} de \menu{respostas}}} então}
+\bk[scLooks]{diga \entrada{Acertou!} por \entrada{1} segundos}
+\bk[scVariables]{mude \menu{pontos} em \entrada{1}}
+\sbcelse{senão}
+\bk[scLooks]{diga \entrada{Errou!} por \entrada{1} segundos}
+\sbcend
+\bk[scVariables]{mude \menu{número} em \entrada{1}}
+\sbcend
+\bk[scLooks]{diga \reporter{junte \entrada{Você fez } \reporter{junte \variavel{pontos} \entrada{ pontos!}}} por \entrada{4} segundos}
+\end{pilha}
+\end{codigo}
+
+\begin{dica}
+Esse código funciona com \textbf{qualquer quantidade} de perguntas! O laço repete o número de vezes que a lista tem. Para ter mais perguntas, basta cadastrar mais.
+\end{dica}
+
+\begin{cuidado}
+Se o jogador digitar ``brasília'' em minúsculas, o Scratch ainda considera igual a ``Brasília'' (ele não diferencia maiúsculas). Mas acentos e espaços a mais contam como erro. Combine isso com os jogadores!
+\end{cuidado}
+
+\section{Melhorando o quiz}
+
+\begin{exercicio}[Mais uma pergunta]
+Adicione uma quarta pergunta ao quiz. Do que você precisa mudar?
+\end{exercicio}
+
+\begin{solucao}
+Só precisa cadastrar mais uma pergunta e mais uma resposta, \textbf{na mesma ordem}:
+\begin{pilha}
+\bk[scLists]{adicione \entrada{Quantos lados tem um triângulo?} a \menu{perguntas}}
+\bk[scLists]{adicione \entrada{3} a \menu{respostas}}
+\end{pilha}
+O laço já repete o tamanho da lista, então o resto do código não muda.
+\end{solucao}
+
+\begin{exercicio}[Mensagem de vitória]
+No final, se o jogador acertar \textbf{todas}, o gatinho diz ``Parabéns, você é demais!''. Senão, diz ``Tente de novo!''.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\sbc[scControl]{se \booleano{\variavel{pontos} = \reporter[scLists]{tamanho de \menu{perguntas}}} então}
+\bk[scLooks]{diga \entrada{Parabéns, você é demais!}}
+\sbcelse{senão}
+\bk[scLooks]{diga \entrada{Tente de novo!}}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Som de acerto e erro]
+Toque um som alegre quando o jogador acertar e um som triste quando errar.
+\end{exercicio}
+
+\begin{solucao}
+Coloque um bloco \bloco[scSound]{inicie o som} dentro de cada ramo do \bloco[scControl]{se}, junto com o \bloco[scLooks]{diga}.
+\end{solucao}
+
+\begin{desafio}[Placar visual]
+Faça um segundo ator que muda de fantasia conforme os pontos: triste com 0, alegre a partir de 3. Dica: use a mensagem ``atualizou'' sempre que os pontos mudarem.
+\end{desafio}
+
+\begin{solucao}
+No quiz, depois de \bloco[scVariables]{mude \menu{pontos} em \entrada{1}}, acrescente \bloco[scEvents]{envie \menu{atualizou}}. No segundo ator:
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{atualizou}}
+\sbc[scControl]{se \booleano{\variavel{pontos} $>$ \entrada{2}} então}
+\bk[scLooks]{mude para a fantasia \menu{alegre}}
+\sbcelse{senão}
+\bk[scLooks]{mude para a fantasia \menu{triste}}
+\sbcend
+\end{pilha}
+\end{solucao}

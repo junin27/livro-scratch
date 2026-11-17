@@ -1,0 +1,150 @@
+\chapter{Operadores: Contas e Comparações}
+
+\begin{objetivos}
+\begin{itemize}
+\item Fazer contas com os blocos verdes;
+\item Comparar valores com \textbf{maior}, \textbf{menor} e \textbf{igual};
+\item Sortear números e combinar condições com \textbf{e}, \textbf{ou} e \textbf{não}.
+\end{itemize}
+\end{objetivos}
+
+\section{Contas}
+
+Os blocos verdes \bloco[scOperators]{Operadores} servem para calcular. Eles têm formato redondo, porque \textbf{devolvem um número} que pode ser encaixado em outros blocos.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\reporter{\entrada{2} + \entrada{3}} & soma $=5$ \\
+\reporter{\entrada{7} $-$ \entrada{2}} & subtração $=5$ \\
+\reporter{\entrada{4} $\times$ \entrada{3}} & multiplicação $=12$ \\
+\reporter{\entrada{10} / \entrada{2}} & divisão $=5$ \\
+\end{tabular}
+\end{center}
+
+\begin{dica}
+Você pode encaixar um operador \textbf{dentro} de outro, como parênteses. Por exemplo: \reporter{\entrada{2} + \reporter{\entrada{3} $\times$ \entrada{4}}} dá 14.
+\end{dica}
+
+\section{Comparações: os sinais lógicos}
+
+\begin{pensaassim}[Pense assim: a balança]
+Colocar duas coisas numa balança diz qual é a mais pesada, qual é a mais leve ou se pesam igual. Comparar dois números é a mesma coisa, e a resposta é sempre \textbf{sim} ou \textbf{não}. Por exemplo: ``5 é maior que 3?'' Sim!
+\end{pensaassim}
+
+Os blocos hexagonais verdes comparam dois valores e respondem \textbf{verdadeiro} ou \textbf{falso}:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\booleano{\entrada{5} $>$ \entrada{3}} & \textbf{maior que}: verdadeiro \\
+\booleano{\entrada{2} $<$ \entrada{9}} & \textbf{menor que}: verdadeiro \\
+\booleano{\entrada{4} = \entrada{4}} & \textbf{igual a}: verdadeiro \\
+\end{tabular}
+\end{center}
+
+\begin{curiosidade}
+No Scratch, o sinal de igual (\entrada{=}) \textbf{compara}. Não existe um bloco para ``guardar'' com ele: isso é trabalho das variáveis, que veremos já já.
+\end{curiosidade}
+
+\section{E, ou, não}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\booleano{\booleano{...} e \booleano{...}} & verdadeiro só se \textbf{os dois} forem verdadeiros \\
+\booleano{\booleano{...} ou \booleano{...}} & verdadeiro se \textbf{pelo menos um} for \\
+\booleano{não \booleano{...}} & inverte: o verdadeiro vira falso \\
+\end{tabular}
+\end{center}
+
+\begin{pensaassim}[Pense assim: o parquinho]
+``Você só entra no brinquedo \textbf{se} tiver altura mínima \textbf{e} estiver com um adulto'': precisa dos dois (\textbf{e}). ``Você pode ir ao parquinho \textbf{se} for sábado \textbf{ou} domingo'': basta um (\textbf{ou}). ``Quem \textbf{não} tem ingresso, fica de fora'': o \textbf{não} inverte a resposta.
+\end{pensaassim}
+
+\begin{definicao}[Exemplo no dia a dia]
+``Se estiver \textbf{chovendo e} frio, vista o casaco.'' Precisa dos \textbf{dois}.\\
+``Se estiver \textbf{chovendo ou} frio, vista o casaco.'' Basta \textbf{um}.
+\end{definicao}
+
+\section{Sorteando números}
+
+\reporter{número aleatório entre \entrada{1} e \entrada{10}} escolhe um número ao acaso sempre que é executado. É a base de dados, loterias e jogos de sorte.
+
+\begin{missao}[Missão 12: O dado do gatinho]
+Faça o gatinho sortear um número de 1 a 6 quando for clicado e dizer qual saiu, como um dado!
+\end{missao}
+
+\begin{codigo}[Jogando o dado]
+\begin{pilha}
+\bk[scEvents]{quando este ator for clicado}
+\bk[scLooks]{diga \reporter{número aleatório entre \entrada{1} e \entrada{6}} por \entrada{2} segundos}
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+O bloco \reporter{número aleatório} muda a cada vez que roda! Se você quiser usar o mesmo número duas vezes, precisa \textbf{guardá-lo} numa variável (capítulo seguinte).
+\end{cuidado}
+
+\section{Juntando textos}
+
+\reporter{junte \entrada{Olá, } \entrada{mundo}} cola dois textos em um só: \textbf{Olá, mundo}. Já usamos esse bloco no capítulo de sensores!
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Conta rápida]
+Faça o gatinho dizer o resultado de $12 + 8 \times 2$ por 3 segundos.
+\end{exercicio}
+
+\begin{solucao}
+A multiplicação vem primeiro, então o resultado é $12 + 16 = 28$. Basta encaixar os operadores.
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{diga \reporter{\entrada{12} + \reporter{\entrada{8} $\times$ \entrada{2}}} por \entrada{3} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Maior de idade?]
+Pergunte a idade e faça o gatinho dizer ``Pode entrar'' se a resposta for maior que 17, ou ``Ainda não'' se não for.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scSensing]{pergunte \entrada{Qual é a sua idade?} e espere}
+\sbc[scControl]{se \booleano{\variavel{resposta} $>$ \entrada{17}} então}
+\bk[scLooks]{diga \entrada{Pode entrar}}
+\sbcelse{senão}
+\bk[scLooks]{diga \entrada{Ainda não}}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Cara ou coroa]
+Sorteie 1 ou 2. Se sair 1, o gatinho diz ``Cara''; senão, diz ``Coroa''.
+\end{exercicio}
+
+\begin{solucao}
+\renewcommand{\sbw}{400pt}\begin{pilha}
+\bk[scEvents]{quando este ator for clicado}
+\sbc[scControl]{se \booleano{\reporter{número aleatório entre \entrada{1} e \entrada{2}} = \entrada{1}} então}
+\bk[scLooks]{diga \entrada{Cara} por \entrada{2} segundos}
+\sbcelse{senão}
+\bk[scLooks]{diga \entrada{Coroa} por \entrada{2} segundos}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Entre 10 e 20]
+Pergunte um número. O gatinho deve dizer ``Está na faixa!'' apenas se o número for \textbf{maior que 10 e menor que 20}.
+\end{desafio}
+
+\begin{solucao}
+\renewcommand{\sbw}{400pt}\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scSensing]{pergunte \entrada{Digite um número:} e espere}
+\sbc[scControl]{se \booleano{\booleano{\variavel{resposta} $>$ \entrada{10}} e \booleano{\variavel{resposta} $<$ \entrada{20}}} então}
+\bk[scLooks]{diga \entrada{Está na faixa!}}
+\sbcend
+\end{pilha}
+\end{solucao}

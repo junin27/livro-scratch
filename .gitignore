@@ -1,0 +1,50 @@
+# --- Arquivos temporarios da compilacao LaTeX ---
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.run.xml
+*-blx.bib
+*.bcf
+*.cut
+*.thm
+*.tcbtemp
+*.pyg
+_minted*/
+latex.out/
+
+# O PDF gerado localmente (main.pdf) nao vai pro Git.
+# Os PDFs finais publicados (Scratch_Guia_Completo*.pdf) continuam versionados.
+main.pdf
+
+# --- Editores e sistema ---
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Pastas de trabalho do Claude Code (configuracao local) ---
+.claude/settings.local.json
+
+# --- Arquivos de teste/rascunho ---
+*.png.tmp
+scratch_*/
+tmp/

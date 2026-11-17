@@ -1,0 +1,156 @@
+\chapter{Eventos: Quando Algo Acontece}
+
+\begin{objetivos}
+\begin{itemize}
+\item Entender o que é um evento e por que todo programa começa com um;
+\item Usar teclas, cliques e a bandeira verde para começar o código;
+\item Fazer atores conversarem usando mensagens.
+\end{itemize}
+\end{objetivos}
+
+\section{O que é um evento?}
+
+Um \textbf{evento} é uma coisa que acontece e dispara o seu código: clicar na bandeira, apertar uma tecla, clicar no ator\ldots Os blocos amarelos \bloco[scEvents]{Eventos} têm um formato especial, com o topo arredondado, como um \textbf{chapéu}. Eles ficam sempre \textbf{no começo} da pilha.
+
+\begin{vocabulario}[Vocabulário: evento]
+\textbf{Evento} é um acontecimento que faz o programa começar. Sem um bloco de evento no topo, a pilha de blocos nunca roda sozinha.
+\end{vocabulario}
+
+\begin{pensaassim}[Pense assim: a campainha]
+Ninguém abre a porta sem ouvir a campainha. O \textbf{toque} é o evento, e \textbf{abrir a porta} é o que acontece depois. Também é como o \emph{apito} do juiz: o jogo só começa quando ele apita. No Scratch, o bloco de evento é a campainha, e os blocos embaixo dele são o que o programa faz quando ela toca.
+\end{pensaassim}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scEvents]{quando \bandeira\ for clicado} & ao clicar na bandeira verde \\
+\bloco[scEvents]{quando a tecla \menu{espaço} for pressionada} & ao apertar uma tecla \\
+\bloco[scEvents]{quando este ator for clicado} & ao clicar no ator com o mouse \\
+\bloco[scEvents]{quando o cenário mudar para \menu{praia}} & quando o fundo trocar \\
+\end{tabular}
+\end{center}
+
+\section{Controlando com o teclado}
+
+\begin{missao}[Missão 6: Mexa o gatinho!]
+Faça o gatinho andar para a direita ou para a esquerda quando você apertar as setas do teclado.
+\end{missao}
+
+Para cada tecla, usamos uma pilha separada com o seu próprio bloco de evento:
+
+\begin{codigo}[Seta para a direita]
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta para a direita} for pressionada}
+\bk[scMotion]{mova \entrada{10} passos}
+\end{pilha}
+\end{codigo}
+
+\begin{codigo}[Seta para a esquerda]
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta para a esquerda} for pressionada}
+\bk[scMotion]{mova \entrada{$-10$} passos}
+\end{pilha}
+\end{codigo}
+
+\begin{dica}
+Um ator pode ter \textbf{várias pilhas} ao mesmo tempo. Cada uma começa com o seu próprio evento e elas trabalham de forma independente.
+\end{dica}
+
+\section{Mensagens: avisando os outros atores}
+
+Às vezes um ator precisa \textbf{avisar} outro: ``Pode começar!''. Para isso existem as \textbf{mensagens}.
+
+\begin{pensaassim}[Pense assim: o grito ``gol!'']
+Quando alguém grita ``gol!'' no estádio, \textbf{todo mundo} que ouviu reage: uns pulam, outros cantam. Quem grita não precisa saber o que cada um vai fazer. No Scratch, um ator \textbf{envia} uma mensagem e todos os atores que estiverem \textbf{esperando por ela} começam o seu próprio código.
+\end{pensaassim}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scEvents]{envie \menu{mensagem1}} & manda um aviso para todos \\
+\bloco[scEvents]{quando eu receber \menu{mensagem1}} & começa quando o aviso chega \\
+\bloco[scEvents]{envie \menu{mensagem1} e espere} & manda e espera os outros terminarem \\
+\end{tabular}
+\end{center}
+
+Pense nas mensagens como \textbf{bilhetes}: um ator escreve o bilhete e todos os outros leem. Só quem tem um bloco \bloco[scEvents]{quando eu receber} com o mesmo nome é que obedece.
+
+\begin{codigo}[Gato avisa o amigo]
+Código do gatinho:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{diga \entrada{Sua vez!} por \entrada{2} segundos}
+\bk[scEvents]{envie \menu{sua vez}}
+\end{pilha}
+Código do amigo:
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{sua vez}}
+\bk[scLooks]{diga \entrada{Agora sou eu!} por \entrada{2} segundos}
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+Se o nome da mensagem for escrito diferente nos dois atores (``sua vez'' e ``sua  vez''), o aviso se perde. Escolha sempre o nome pelo menu, em vez de digitar de novo.
+\end{cuidado}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Meu primeiro clique]
+Faça o gatinho dizer ``Ai! Você me clicou!'' por 2 segundos quando clicarem nele.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando este ator for clicado}
+\bk[scLooks]{diga \entrada{Ai! Você me clicou!} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Sobe e desce]
+Faça o gatinho subir 10 passos quando apertarem a \textbf{seta para cima} e descer quando apertarem a \textbf{seta para baixo}. Dica: aponte para cima com \bloco[scMotion]{aponte para a direção \entrada{0}}, ou mude a posição \textbf{y}.
+\end{exercicio}
+
+\begin{solucao}
+Mudar o \textbf{y} é o jeito mais simples.
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta para cima} for pressionada}
+\bk[scMotion]{mude y em \entrada{10}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta para baixo} for pressionada}
+\bk[scMotion]{mude y em \entrada{$-10$}}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Espaço para falar]
+Faça o gatinho dizer ``Pronto!'' por 1 segundo e tocar um som sempre que a \textbf{barra de espaço} for pressionada.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{espaço} for pressionada}
+\bk[scSound]{inicie o som \menu{Miau}}
+\bk[scLooks]{diga \entrada{Pronto!} por \entrada{1} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Cadeia de mensagens]
+Crie três atores: A, B e C. Quando clicarem na bandeira, A diz ``1!'' e avisa B. B diz ``2!'' e avisa C. C diz ``3! Foi!''. Use duas mensagens diferentes.
+\end{desafio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{diga \entrada{1!} por \entrada{1} segundos}
+\bk[scEvents]{envie \menu{para B}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{para B}}
+\bk[scLooks]{diga \entrada{2!} por \entrada{1} segundos}
+\bk[scEvents]{envie \menu{para C}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{para C}}
+\bk[scLooks]{diga \entrada{3! Foi!} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}

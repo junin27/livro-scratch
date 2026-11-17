@@ -1,0 +1,136 @@
+\chapter{Listas: Guardando Muitas Coisas}
+
+\begin{objetivos}
+\begin{itemize}
+\item Entender a diferença entre variável e lista;
+\item Criar uma lista e adicionar itens;
+\item Ler e sortear itens de uma lista.
+\end{itemize}
+\end{objetivos}
+
+\section{Uma variável guarda um, uma lista guarda vários}
+
+Uma variável é uma caixinha com \textbf{um valor}. Uma \textbf{lista} é uma \textbf{prateleira}, com vários valores em ordem, cada um com o seu número de posição.
+
+\begin{center}
+\begin{tikzpicture}[font=\sffamily\bfseries\small]
+  \foreach \i/\t/\c in {1/Maçã/scMyBlocks,2/Banana/scEvents,3/Uva/scLooks,4/Pera/scOperators}{
+    \node[draw=ink,line width=1.1pt,fill=\c!35,minimum width=2.6cm,minimum height=.9cm,anchor=west] at (\i*2.7-2.7,0) {\t};
+    \node[fill=ink,text=white,circle,inner sep=2pt,font=\sffamily\bfseries\scriptsize] at (\i*2.7-2.7+.1,.6) {\i};}
+\end{tikzpicture}
+\end{center}
+
+\begin{pensaassim}[Pense assim: a lista de compras]
+Quando você vai ao mercado, anota tudo numa \textbf{lista}: leite, pão, ovos\ldots Você pode \emph{adicionar} um item, \emph{riscar} outro ou perguntar ``o que é o item número 2?''. Em vez de criar uma caixinha (variável) para cada produto, você usa uma lista só.
+\end{pensaassim}
+
+\begin{vocabulario}[Vocabulário: lista]
+\textbf{Lista} é uma coleção de valores guardados em ordem. Cada lugar da lista tem um \textbf{número de posição} (o primeiro item é o número \textbf{1}).
+\end{vocabulario}
+
+\section{Criando e usando listas}
+
+Em \bloco[scLists]{Variáveis}, clique em \textbf{Criar uma lista} e dê um nome, como \textbf{frutas}.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scLists]{adicione \entrada{coisa} a \menu{frutas}} & coloca no final da lista \\
+\reporter[scLists]{item \entrada{1} de \menu{frutas}} & lê o item que está na posição 1 \\
+\reporter[scLists]{tamanho de \menu{frutas}} & quantos itens existem \\
+\bloco[scLists]{apague \entrada{1} de \menu{frutas}} & remove um item \\
+\bloco[scLists]{apague tudo de \menu{frutas}} & esvazia a lista \\
+\end{tabular}
+\end{center}
+
+\begin{dica}
+No começo do projeto, use \bloco[scLists]{apague tudo de \menu{frutas}} para a lista começar \textbf{vazia}. Assim você não tem itens repetidos a cada execução.
+\end{dica}
+
+\begin{missao}[Missão 14: Sorteio de frutas]
+Monte uma lista com 4 frutas e faça o gatinho sortear e dizer uma delas.
+\end{missao}
+
+\begin{codigo}[Montando a lista]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLists]{apague tudo de \menu{frutas}}
+\bk[scLists]{adicione \entrada{Maçã} a \menu{frutas}}
+\bk[scLists]{adicione \entrada{Banana} a \menu{frutas}}
+\bk[scLists]{adicione \entrada{Uva} a \menu{frutas}}
+\bk[scLists]{adicione \entrada{Pera} a \menu{frutas}}
+\end{pilha}
+\end{codigo}
+
+\begin{codigo}[Sorteando]
+\renewcommand{\sbw}{405pt}\begin{pilha}
+\bk[scEvents]{quando este ator for clicado}
+\bk[scLooks]{diga \reporter[scLists]{item \reporter{número aleatório entre \entrada{1} e \reporter[scLists]{tamanho de \menu{frutas}}} de \menu{frutas}}}
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+Se você pedir o item de número 10 e a lista só tem 4, o Scratch devolve um valor vazio. Use \reporter[scLists]{tamanho de \menu{frutas}} como limite do sorteio!
+\end{cuidado}
+
+\begin{curiosidade}
+As listas são usadas em quase todo jogo de verdade: lista de fases, lista de pontuações, lista de inimigos\ldots Quase tudo o que se repete cabe em uma lista.
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Lista de amigos]
+Crie uma lista \textbf{amigos} com três nomes. Faça o gatinho dizer o \textbf{segundo} nome da lista.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLists]{apague tudo de \menu{amigos}}
+\bk[scLists]{adicione \entrada{Ana} a \menu{amigos}}
+\bk[scLists]{adicione \entrada{Bruno} a \menu{amigos}}
+\bk[scLists]{adicione \entrada{Carla} a \menu{amigos}}
+\bk[scLooks]{diga \reporter[scLists]{item \entrada{2} de \menu{amigos}} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Quantos tem?]
+Faça o gatinho dizer quantos itens existem na lista \textbf{amigos}.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{diga \reporter[scLists]{tamanho de \menu{amigos}} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Lista que o jogador preenche]
+Pergunte ao jogador um nome e adicione a resposta na lista \textbf{amigos}. Repita 3 vezes.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLists]{apague tudo de \menu{amigos}}
+\sbc[scControl]{repita \entrada{3} vezes}
+\bk[scSensing]{pergunte \entrada{Qual é o nome?} e espere}
+\bk[scLists]{adicione \variavel{resposta} a \menu{amigos}}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Ler a lista toda]
+Faça o gatinho dizer, um por um, todos os itens da lista \textbf{amigos}. Dica: use uma variável \textbf{posição} que começa em 1 e sobe a cada volta, e repita o número de vezes do \reporter[scLists]{tamanho de \menu{amigos}}.
+\end{desafio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scVariables]{defina \menu{posição} para \entrada{1}}
+\sbc[scControl]{repita \reporter[scLists]{tamanho de \menu{amigos}} vezes}
+\bk[scLooks]{diga \reporter[scLists]{item \variavel{posição} de \menu{amigos}} por \entrada{1} segundos}
+\bk[scVariables]{mude \menu{posição} em \entrada{1}}
+\sbcend
+\end{pilha}
+\end{solucao}

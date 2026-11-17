@@ -1,0 +1,131 @@
+\chapter{Animação: Dando Vida aos Personagens}
+
+\begin{objetivos}
+\begin{itemize}
+\item Criar animações trocando fantasias;
+\item Combinar movimento e animação;
+\item Fazer um personagem andar com as setas do teclado.
+\end{itemize}
+\end{objetivos}
+
+\section{O segredo da animação}
+
+Um desenho animado é feito de muitos desenhos parecidos mostrados rapidamente, um após o outro. No Scratch fazemos igual, mudando de \textbf{fantasia} em um laço, com uma pausa pequena.
+
+\begin{codigo}[Receita da animação]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\bk[scLooks]{próxima fantasia}
+\bk[scControl]{espere \entrada{0.2} segundos}
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{dica}
+Quanto \textbf{menor} a pausa, mais \textbf{rápida} a animação. Tente \entrada{0.05} para algo veloz e \entrada{0.5} para algo lento.
+\end{dica}
+
+\section{Andando e animando ao mesmo tempo}
+
+Para o personagem andar de verdade, juntamos \textbf{movimento} e \textbf{fantasia}. A cada passo, o gatinho muda de perna.
+
+\begin{codigo}[Andar com animação]
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta para a direita} for pressionada}
+\bk[scMotion]{aponte para a direção \entrada{90}}
+\bk[scMotion]{mova \entrada{10} passos}
+\bk[scLooks]{próxima fantasia}
+\end{pilha}
+\end{codigo}
+
+\begin{missao}[Missão 9: Gato andarilho]
+Faça o gatinho andar para os dois lados, virando para o lado certo e trocando de perna a cada passo.
+\end{missao}
+
+\begin{codigo}[Esquerda e direita]
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta direita} for pressionada}
+\bk[scMotion]{aponte para a direção \entrada{90}}
+\bk[scMotion]{mova \entrada{10} passos}
+\bk[scLooks]{próxima fantasia}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta esquerda} for pressionada}
+\bk[scMotion]{aponte para a direção \entrada{$-90$}}
+\bk[scMotion]{mova \entrada{10} passos}
+\bk[scLooks]{próxima fantasia}
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+Se o gatinho andar de ponta-cabeça ao virar para a esquerda, ajuste o \textbf{estilo de rotação} para \textbf{esquerda-direita} com o bloco \bloco[scMotion]{defina o estilo de rotação \menu{esquerda-direita}}.
+\end{cuidado}
+
+\section{Deslizando}
+
+\bloco[scMotion]{deslize por \entrada{1} seg até x: \entrada{100} y: \entrada{0}} faz um movimento \textbf{suave} entre dois pontos, sem precisar de laço.
+
+\begin{curiosidade}
+Os animadores de filmes de desenho usam 12 a 24 desenhos \textbf{por segundo}. No Scratch o projeto roda a 30 quadros por segundo. Por isso a pausa de 0.1 segundo já parece um movimento natural!
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Gato dançarino]
+Faça o gatinho trocar de fantasia 10 vezes, com uma pausa de 0.2 segundo.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{10} vezes}
+\bk[scLooks]{próxima fantasia}
+\bk[scControl]{espere \entrada{0.2} segundos}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Vai e volta suave]
+Faça o gatinho deslizar para a direita (x: 150) em 1 segundo e depois voltar ao centro (x: 0) em 1 segundo.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{deslize por \entrada{1} seg até x: \entrada{150} y: \entrada{0}}
+\bk[scMotion]{deslize por \entrada{1} seg até x: \entrada{0} y: \entrada{0}}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Cresce e encolhe]
+Faça o gatinho crescer de 10 em 10 por 5 vezes e depois encolher de volta.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{5} vezes}
+\bk[scLooks]{mude o tamanho em \entrada{10}}
+\bk[scControl]{espere \entrada{0.1} segundos}
+\sbcend
+\sbc[scControl]{repita \entrada{5} vezes}
+\bk[scLooks]{mude o tamanho em \entrada{$-10$}}
+\bk[scControl]{espere \entrada{0.1} segundos}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Passeio no palco]
+Faça o gatinho andar para a direita com a seta direita, para a esquerda com a seta esquerda, e \textbf{pular} (subir 50 e voltar) com a seta para cima.
+\end{desafio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta para cima} for pressionada}
+\bk[scMotion]{mude y em \entrada{50}}
+\bk[scControl]{espere \entrada{0.3} segundos}
+\bk[scMotion]{mude y em \entrada{$-50$}}
+\end{pilha}
+As pilhas das setas esquerda e direita são as da Missão 9.
+\end{solucao}

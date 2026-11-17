@@ -1,0 +1,70 @@
+\parte{Para Consultar}{Glossário, tabela de blocos e dicas para consertar bugs.}
+
+\chapter*{Glossário}
+\addcontentsline{toc}{chapter}{Glossário}
+
+\begin{description}[leftmargin=!,labelwidth=3.6cm,style=nextline,itemsep=6pt]
+\item[\textbf{Ator}] Personagem ou objeto do projeto (em inglês, \textit{sprite}).
+\item[\textbf{Palco}] Área onde a ação acontece, com o cenário de fundo.
+\item[\textbf{Bloco}] Peça de código que se encaixa em outras.
+\item[\textbf{Bug}] Erro no programa. Consertá-lo se chama \textbf{depurar}.
+\item[\textbf{Cenário}] Imagem de fundo do palco.
+\item[\textbf{Clone}] Cópia temporária de um ator.
+\item[\textbf{Condição}] Pergunta com resposta sim ou não, que o programa usa para decidir.
+\item[\textbf{Coordenadas}] Os números \textbf{x} e \textbf{y} que dizem onde algo está no palco.
+\item[\textbf{Evento}] Algo que acontece e dispara o código (clique, tecla, mensagem\ldots).
+\item[\textbf{Fantasia}] Cada aparência de um ator.
+\item[\textbf{Função}] Bloco criado por você (Meus Blocos).
+\item[\textbf{Laço}] Repetição de um conjunto de blocos (\textbf{repita}, \textbf{sempre}).
+\item[\textbf{Lista}] Conjunto de valores guardados em ordem.
+\item[\textbf{Mensagem}] Aviso enviado de um ator para os outros.
+\item[\textbf{Programa}] Conjunto de ordens dadas ao computador.
+\item[\textbf{Roteiro}] Plano escrito do projeto antes de programar.
+\item[\textbf{Variável}] Caixinha com nome que guarda um valor que pode mudar.
+\end{description}
+
+\chapter*{Tabela de Blocos}
+\addcontentsline{toc}{chapter}{Tabela de Blocos}
+
+\renewcommand{\arraystretch}{1.7}
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\bloco[scMotion]{Movimento} & mova, gire, vá para, deslize, mude x/y, aponte \\
+\bloco[scLooks]{Aparência} & diga, pense, fantasia, tamanho, efeitos, mostre/esconda \\
+\bloco[scSound]{Som} & toque o som, volume, notas e tambores \\
+\bloco[scEvents]{Eventos} & bandeira, teclas, cliques, mensagens \\
+\bloco[scControl]{Controle} & espere, repita, sempre, se, senão, clones, pare \\
+\bloco[scSensing]{Sensores} & tocando em, tecla, mouse, pergunte, cronômetro \\
+\bloco[scOperators]{Operadores} & contas, comparações, e/ou/não, aleatório, junte \\
+\bloco[scVariables]{Variáveis} & criar, defina, mude, mostre, esconda \\
+\bloco[scLists]{Listas} & adicione, item, tamanho, apague \\
+\bloco[scMyBlocks]{Meus Blocos} & blocos criados por você \\
+\end{tabular}
+\end{center}
+
+\chapter*{Bugs Comuns}
+\addcontentsline{toc}{chapter}{Bugs Comuns}
+
+\begin{cuidado}[O ator não se mexe]
+Os blocos estão soltos? Falta o bloco de evento no topo? Você está com o ator certo selecionado?
+\end{cuidado}
+
+\begin{cuidado}[O ator anda de cabeça para baixo]
+Mude o \bloco[scMotion]{estilo de rotação} para esquerda-direita.
+\end{cuidado}
+
+\begin{cuidado}[A pontuação continua do jogo anterior]
+Falta um \bloco[scVariables]{defina \menu{pontos} para \entrada{0}} no começo do projeto.
+\end{cuidado}
+
+\begin{cuidado}[A mensagem não chega]
+O nome da mensagem está escrito diferente no \bloco[scEvents]{envie} e no \bloco[scEvents]{quando eu receber}? Escolha sempre no menu.
+\end{cuidado}
+
+\begin{cuidado}[O projeto ficou lento]
+Você criou clones sem apagá-los? Use \bloco[scControl]{apague este clone} quando eles não forem mais necessários.
+\end{cuidado}
+
+\begin{cuidado}[A cor não é reconhecida]
+Use o conta-gotas do bloco \bloco[scSensing]{tocando na cor} para escolher exatamente a mesma cor do desenho.
+\end{cuidado}

@@ -1,0 +1,180 @@
+\chapter{Condições: Tomando Decisões}
+
+\begin{objetivos}
+\begin{itemize}
+\item Entender o que é uma condição;
+\item Usar \textbf{se} e \textbf{se--senão} para o programa decidir;
+\item Combinar várias decisões, uma dentro da outra.
+\end{itemize}
+\end{objetivos}
+
+\section{Pergunta com resposta sim ou não}
+
+Pense nesta frase: \emph{``Se estiver chovendo, leve o guarda-chuva.''} Você só leva o guarda-chuva \textbf{se} a condição for verdadeira. O computador também decide assim!
+
+\begin{vocabulario}[Vocabulário: condição]
+\textbf{Condição} é uma pergunta que só tem duas respostas: \textbf{verdadeiro} (sim) ou \textbf{falso} (não). Exemplo: ``o gatinho está tocando na borda?''
+\end{vocabulario}
+
+\begin{pensaassim}[Pense assim: o semáforo]
+Você chega na rua e olha o semáforo. \emph{Se} estiver verde, atravessa; \emph{senão}, espera. Você \textbf{faz uma pergunta} (``está verde?''), recebe \textbf{sim ou não} e \textbf{escolhe o que fazer}. É exatamente isso que um bloco de condição faz no Scratch!
+\end{pensaassim}
+
+\section{O bloco se}
+
+O bloco \bloco[scControl]{se \booleano{...} então} executa os blocos de \textbf{dentro} dele apenas quando a condição é verdadeira.
+
+\begin{codigo}[Se tocar na borda, vira]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\bk[scMotion]{mova \entrada{5} passos}
+\sbc[scControl]{se \booleano{tocando em \menu{borda}?} então}
+\bk[scMotion]{gire \entrada{180} graus}
+\sbcend
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\section{O bloco se--senão}
+
+Às vezes queremos \textbf{duas saídas}: uma se for verdadeiro e outra se for falso. É o \bloco[scControl]{se \booleano{...} então \ldots senão}.
+
+\begin{pensaassim}[Pense assim: dia de chuva ou de sol]
+\emph{Se} estiver chovendo, você leva o guarda-chuva; \emph{senão}, leva os óculos de sol. Sempre acontece \textbf{uma das duas coisas}, nunca as duas ao mesmo tempo e nunca nenhuma.
+\end{pensaassim}
+
+Já o bloco \bloco[scControl]{se} sozinho é como ``se estiver frio, vista um casaco'': se não estiver frio, você simplesmente não faz nada.
+
+\begin{codigo}[Se a tecla espaço estiver apertada\ldots]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{tecla \menu{espaço} pressionada?} então}
+\bk[scLooks]{diga \entrada{Apertado!}}
+\sbcelse{senão}
+\bk[scLooks]{diga \entrada{Solto!}}
+\sbcend
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{missao}[Missão 11: Gato obediente]
+Faça o gatinho andar \textbf{só enquanto} a seta para a direita estiver apertada. Quando soltar, ele fica parado e diz ``Parei''.
+\end{missao}
+
+\begin{codigo}[Andar só quando mandar]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{tecla \menu{seta direita} pressionada?} então}
+\bk[scMotion]{mova \entrada{5} passos}
+\bk[scLooks]{diga \entrada{} }
+\sbcelse{senão}
+\bk[scLooks]{diga \entrada{Parei}}
+\sbcend
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{dica}
+Quando o programa tem um \bloco[scControl]{sempre}, ele pergunta a mesma coisa várias vezes por segundo. É assim que o computador ``percebe'' mudanças enquanto o jogo roda! É como um \textbf{goleiro}: ele fica de olho na bola o tempo todo, e \emph{se} ela vem, ele pula.
+\end{dica}
+
+\section{Decisões dentro de decisões}
+
+Um \bloco[scControl]{se} pode ficar dentro de outro. A primeira condição filtra, a segunda decide.
+
+\begin{pensaassim}[Pense assim: a porta e a chave]
+\emph{Se} você chegou em casa, \emph{então} \emph{se} tiver a chave, abre a porta. Só faz sentido perguntar pela chave depois de ter chegado em casa. Um \bloco[scControl]{se} dentro do outro é uma pergunta que só é feita quando a primeira resposta foi ``sim''.
+\end{pensaassim}
+
+\begin{codigo}[Dois ses encaixados]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{tocando em \menu{borda}?} então}
+\sbc[scControl]{se \booleano{tecla \menu{espaço} pressionada?} então}
+\bk[scLooks]{diga \entrada{Pulei a parede!}}
+\sbcend
+\sbcend
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+Cuidado com a ordem! O \bloco[scControl]{se} de dentro só é olhado quando o de fora for verdadeiro. Se você inverter a ordem, o resultado muda.
+\end{cuidado}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Guarda-chuva]
+Faça o gatinho dizer ``Leve o guarda-chuva!'' se estiver tocando na cor azul (``chuva''), e ``Dia de sol!'' se não estiver.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{tocando na cor \menu{azul}?} então}
+\bk[scLooks]{diga \entrada{Leve o guarda-chuva!}}
+\sbcelse{senão}
+\bk[scLooks]{diga \entrada{Dia de sol!}}
+\sbcend
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Cabeça ou cauda]
+Faça o gatinho, ao ser clicado, perguntar a si mesmo: se o mouse estiver pressionado, diga ``Clique!''; senão, diga ``Esperando\ldots''.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{mouse pressionado?} então}
+\bk[scLooks]{diga \entrada{Clique!}}
+\sbcelse{senão}
+\bk[scLooks]{diga \entrada{Esperando...}}
+\sbcend
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Ping-pong]
+Faça o gatinho andar para a direita e voltar para a esquerda ao tocar na borda, sem ficar de cabeça para baixo.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{defina o estilo de rotação \menu{esquerda-direita}}
+\sbc[scControl]{sempre}
+\bk[scMotion]{mova \entrada{5} passos}
+\bk[scMotion]{se tocar na borda, volte}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Semáforo]
+Crie um semáforo: se a tecla \textbf{V} estiver apertada, diga ``Pode ir'' (verde); senão se a tecla \textbf{A} estiver apertada, diga ``Atenção'' (amarelo); senão diga ``Pare'' (vermelho).
+\end{desafio}
+
+\begin{solucao}
+Um \bloco[scControl]{se} dentro do \bloco[scControl]{senão}:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{tecla \menu{v} pressionada?} então}
+\bk[scLooks]{diga \entrada{Pode ir}}
+\sbcelse{senão}
+\sbc[scControl]{se \booleano{tecla \menu{a} pressionada?} então}
+\bk[scLooks]{diga \entrada{Atenção}}
+\sbcelse{senão}
+\bk[scLooks]{diga \entrada{Pare}}
+\sbcend
+\sbcend
+\sbcend
+\end{pilha}
+\end{solucao}

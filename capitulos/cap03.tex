@@ -1,0 +1,135 @@
+\chapter{Aparência: Mudando o Visual}
+
+\begin{objetivos}
+\begin{itemize}
+\item Fazer o ator falar e pensar com balões;
+\item Trocar de fantasia para criar movimento;
+\item Mudar tamanho, cor e esconder ou mostrar o ator.
+\end{itemize}
+\end{objetivos}
+
+\section{Falar e pensar}
+
+Os blocos roxos \bloco[scLooks]{Aparência} cuidam do \textbf{visual} do ator. Os dois mais simples fazem aparecer um balão de fala ou de pensamento:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scLooks]{diga \entrada{Olá!} por \entrada{2} segundos} & fala e depois o balão some \\
+\bloco[scLooks]{diga \entrada{Olá!}} & fala e o balão fica na tela \\
+\bloco[scLooks]{pense \entrada{Hmm...} por \entrada{2} segundos} & balão de pensamento \\
+\end{tabular}
+\end{center}
+
+\begin{dica}
+Use \bloco[scLooks]{diga \entrada{}} com o texto vazio para apagar um balão que ficou na tela.
+\end{dica}
+
+\section{Fantasias}
+
+Cada ator pode ter várias \textbf{fantasias}. Uma fantasia é uma imagem diferente do mesmo ator, como os quadros de um desenho animado. O gatinho já vem com duas: uma de perna aberta e outra de perna fechada.
+
+\begin{vocabulario}[Vocabulário: fantasia]
+\textbf{Fantasia} é cada aparência de um ator. Trocar de fantasia depressa dá a sensação de movimento, e isso se chama \textbf{animação}.
+\end{vocabulario}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scLooks]{próxima fantasia} & passa para a fantasia seguinte \\
+\bloco[scLooks]{mude para a fantasia \menu{gato-b}} & escolhe uma fantasia específica \\
+\end{tabular}
+\end{center}
+
+\begin{missao}[Missão 3: O gatinho que corre]
+Faça o gatinho correr pelo palco, alternando as fantasias a cada passo.
+\end{missao}
+
+\begin{codigo}[Gatinho andando]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{10} vezes}
+\bk[scMotion]{mova \entrada{10} passos}
+\bk[scLooks]{próxima fantasia}
+\bk[scControl]{espere \entrada{0.1} segundos}
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+Sem o bloco \bloco[scControl]{espere \entrada{0.1} segundos}, as fantasias trocam rápido demais e o gatinho parece tremer em vez de correr.
+\end{cuidado}
+
+\section{Tamanho, cor e visibilidade}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scLooks]{mude o tamanho para \entrada{150} \%} & define o tamanho exato (100\% é o normal) \\
+\bloco[scLooks]{mude o tamanho em \entrada{10}} & cresce (ou encolhe, se for negativo) \\
+\bloco[scLooks]{mude o efeito \menu{cor} para \entrada{25}} & troca a cor do ator \\
+\bloco[scLooks]{esconda} & o ator some do palco \\
+\bloco[scLooks]{mostre} & o ator aparece de novo \\
+\end{tabular}
+\end{center}
+
+\begin{curiosidade}
+Efeitos como \textbf{cor}, \textbf{olho de peixe} e \textbf{mosaico} deixam o ator com cara de filtro de foto! Para voltar ao normal, use o bloco \bloco[scLooks]{tire os efeitos gráficos}.
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Pensando alto]
+Faça o gatinho \textbf{pensar} ``Que dia lindo!'' por 3 segundos e depois \textbf{dizer} ``Vamos brincar!'' por 2 segundos.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{pense \entrada{Que dia lindo!} por \entrada{3} segundos}
+\bk[scLooks]{diga \entrada{Vamos brincar!} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Gigante e pequeno]
+Faça o gatinho ficar com o dobro do tamanho (200\%), esperar 1 segundo e depois voltar ao tamanho normal (100\%).
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{mude o tamanho para \entrada{200} \%}
+\bk[scControl]{espere \entrada{1} segundos}
+\bk[scLooks]{mude o tamanho para \entrada{100} \%}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Pisca-pisca]
+Faça o gatinho \textbf{sumir e aparecer} 5 vezes, esperando meio segundo entre cada mudança.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{5} vezes}
+\bk[scLooks]{esconda}
+\bk[scControl]{espere \entrada{0.5} segundos}
+\bk[scLooks]{mostre}
+\bk[scControl]{espere \entrada{0.5} segundos}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Gato arco-íris]
+Faça o gatinho mudar de cor 12 vezes seguidas, somando 10 ao efeito de cor a cada vez, com uma pequena pausa entre as trocas. Dica: use \bloco[scLooks]{mude o efeito \menu{cor} em \entrada{10}}.
+\end{desafio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{12} vezes}
+\bk[scLooks]{mude o efeito \menu{cor} em \entrada{10}}
+\bk[scControl]{espere \entrada{0.2} segundos}
+\sbcend
+\end{pilha}
+\end{solucao}

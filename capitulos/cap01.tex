@@ -1,0 +1,189 @@
+\chapter{Bem-vindo ao Scratch!}
+
+\begin{objetivos}
+\begin{itemize}
+\item Descobrir o que é o Scratch e para que ele serve;
+\item Conhecer as partes da tela: palco, atores e blocos;
+\item Montar e rodar o seu primeiro programa.
+\end{itemize}
+\end{objetivos}
+
+\section{O que é o Scratch?}
+
+O \textbf{Scratch} é uma linguagem de programação feita para quem está começando. Em vez de escrever códigos difíceis, você \textbf{encaixa blocos coloridos}, como se fossem peças de quebra-cabeça. Com eles dá para criar histórias, animações, músicas e até jogos!
+
+\begin{vocabulario}
+\textbf{Programar} é dar ordens, passo a passo, para o computador. Um conjunto de ordens se chama \textbf{programa} (ou \textbf{código}).
+\end{vocabulario}
+
+Cada bloco é uma ordem. Veja como é um programa pequeno:
+
+\begin{codigo}[Meu primeiro programa]
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{mova \entrada{10} passos}
+\bk[scLooks]{diga \entrada{Olá!} por \entrada{2} segundos}
+\end{pilha}
+\end{codigo}
+
+\begin{dica}
+Os blocos só se encaixam de cima para baixo, e o computador executa uma ordem de cada vez, \textbf{na ordem em que estão empilhadas}.
+\end{dica}
+
+\section{Sequência: a ordem importa!}
+
+Uma lista de ordens colocadas uma depois da outra se chama \textbf{sequência de instruções}. O computador é muito obediente, mas não pensa por conta própria: ele faz \textbf{exatamente} o que está escrito, \textbf{na ordem} em que está escrito.
+
+\begin{pensaassim}[Pense assim: a receita de bolo]
+Para fazer um bolo, você segue uma receita: \emph{1) misture os ingredientes, 2) coloque na forma, 3) asse no forno}. Se você assar \textbf{antes} de misturar, o bolo não sai! O mesmo vale para um programa: cada bloco é um passo da receita, e a ordem muda o resultado.
+\end{pensaassim}
+
+\begin{pensaassim}[Pense assim: se vestir]
+Você coloca a \textbf{meia} e só depois o \textbf{sapato}. Se inverter a ordem, o resultado fica engraçado (e errado!). Na programação, trocar dois blocos de lugar pode mudar tudo.
+\end{pensaassim}
+
+Veja dois programas com os \textbf{mesmos blocos}, mas em ordens diferentes:
+
+\begin{codigo}[Ordem certa]
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{mova \entrada{50} passos}
+\bk[scLooks]{diga \entrada{Cheguei!} por \entrada{2} segundos}
+\end{pilha}
+\end{codigo}
+
+\begin{codigo}[Ordem trocada]
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{diga \entrada{Cheguei!} por \entrada{2} segundos}
+\bk[scMotion]{mova \entrada{50} passos}
+\end{pilha}
+\end{codigo}
+
+No primeiro, o gatinho anda e depois diz ``Cheguei!''. No segundo, ele diz ``Cheguei!'' \textbf{antes} de andar, ou seja, ainda nem chegou! Os blocos são iguais, mas o programa conta uma história diferente.
+
+\begin{dica}[Teste a sequência]
+Quando um programa não faz o que você queria, leia os blocos de cima para baixo, um de cada vez, fingindo que você é o computador. Muitas vezes o erro é só uma ordem trocada.
+\end{dica}
+
+\section{As cores dos blocos}
+
+Cada cor de bloco tem um trabalho diferente. Assim fica fácil achar o que você precisa!
+
+\begin{center}
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{@{}lll@{}}
+\bloco[scMotion]{Movimento} & mexe o ator pela tela & \small\textit{mova, gire, vá para}\\
+\bloco[scLooks]{Aparência} & muda o visual e as falas & \small\textit{diga, mude de fantasia}\\
+\bloco[scSound]{Som} & toca sons e músicas & \small\textit{toque o som}\\
+\bloco[scEvents]{Eventos} & começa o programa & \small\textit{quando clicar na bandeira}\\
+\bloco[scControl]{Controle} & repete e decide & \small\textit{repita, se\ldots então}\\
+\bloco[scSensing]{Sensores} & percebe o que acontece & \small\textit{tocando em, tecla pressionada}\\
+\bloco[scOperators]{Operadores} & faz contas e comparações & \small\textit{+, $-$, $>$, aleatório}\\
+\bloco[scVariables]{Variáveis} & guarda informações & \small\textit{pontos, vidas}\\
+\bloco[scMyBlocks]{Meus Blocos} & blocos criados por você & \small\textit{seus próprios comandos}\\
+\end{tabular}
+\end{center}
+
+\section{Conhecendo a tela}
+
+Quando você abre o Scratch, vê quatro áreas principais:
+
+\begin{center}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\small]
+  % janela
+  \draw[fill=white,draw=ink,line width=1.4pt,rounded corners=8pt] (0,0) rectangle (13,7.2);
+  \fill[scMotion] (0,6.5) [rounded corners=8pt] rectangle (13,7.2);
+  % paleta de blocos
+  \draw[fill=scMotion!12,draw=ink,line width=1pt] (.3,.3) rectangle (3.2,6.2);
+  \foreach \y/\c in {5.5/scMotion,4.8/scLooks,4.1/scSound,3.4/scEvents,2.7/scControl}{\fill[\c,draw=ink,rounded corners=2pt] (.55,\y) rectangle (2.95,\y+.45);}
+  % area de codigo
+  \draw[fill=white,draw=ink,line width=1pt] (3.4,.3) rectangle (8.2,6.2);
+  \fill[scEvents,draw=ink,rounded corners=2pt] (4,5.2) rectangle (6.4,5.65);
+  \fill[scMotion,draw=ink,rounded corners=2pt] (4,4.7) rectangle (6.4,5.15);
+  \fill[scLooks,draw=ink,rounded corners=2pt] (4,4.2) rectangle (6.4,4.65);
+  % palco
+  \draw[fill=white,draw=ink,line width=1pt] (8.4,2.6) rectangle (12.7,6.2);
+  \begin{scope}[shift={(10.55,3.5)},scale=.42]\gatinho\end{scope}
+  % lista de atores
+  \draw[fill=scLooks!10,draw=ink,line width=1pt] (8.4,.3) rectangle (12.7,2.4);
+  \draw[fill=white,draw=ink,rounded corners=3pt] (8.7,.6) rectangle (9.9,2.1);
+  \begin{scope}[shift={(9.3,.85)},scale=.2]\gatinho\end{scope}
+  % rotulos
+  \node[fill=scMotion,draw=ink,text=white,rounded corners=4pt,inner sep=3pt,font=\sffamily\bfseries\footnotesize] at (1.75,-.55) {1. Paleta de blocos};
+  \node[fill=scControl,draw=ink,text=white,rounded corners=4pt,inner sep=3pt,font=\sffamily\bfseries\footnotesize] at (5.8,-.55) {2. Área de código};
+  \node[fill=scOperators,draw=ink,text=white,rounded corners=4pt,inner sep=3pt,font=\sffamily\bfseries\footnotesize] at (10.5,-.55) {3. Palco e 4. Atores};
+\end{tikzpicture}
+\end{center}
+
+\begin{description}[leftmargin=!,labelwidth=3.4cm,style=nextline]
+\item[\textbf{1. Paleta de blocos}] Fica na esquerda. É a ``caixa de peças'' com todos os blocos, separados por cor.
+\item[\textbf{2. Área de código}] Fica no meio. É onde você arrasta e encaixa os blocos para montar o programa.
+\item[\textbf{3. Palco}] Fica no alto, à direita. É onde a ação acontece! Tudo o que o seu programa faz aparece aqui.
+\item[\textbf{4. Atores}] Fica embaixo do palco. Aqui moram os personagens (o gatinho é o ator inicial).
+\end{description}
+
+\begin{vocabulario}[Vocabulário: ator e palco]
+Em Scratch, cada personagem ou objeto é um \textbf{ator} (em inglês, \textit{sprite}). O cenário onde eles aparecem é o \textbf{palco} (\textit{stage}).
+\end{vocabulario}
+
+\section{Seu primeiro programa}
+
+\begin{missao}[Missão 1: Faça o gatinho falar!]
+Faça o gatinho andar um pouquinho e dizer ``Olá!'' quando você clicar na bandeira verde.
+\end{missao}
+
+\begin{passos}
+\item Clique na categoria \bloco[scEvents]{Eventos} e arraste \bloco[scEvents]{quando \bandeira\ for clicado} para a área de código.
+\item Na categoria \bloco[scMotion]{Movimento}, arraste \bloco[scMotion]{mova \entrada{10} passos} e encaixe embaixo do primeiro bloco.
+\item Em \bloco[scLooks]{Aparência}, arraste \bloco[scLooks]{diga \entrada{Olá!} por \entrada{2} segundos} e encaixe por último.
+\item Clique na \bandeira\ \textbf{bandeira verde} acima do palco e veja a mágica acontecer!
+\end{passos}
+
+\begin{cuidado}
+Se nada acontecer, confira se os blocos estão \textbf{encaixados} (colados uns nos outros). Blocos soltos não funcionam!
+\end{cuidado}
+
+\begin{curiosidade}
+O Scratch foi criado em 2007 por um grupo de pesquisadores do MIT, nos Estados Unidos. Hoje milhões de crianças no mundo todo usam o Scratch!
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Troque a fala]
+Mude o texto do bloco \bloco[scLooks]{diga \entrada{Olá!} por \entrada{2} segundos} para dizer o seu nome, por 3 segundos.
+\end{exercicio}
+
+\begin{solucao}
+Clique no texto \entrada{Olá!} e digite o seu nome. Depois clique no número \entrada{2} e troque por \entrada{3}.
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{mova \entrada{10} passos}
+\bk[scLooks]{diga \entrada{Maria} por \entrada{3} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Dois passos]
+Faça o gatinho andar \textbf{20 passos} em vez de 10 e depois dizer ``Cheguei!''.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{mova \entrada{20} passos}
+\bk[scLooks]{diga \entrada{Cheguei!} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Andou, falou, andou]
+Faça o gatinho andar 10 passos, dizer ``Oi!'', e depois andar mais 10 passos. Dica: você pode usar o mesmo bloco \bloco[scMotion]{mova \entrada{10} passos} duas vezes.
+\end{desafio}
+
+\begin{solucao}
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{mova \entrada{10} passos}
+\bk[scLooks]{diga \entrada{Oi!} por \entrada{2} segundos}
+\bk[scMotion]{mova \entrada{10} passos}
+\end{pilha}
+\end{solucao}

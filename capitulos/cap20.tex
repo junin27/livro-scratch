@@ -1,0 +1,131 @@
+\chapter{Projeto 4: Meu Jogo Livre}
+
+\begin{objetivos}
+\begin{itemize}
+\item Planejar um jogo criado por você do começo ao fim;
+\item Testar, achar bugs e consertar;
+\item Compartilhar o projeto com o mundo.
+\end{itemize}
+\end{objetivos}
+
+\section{Agora é com você!}
+
+Você já sabe tudo o que precisa: movimento, aparência, som, eventos, repetições, sensores, condições, variáveis, listas, clones e blocos próprios. Chegou a hora de criar o \textbf{seu} jogo!
+
+\begin{missao}[Missão 20: Crie o seu jogo]
+Invente, planeje, programe, teste e compartilhe um jogo ou uma história interativa.
+\end{missao}
+
+\section{Passo 1: escolha uma ideia}
+
+Se estiver sem ideias, escolha uma destas:
+
+\begin{itemize}
+\item \textbf{Pega-pega:} um personagem foge de outro que anda atrás dele;
+\item \textbf{Corrida:} dois jogadores apertam teclas diferentes e quem chegar primeiro vence;
+\item \textbf{Nave espacial:} atire em inimigos que caem usando clones;
+\item \textbf{Pulo do gato:} o gatinho pula obstáculos que andam na tela;
+\item \textbf{História com escolhas:} o jogador responde perguntas e a história muda.
+\end{itemize}
+
+\section{Passo 2: planeje no papel}
+
+Preencha este roteiro antes de arrastar o primeiro bloco:
+
+\begin{definicao}[Meu roteiro]
+\textbf{Nome do jogo:} \underline{\hspace{8cm}}\\[4pt]
+\textbf{Atores:} \underline{\hspace{9cm}}\\[4pt]
+\textbf{Cenários:} \underline{\hspace{9cm}}\\[4pt]
+\textbf{Variáveis:} \underline{\hspace{9cm}}\\[4pt]
+\textbf{Como se ganha:} \underline{\hspace{8cm}}\\[4pt]
+\textbf{Como se perde:} \underline{\hspace{8cm}}
+\end{definicao}
+
+\section{Passo 3: programe aos poucos}
+
+Não tente fazer tudo de uma vez! Siga esta ordem:
+
+\begin{passos}
+\item Faça o personagem principal \textbf{andar};
+\item Adicione o \textbf{obstáculo} ou o \textbf{objetivo};
+\item Crie as \textbf{regras} (pontos, vidas, condições);
+\item Adicione \textbf{sons} e \textbf{efeitos};
+\item Acrescente \textbf{tela inicial} e \textbf{fim de jogo}.
+\end{passos}
+
+\begin{dica}
+Teste a cada pequeno passo! Clique na bandeira verde sempre que acrescentar um bloco novo. Assim, se algo der errado, você sabe exatamente onde procurar.
+\end{dica}
+
+\section{Passo 4: caçando os bugs}
+
+\begin{vocabulario}[Vocabulário: bug e depuração]
+\textbf{Bug} é um erro no programa que faz algo funcionar diferente do planejado. \textbf{Depurar} (ou \textbf{debugar}) é achar e consertar os bugs. Todo programador, mesmo os mais experientes, passa boa parte do tempo depurando!
+\end{vocabulario}
+
+Se o seu jogo estiver estranho, faça estas perguntas:
+
+\begin{itemize}
+\item Todos os blocos estão \textbf{encaixados}?
+\item Cada pilha começa com um bloco de \textbf{evento}?
+\item As variáveis são \textbf{zeradas} no começo do jogo?
+\item O nome do ator ou da mensagem está \textbf{escrito igual} em todo lugar?
+\item O ator está no \textbf{lugar} certo? Está escondido?
+\end{itemize}
+
+\begin{cuidado}[Bug dos bugs]
+Quando nada funciona, \textbf{pare, respire} e execute o programa passo a passo, falando em voz alta o que cada bloco faz. Chama-se \textbf{depuração do patinho}: explicar o código para um patinho de borracha (ou para um amigo) ajuda a achar o erro!
+\end{cuidado}
+
+\section{Passo 5: compartilhe}
+
+Quando o jogo estiver pronto, você pode compartilhá-lo no site do Scratch:
+
+\begin{passos}
+\item Crie uma conta gratuita em \texttt{scratch.mit.edu} (com a ajuda de um adulto);
+\item Dê um nome ao projeto no editor e clique em \textbf{Compartilhar};
+\item Escreva em \textbf{Instruções} como se joga e em \textbf{Notas e créditos} quem fez o quê;
+\item Peça a amigos e à família para jogarem e dizerem o que acharam.
+\end{passos}
+
+\begin{curiosidade}
+Na comunidade do Scratch você também pode \textbf{ver dentro} de milhões de projetos de outras pessoas e até \textbf{remixar}, isto é, copiar e melhorar com os seus próprios blocos, dando o crédito ao autor original!
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Tela de início]
+Adicione uma tela inicial ao seu jogo com o nome dele e o aviso ``Aperte espaço para começar''.
+\end{exercicio}
+
+\begin{solucao}
+No Palco, use um cenário ``início'' e espere a tecla:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{mude o cenário para \menu{início}}
+\bk[scControl]{espere até que \booleano{tecla \menu{espaço} pressionada?}}
+\bk[scLooks]{mude o cenário para \menu{jogo}}
+\bk[scEvents]{envie \menu{começar}}
+\end{pilha}
+Os atores só começam o jogo quando recebem a mensagem \bloco[scEvents]{quando eu receber \menu{começar}}.
+\end{solucao}
+
+\begin{exercicio}[Recomeçar]
+Faça o jogo recomeçar quando o jogador apertar a tecla R.
+\end{exercicio}
+
+\begin{solucao}
+Use o evento de tecla e uma mensagem de reinício, que zera as variáveis:
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{r} for pressionada}
+\bk[scEvents]{envie \menu{começar}}
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[O jogo final]
+Publique o seu jogo e peça a três pessoas para jogar. Anote o que elas gostaram e o que elas sugeriram. Escolha uma sugestão e melhore o jogo!
+\end{desafio}
+
+\begin{solucao}
+Não existe uma resposta única, e esse é o objetivo! Um bom jogo se melhora com os comentários de quem joga. \textbf{Parabéns, programador!}
+\end{solucao}

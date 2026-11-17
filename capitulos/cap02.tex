@@ -1,0 +1,148 @@
+\chapter{Movimento e Direção}
+
+\begin{objetivos}
+\begin{itemize}
+\item Usar os blocos de \textbf{Movimento} para mexer os atores;
+\item Entender o plano do palco com as coordenadas \textbf{x} e \textbf{y};
+\item Fazer um ator girar, deslizar e repetir um movimento.
+\end{itemize}
+\end{objetivos}
+
+\section{Os blocos de movimento}
+
+Os blocos azuis \bloco[scMotion]{Movimento} dizem para onde o ator vai. Os mais usados são:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scMotion]{mova \entrada{10} passos} & anda para a frente \\
+\bloco[scMotion]{gire \entrada{15} graus} & vira o ator \\
+\bloco[scMotion]{vá para x: \entrada{0} y: \entrada{0}} & vai direto para um ponto \\
+\bloco[scMotion]{deslize por \entrada{1} seg até x: \entrada{0} y: \entrada{0}} & vai deslizando até lá \\
+\end{tabular}
+\end{center}
+
+\begin{dica}
+Passos \textbf{negativos} fazem o ator andar para trás! Experimente \bloco[scMotion]{mova \entrada{$-10$} passos}.
+\end{dica}
+
+\section{O plano do palco: x e y}
+
+O palco é como um \textbf{papel quadriculado}. Cada lugar tem um endereço com dois números: o \textbf{x} (esquerda--direita) e o \textbf{y} (embaixo--em cima). O centro é o ponto \textbf{(0, 0)}.
+
+\begin{center}
+\begin{tikzpicture}[font=\sffamily\small]
+  \draw[fill=white,draw=ink,line width=1.3pt,rounded corners=4pt] (-4.8,-3.6) rectangle (4.8,3.6);
+  \draw[gridc!70!ink,line width=.4pt] (-4.8,-3.6) grid[step=.6] (4.8,3.6);
+  \draw[ink,-{Stealth},line width=1.1pt] (-4.8,0)--(5.1,0) node[right]{\bfseries x};
+  \draw[ink,-{Stealth},line width=1.1pt] (0,-3.6)--(0,3.9) node[above]{\bfseries y};
+  \node[fill=scMotion,draw=ink,text=white,inner sep=2pt,rounded corners=2pt,font=\sffamily\bfseries\scriptsize] at (-4.4,-.3) {$-240$};
+  \node[fill=scMotion,draw=ink,text=white,inner sep=2pt,rounded corners=2pt,font=\sffamily\bfseries\scriptsize] at (4.4,-.3) {$240$};
+  \node[fill=scOperators,draw=ink,text=white,inner sep=2pt,rounded corners=2pt,font=\sffamily\bfseries\scriptsize] at (.6,3.3) {$180$};
+  \node[fill=scOperators,draw=ink,text=white,inner sep=2pt,rounded corners=2pt,font=\sffamily\bfseries\scriptsize] at (.65,-3.3) {$-180$};
+  \fill[scMyBlocks,draw=ink] (2.4,1.8) circle(.13) node[above right,font=\sffamily\bfseries\footnotesize]{(120, 90)};
+  \fill[scLooks,draw=ink] (-2.4,-1.2) circle(.13) node[below left,font=\sffamily\bfseries\footnotesize]{($-120$, $-60$)};
+  \fill[scEvents,draw=ink] (0,0) circle(.13);
+\end{tikzpicture}
+\end{center}
+
+\begin{definicao}[Resumo]
+\textbf{x} mede \emph{para o lado}: positivo é direita, negativo é esquerda.\\
+\textbf{y} mede \emph{para cima}: positivo é para cima, negativo é para baixo.
+\end{definicao}
+
+\section{Girando}
+
+O bloco \bloco[scMotion]{gire \entrada{15} graus} vira o ator para a direita. Uma volta completa tem \textbf{360 graus}. Girar 90 graus é um quarto de volta, como a curva de uma esquina.
+
+\begin{missao}[Missão 2: Dança do gatinho]
+Faça o gatinho andar, girar, andar de novo e deslizar de volta para o centro do palco.
+\end{missao}
+
+\begin{codigo}[Uma solução possível]
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{mova \entrada{50} passos}
+\bk[scMotion]{gire \entrada{90} graus}
+\bk[scMotion]{mova \entrada{50} passos}
+\bk[scMotion]{deslize por \entrada{1} seg até x: \entrada{0} y: \entrada{0}}
+\end{pilha}
+\end{codigo}
+
+\section{Repetindo movimentos}
+
+Imagine ter que arrastar o mesmo bloco 4 vezes! Para isso existe o bloco laranja \bloco[scControl]{repita \entrada{4} vezes}. Tudo o que estiver dentro dele é repetido.
+
+\begin{codigo}[Desenhando um quadrado]
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{4} vezes}
+\bk[scMotion]{mova \entrada{100} passos}
+\bk[scMotion]{gire \entrada{90} graus}
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{vocabulario}[Vocabulário: repetição]
+Repetir um conjunto de ordens várias vezes se chama \textbf{laço} (em inglês, \textit{loop}). Ele evita que a gente copie blocos sem parar.
+\end{vocabulario}
+
+\begin{pensaassim}[Pense assim: escovar os dentes]
+Ninguém diz ``mova a escova, mova a escova, mova a escova\ldots'' trinta vezes. Dizemos só: \emph{``escove por 30 movimentos''}. O bloco \bloco[scControl]{repita} faz isso: você escreve o passo \textbf{uma vez} e diz \textbf{quantas vezes} repetir. No quadrado acima, \emph{mova 100 passos e gire 90 graus} é um ``lado'', e o gatinho repete 4 lados.
+\end{pensaassim}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Vá para o canto]
+Use um bloco para levar o gatinho até o canto superior direito do palco, no ponto $x=200$, $y=150$.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{vá para x: \entrada{200} y: \entrada{150}}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Meia-volta]
+Faça o gatinho andar 100 passos, dar meia-volta (180 graus) e voltar ao ponto de partida.
+\end{exercicio}
+
+\begin{solucao}
+Meia-volta é 180 graus. Depois de girar, andar o mesmo tanto traz o gato de volta.
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{mova \entrada{100} passos}
+\bk[scMotion]{gire \entrada{180} graus}
+\bk[scMotion]{mova \entrada{100} passos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Triângulo]
+Desenhe um triângulo com o gatinho usando \bloco[scControl]{repita}. Dica: em um triângulo com lados iguais, cada giro é de $360 \div 3 = 120$ graus.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{3} vezes}
+\bk[scMotion]{mova \entrada{100} passos}
+\bk[scMotion]{gire \entrada{120} graus}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Sua própria figura]
+Descubra quantas vezes repetir e quantos graus girar para desenhar um \textbf{hexágono} (6 lados). Dica: $360 \div 6$.
+\end{desafio}
+
+\begin{solucao}
+Seis lados, então repita 6 vezes, girando $360 \div 6 = 60$ graus a cada lado.
+\begin{pilha}
+\sbh[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita \entrada{6} vezes}
+\bk[scMotion]{mova \entrada{60} passos}
+\bk[scMotion]{gire \entrada{60} graus}
+\sbcend
+\end{pilha}
+\end{solucao}

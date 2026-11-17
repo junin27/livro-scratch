@@ -1,0 +1,169 @@
+\chapter{Projeto 1: O Jogo da Coleta}
+
+\begin{objetivos}
+\begin{itemize}
+\item Juntar o que você aprendeu em um jogo completo;
+\item Usar clones, variáveis, condições e eventos juntos;
+\item Criar pontos, vidas e uma tela de fim de jogo.
+\end{itemize}
+\end{objetivos}
+
+\section{O plano do jogo}
+
+Neste projeto você vai criar um jogo em que \textbf{maçãs caem do céu} e você controla uma \textbf{cesta} para pegá-las. Antes de começar, o roteiro (lembra do planejamento?):
+
+\begin{definicao}[Roteiro do jogo]
+\textbf{Atores:} Cesta e Maçã.\\
+\textbf{Variáveis:} \textbf{pontos} e \textbf{vidas}.\\
+\textbf{Regras:} pegar a maçã dá 1 ponto; deixar a maçã cair no chão tira 1 vida; sem vidas, o jogo acaba.
+\end{definicao}
+
+\begin{missao}[Missão 17: Monte o Jogo da Coleta]
+Siga os cinco passos e, no final, você terá o seu primeiro jogo completo!
+\end{missao}
+
+\section{Passo 1: a cesta}
+
+Escolha ou desenhe uma cesta. Coloque-a embaixo do palco e faça-a andar com as setas.
+
+\begin{codigo}[Cesta]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{vá para x: \entrada{0} y: \entrada{$-150$}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta direita} for pressionada}
+\bk[scMotion]{mude x em \entrada{15}}
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando a tecla \menu{seta esquerda} for pressionada}
+\bk[scMotion]{mude x em \entrada{$-15$}}
+\end{pilha}
+\end{codigo}
+
+\section{Passo 2: as variáveis}
+
+Crie \textbf{pontos} e \textbf{vidas} (para todos os atores). Ao começar o jogo, zere os pontos e dê 3 vidas.
+
+\begin{codigo}[No Palco]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scVariables]{defina \menu{pontos} para \entrada{0}}
+\bk[scVariables]{defina \menu{vidas} para \entrada{3}}
+\end{pilha}
+\end{codigo}
+
+\section{Passo 3: a maçã e os clones}
+
+O ator Maçã fica escondido e vai criando clones em lugares aleatórios do topo.
+
+\begin{codigo}[Maçã original]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{esconda}
+\sbc[scControl]{sempre}
+\bk[scMotion]{vá para x: \reporter{número aleatório entre \entrada{$-200$} e \entrada{200}} y: \entrada{170}}
+\bk[scControl]{crie um clone de \menu{mim mesmo}}
+\bk[scControl]{espere \entrada{1} segundos}
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\section{Passo 4: o que a maçã faz}
+
+Cada clone cai. Se tocar na cesta, dá 1 ponto. Se tocar no chão, tira 1 vida.
+
+\begin{codigo}[Clone da maçã]
+\begin{pilha}
+\bk[scControl]{quando eu começar como um clone}
+\bk[scLooks]{mostre}
+\sbc[scControl]{repita até que \booleano{\variavel{y} $<$ \entrada{$-160$}}}
+\bk[scMotion]{mude y em \entrada{$-5$}}
+\sbc[scControl]{se \booleano{tocando em \menu{Cesta}?} então}
+\bk[scVariables]{mude \menu{pontos} em \entrada{1}}
+\bk[scControl]{apague este clone}
+\sbcend
+\sbcend
+\bk[scVariables]{mude \menu{vidas} em \entrada{$-1$}}
+\bk[scControl]{apague este clone}
+\end{pilha}
+\end{codigo}
+
+\begin{dica}
+\variavel{y} é um bloco da categoria \bloco[scMotion]{Movimento} que mostra a posição vertical do ator. Quando ela fica menor que $-160$, a maçã chegou ao chão.
+\end{dica}
+
+\section{Passo 5: fim de jogo}
+
+Quando as vidas acabam, o Palco avisa que o jogo terminou e para tudo.
+
+\begin{codigo}[No Palco]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{repita até que \booleano{\variavel{vidas} = \entrada{0}}}
+\bk[scControl]{espere \entrada{0.1} segundos}
+\sbcend
+\bk[scLooks]{mude o cenário para \menu{Fim de jogo}}
+\bk[scControl]{pare \menu{tudo}}
+\end{pilha}
+\end{codigo}
+
+\begin{cuidado}
+Se as maçãs não caírem, confira se o ator Maçã tem o bloco \bloco[scLooks]{esconda} só no \textbf{original}, e o bloco \bloco[scLooks]{mostre} no começo do \textbf{clone}. Se as pontuações não subirem, veja se o nome do ator no bloco \bloco[scSensing]{tocando em} está certo.
+\end{cuidado}
+
+\section{Melhorando o jogo}
+
+\begin{exercicio}[Maçã mais rápida a cada ponto]
+Faça a maçã cair mais rápido conforme os pontos aumentam. Dica: use \variavel{pontos} no valor de queda.
+\end{exercicio}
+
+\begin{solucao}
+Troque o \bloco[scMotion]{mude y em \entrada{$-5$}} do clone por um valor que dependa dos pontos:
+\begin{pilha}
+\bk[scMotion]{mude y em \reporter{\entrada{$-3$} $-$ \reporter{\variavel{pontos} / \entrada{5}}}}
+\end{pilha}
+A cada 5 pontos, a maçã cai mais 1 passo por volta.
+\end{solucao}
+
+\begin{exercicio}[Maçã podre]
+Adicione uma segunda fantasia ``podre''. Quando a cesta pegar a podre, perde 1 vida em vez de ganhar ponto.
+\end{exercicio}
+
+\begin{solucao}
+Ao criar o clone, sorteie a fantasia:
+\begin{pilha}
+\bk[scControl]{quando eu começar como um clone}
+\bk[scLooks]{mude para a fantasia \reporter{número aleatório entre \entrada{1} e \entrada{2}}}
+\bk[scLooks]{mostre}
+\end{pilha}
+E na hora de tocar na cesta, veja qual fantasia o clone tem: \bloco[scControl]{se \booleano{\variavel{número da fantasia} = \entrada{2}} então} tira vida; \bloco[scControl]{senão} dá ponto.
+\end{solucao}
+
+\begin{exercicio}[Som de ponto]
+Toque um som toda vez que a cesta pegar uma maçã.
+\end{exercicio}
+
+\begin{solucao}
+Dentro do \bloco[scControl]{se \booleano{tocando em \menu{Cesta}?} então}, antes de apagar o clone:
+\begin{pilha}
+\bk[scSound]{inicie o som \menu{Pop}}
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Sua versão]
+Troque a maçã por outra coisa (estrelas, moedas, peixes\ldots) e a cesta por um personagem seu. Acrescente um cronômetro de 30 segundos: ao acabar, o jogo mostra os pontos.
+\end{desafio}
+
+\begin{solucao}
+Crie a variável \textbf{tempo} e use o mesmo padrão do capítulo de Variáveis:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scVariables]{defina \menu{tempo} para \entrada{30}}
+\sbc[scControl]{repita até que \booleano{\variavel{tempo} = \entrada{0}}}
+\bk[scControl]{espere \entrada{1} segundos}
+\bk[scVariables]{mude \menu{tempo} em \entrada{$-1$}}
+\sbcend
+\bk[scControl]{pare \menu{tudo}}
+\end{pilha}
+\end{solucao}

@@ -1,0 +1,155 @@
+\chapter{Cenários e Atores}
+
+\begin{objetivos}
+\begin{itemize}
+\item Adicionar novos atores e escolher cenários;
+\item Desenhar o seu próprio ator;
+\item Organizar atores nas camadas do palco.
+\end{itemize}
+\end{objetivos}
+
+\section{Adicionando atores}
+
+No canto inferior direito da tela, o botão azul redondo abre o menu de \textbf{novo ator}. Você pode:
+
+\begin{passos}
+\item \textbf{Escolher} um ator da biblioteca (animais, pessoas, objetos, letras\ldots);
+\item \textbf{Pintar} o seu próprio ator no editor de desenho;
+\item \textbf{Surpresa:} o Scratch escolhe um ator para você;
+\item \textbf{Enviar} uma imagem do computador;
+\item \textbf{Tirar uma foto} com a câmera.
+\end{passos}
+
+\begin{dica}
+Para apagar um ator, clique no pequeno \textbf{X} no canto da miniatura dele. Para dar um nome fácil, mude o campo \textbf{Ator} acima da lista.
+\end{dica}
+
+\section{Cada ator, o seu código}
+
+\begin{cuidado}
+O código fica no \textbf{ator selecionado}. Se você montar blocos com o gatinho selecionado, só o gatinho obedece! Para dar ordens a outro ator, clique nele na lista antes de montar os blocos.
+\end{cuidado}
+
+\section{Cenários}
+
+O \textbf{cenário} é o fundo do palco. Ele é o ator especial chamado \textbf{Palco}, no canto inferior direito, que não anda nem gira, mas pode ter fantasias (cenários diferentes) e código próprio.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scLooks]{mude o cenário para \menu{praia}} & troca o fundo \\
+\bloco[scLooks]{próximo cenário} & passa para o fundo seguinte \\
+\end{tabular}
+\end{center}
+
+\begin{vocabulario}[Vocabulário: cenário]
+\textbf{Cenário} é a imagem de fundo do palco, onde a história acontece. Um projeto pode ter vários cenários e trocar entre eles.
+\end{vocabulario}
+
+\section{Desenhando o seu ator}
+
+O \textbf{editor de desenho} tem ferramentas como pincel, linha, círculo, retângulo, texto e balde de tinta. Há dois modos:
+
+\begin{description}[leftmargin=!,labelwidth=3.4cm,style=nextline]
+\item[\textbf{Vetor}] O desenho é feito de formas que podem ser esticadas sem perder a qualidade. É o melhor para quem está começando.
+\item[\textbf{Bitmap}] O desenho é feito de pontinhos (pixels), como uma pintura. Dá efeitos mais livres.
+\end{description}
+
+\begin{dica}
+Clique no \textbf{ponto central} do desenho: é ele que define em torno de qual ponto o ator gira e cresce. Coloque-o no meio do ator!
+\end{dica}
+
+\section{Camadas}
+
+Se dois atores ocupam o mesmo lugar, um aparece \textbf{na frente} do outro. Isso se chama \textbf{camada}. Para mudar, use:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\bloco[scLooks]{vá para a camada da frente} & o ator vai para o topo \\
+\bloco[scLooks]{vá para trás \entrada{1} camadas} & o ator recua uma camada \\
+\end{tabular}
+\end{center}
+
+\begin{missao}[Missão 5: Conversa entre amigos]
+Adicione um segundo ator e faça os dois conversarem. O gatinho fala primeiro, o amigo responde.
+\end{missao}
+
+Para isso precisamos de um jeito de combinar \textbf{a vez de cada um}. Vamos usar o tempo: o amigo espera 2 segundos antes de responder.
+
+\begin{codigo}[Código do gatinho]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{diga \entrada{Oi! Tudo bem?} por \entrada{2} segundos}
+\end{pilha}
+\end{codigo}
+
+\begin{codigo}[Código do amigo]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scControl]{espere \entrada{2} segundos}
+\bk[scLooks]{diga \entrada{Tudo ótimo!} por \entrada{2} segundos}
+\end{pilha}
+\end{codigo}
+
+\begin{curiosidade}
+Existe um jeito mais seguro de combinar a vez de cada ator: as \textbf{mensagens}. Vamos aprender isso no capítulo sobre Eventos.
+\end{curiosidade}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Novo cenário]
+Escolha um cenário da biblioteca e faça o projeto \textbf{trocar de cenário} 1 segundo depois de a bandeira ser clicada.
+\end{exercicio}
+
+\begin{solucao}
+Esse código vai no \textbf{Palco}, não no ator.
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scControl]{espere \entrada{1} segundos}
+\bk[scLooks]{próximo cenário}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Dois amigos]
+Adicione um ator da biblioteca. Faça o gatinho andar 100 passos para a direita e o outro ator dizer ``Bem-vindo!'' depois de 1 segundo.
+\end{exercicio}
+
+\begin{solucao}
+Código do gatinho:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{mova \entrada{100} passos}
+\end{pilha}
+Código do outro ator:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scControl]{espere \entrada{1} segundos}
+\bk[scLooks]{diga \entrada{Bem-vindo!} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Quem está na frente?]
+Coloque o gatinho em cima de outro ator. Faça o gatinho \textbf{ficar atrás} dele quando a bandeira for clicada.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{vá para trás \entrada{1} camadas}
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Minha pequena história]
+Crie uma cena com \textbf{dois atores} e \textbf{dois cenários}. No primeiro cenário os atores conversam; depois o cenário muda e eles falam de novo. Desenhe um dos atores você mesmo!
+\end{desafio}
+
+\begin{solucao}
+Sugestão de código do Palco:
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scControl]{espere \entrada{5} segundos}
+\bk[scLooks]{próximo cenário}
+\end{pilha}
+O ator 1 fala logo; o ator 2 espera 2 segundos para responder; e depois que o cenário mudar, use \bloco[scControl]{espere \entrada{6} segundos} e um novo \bloco[scLooks]{diga} em cada ator.
+\end{solucao}

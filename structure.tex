@@ -1,0 +1,515 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Livro de Scratch -- arquivo de estrutura/estilo
+% Baseado na estrutura do "The Legrand Orange Book"
+% (Mathias Legrand, CC BY-NC-SA 3.0), totalmente reestilizado
+% em versao "cartoon" inspirada no Scratch.
+%
+% Compile com:  pdflatex main  (2 vezes)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACOTES BASICOS
+%----------------------------------------------------------------------------------------
+
+\usepackage[top=2.6cm,bottom=2.4cm,left=2.6cm,right=2.4cm,headsep=14pt,a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{{Pictures/}}
+\usepackage{microtype}
+\usepackage{enumitem}
+\setlist{nolistsep}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{comment}
+
+%----------------------------------------------------------------------------------------
+%	FONTE ARREDONDADA (estilo livro infantil)
+%----------------------------------------------------------------------------------------
+
+\usepackage[lining,tabular]{nunito} % fonte arredondada para todo o livro
+\renewcommand{\sfdefault}{\rmdefault} % \sffamily (titulos) tambem usa a Nunito
+\renewcommand{\familydefault}{\rmdefault}
+\linespread{1.12}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+
+%----------------------------------------------------------------------------------------
+%	CORES (paleta oficial das categorias do Scratch)
+%----------------------------------------------------------------------------------------
+
+\definecolor{scMotion}{HTML}{4C97FF}    % Movimento (azul)
+\definecolor{scLooks}{HTML}{9966FF}     % Aparencia (roxo)
+\definecolor{scSound}{HTML}{CF63CF}     % Som (rosa)
+\definecolor{scEvents}{HTML}{FFBF00}    % Eventos (amarelo)
+\definecolor{scControl}{HTML}{FFAB19}   % Controle (laranja)
+\definecolor{scSensing}{HTML}{5CB1D6}   % Sensores (azul claro)
+\definecolor{scOperators}{HTML}{59C059} % Operadores (verde)
+\definecolor{scVariables}{HTML}{FF8C1A} % Variaveis (laranja escuro)
+\definecolor{scLists}{HTML}{FF661A}     % Listas
+\definecolor{scMyBlocks}{HTML}{FF6680}  % Meus blocos (rosa/vermelho)
+\definecolor{ink}{HTML}{2B2D42}         % contorno escuro dos desenhos
+\definecolor{paper}{HTML}{F7FAFE}       % fundo do "papel quadriculado"
+\definecolor{gridc}{HTML}{DDE7F3}       % cor das linhas do quadriculado
+\definecolor{ocre}{HTML}{FFAB19}        % compatibilidade com o template original
+
+\newcommand{\chapcolorname}{scControl}  % cor do capitulo atual (muda sozinha)
+
+%----------------------------------------------------------------------------------------
+%	TIKZ E BIBLIOTECAS
+%----------------------------------------------------------------------------------------
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,shapes.symbols,shapes.misc,shadows,calc,patterns,arrows.meta,positioning}
+\usepackage[most]{tcolorbox}
+\usepackage{eso-pic}
+
+%----------------------------------------------------------------------------------------
+%	FUNDO: PAPEL QUADRICULADO + ADESIVOS NOS CANTOS
+%----------------------------------------------------------------------------------------
+
+% --- Adesivos (cada um desenha em torno de (0,0), tamanho ~1cm) ---
+\newcommand{\stkstar}[1][scEvents]{%
+  \node[star,star points=5,star point ratio=2.1,fill=white,draw=white,line width=4pt,minimum size=1cm,inner sep=0pt]{};
+  \node[star,star points=5,star point ratio=2.1,fill=#1,draw=ink,line width=.9pt,minimum size=1cm,inner sep=0pt]{};}
+
+\newcommand{\stkgear}[1][scMotion]{%
+  \node[star,star points=8,star point ratio=1.18,fill=white,draw=white,line width=4pt,minimum size=1cm,inner sep=0pt]{};
+  \node[star,star points=8,star point ratio=1.18,fill=#1,draw=ink,line width=.9pt,minimum size=1cm,inner sep=0pt]{};
+  \node[circle,fill=paper,draw=ink,line width=.9pt,minimum size=.38cm,inner sep=0pt]{};}
+
+\newcommand{\stkbulb}{%
+  \draw[fill=white,draw=white,line width=4pt,rounded corners=2pt] (0,.1) circle(.38) (-.17,-.35) rectangle (.17,-.58);
+  \foreach \a in {35,90,145}{\draw[scEvents!85!orange,line width=1.3pt,line cap=round] (0,.1)++(\a:.55) -- ++(\a:.2);}
+  \draw[fill=scEvents!55!white,draw=ink,line width=.9pt] (0,.1) circle(.38);
+  \draw[fill=gray!35,draw=ink,line width=.9pt,rounded corners=1pt] (-.17,-.35) rectangle (.17,-.58);
+  \draw[ink,line width=.7pt] (-.12,0) to[bend left] (0,.2) to[bend right] (.12,0);}
+
+\newcommand{\stkbolt}{%
+  \draw[fill=white,draw=white,line width=4pt,line join=round] (.1,.5)--(-.25,-.05)--(-.02,-.05)--(-.12,-.5)--(.27,.12)--(.04,.12)--cycle;
+  \draw[fill=scEvents,draw=ink,line width=.9pt,line join=round] (.1,.5)--(-.25,-.05)--(-.02,-.05)--(-.12,-.5)--(.27,.12)--(.04,.12)--cycle;}
+
+\newcommand{\stkbug}[1][scLooks]{%
+  \draw[fill=white,draw=white,line width=4pt] (0,0) ellipse (.3 and .36);
+  \foreach \s in {-1,1}{%
+    \foreach \y in {-.15,.05,.2}{\draw[ink,line width=.8pt] (\s*.28,\y)--(\s*.5,\y-.08);}
+    \draw[ink,line width=.8pt] (\s*.1,.3)--(\s*.2,.55);}
+  \draw[fill=#1,draw=ink,line width=.9pt] (0,0) ellipse (.3 and .36);
+  \fill[white] (-.1,.1) circle(.07) (.1,.1) circle(.07);
+  \fill[ink] (-.1,.1) circle(.03) (.1,.1) circle(.03);
+  \draw[ink,line width=.7pt,line cap=round] (-.1,-.08) to[bend right] (.1,-.08);}
+
+% --- Robozinho (mascote) --- altura ~3.9 unidades
+\newcommand{\robozinho}{%
+  \fill[ink,opacity=.14] (0,-.12) ellipse (1.25 and .2);
+  % antena
+  \draw[ink,line width=2.4pt,line cap=round] (0,3.2)--(0,3.62);
+  \draw[top color=scMyBlocks!60!white,bottom color=scMyBlocks,draw=ink,line width=1.1pt] (0,3.75) circle(.16);
+  \fill[white,opacity=.8] (-.05,3.8) circle(.04);
+  % bracos (atras do corpo)
+  \draw[ink,line width=7pt,line cap=round] (-.85,1.75)--(-1.4,1.05);
+  \draw[scMotion!25!white,line width=4.6pt,line cap=round] (-.85,1.75)--(-1.4,1.05);
+  \draw[ink,line width=7pt,line cap=round] (.85,1.75)--(1.45,2.5);
+  \draw[scMotion!25!white,line width=4.6pt,line cap=round] (.85,1.75)--(1.45,2.5);
+  \draw[top color=scControl!60!white,bottom color=scControl,draw=ink,line width=1.1pt] (-1.4,.98) circle(.22) (1.5,2.58) circle(.22);
+  % pernas e pes
+  \draw[top color=scMotion!70!white,bottom color=scMotion,draw=ink,line width=1.1pt,rounded corners=3pt] (-.55,.05) rectangle (-.14,.75) (.14,.05) rectangle (.55,.75);
+  \draw[top color=ink!60,bottom color=ink,draw=ink,line width=1.1pt,rounded corners=5pt] (-.78,-.15) rectangle (-.06,.2) (.06,-.15) rectangle (.78,.2);
+  % corpo
+  \draw[top color=white,bottom color=scMotion!18!gray!35,draw=ink,line width=1.3pt,rounded corners=11pt] (-.88,.65) rectangle (.88,2.05);
+  \fill[white,opacity=.75,rounded corners=3pt] (-.72,1.82) rectangle (-.5,1.96);
+  \draw[top color=scControl!65!white,bottom color=scControl,draw=ink,line width=1.1pt,rounded corners=5pt] (-.55,1.0) rectangle (.55,1.72);
+  \draw[white,line width=1.5pt,line join=round,line cap=round] (-.43,1.36)--(-.2,1.36)--(-.1,1.6)--(.06,1.1)--(.17,1.36)--(.43,1.36);
+  \foreach \x in {-.72,.72}{\fill[ink!70] (\x,.82) circle(.04);}
+  % pescoco
+  \draw[fill=ink!70,draw=ink,line width=.8pt] (-.28,2.02) rectangle (.28,2.2);
+  % orelhas (fones)
+  \draw[top color=scMotion!60!white,bottom color=scMotion,draw=ink,line width=1.1pt,rounded corners=4pt] (-1.3,2.3) rectangle (-.95,2.95) (.95,2.3) rectangle (1.3,2.95);
+  \fill[white,opacity=.6] (-1.22,2.75) rectangle (-1.14,2.9);
+  % cabeca
+  \draw[top color=white,bottom color=scMotion!18!gray!35,draw=ink,line width=1.3pt,rounded corners=14pt] (-1.05,2.0) rectangle (1.05,3.2);
+  \draw[fill=white,draw=ink,line width=1.1pt,rounded corners=9pt] (-.85,2.14) rectangle (.85,3.04);
+  \fill[scMotion!25!white,opacity=.5,rounded corners=6pt] (-.8,2.18) rectangle (.8,2.5);
+  % olhos
+  \foreach \x in {-.37,.37}{\fill[ink] (\x,2.76) ellipse (.13 and .16); \fill[white] (\x+.04,2.82) circle(.045);}
+  % bochechas e sorriso
+  \fill[scMyBlocks,opacity=.35] (-.62,2.52) circle(.1) (.62,2.52) circle(.1);
+  \draw[fill=ink,draw=ink,line width=1pt,line join=round] (-.26,2.52) to[out=-70,in=-110] (.26,2.52) -- cycle;
+  \fill[scMyBlocks] (-.1,2.4) to[bend left=60] (.1,2.4) -- cycle;
+  % brilhos
+  \draw[white,line width=2pt,line cap=round,opacity=.9] (-.9,3.0) to[bend left=30] (-.6,3.12);}
+
+% --- Gatinho do Scratch (estilizado) --- altura ~3.9 unidades
+\newcommand{\gatinhodesenho}{%
+  \fill[ink,opacity=.14] (0,-.1) ellipse (1.2 and .2);
+  % cauda listrada
+  \draw[ink,line width=14pt,line cap=round] (.55,.6) to[out=0,in=-80] (1.5,1.4) to[out=100,in=-20] (1.2,2.2);
+  \draw[scControl,line width=10pt,line cap=round] (.55,.6) to[out=0,in=-80] (1.5,1.4) to[out=100,in=-20] (1.2,2.2);
+  \draw[scVariables!75!black,line width=10pt,line cap=butt,dash pattern=on 3pt off 13pt,dash phase=6pt] (.55,.6) to[out=0,in=-80] (1.5,1.4) to[out=100,in=-20] (1.2,2.2);
+  % pes
+  \draw[top color=scControl!70!white,bottom color=scControl,draw=ink,line width=1.2pt,rounded corners=6pt] (-.7,-.08) rectangle (-.08,.42) (.08,-.08) rectangle (.7,.42);
+  % corpo
+  \draw[top color=scControl!75!white,bottom color=scControl!90!black,draw=ink,line width=1.3pt,rounded corners=14pt] (-.78,.2) rectangle (.78,1.85);
+  \draw[fill=white,draw=ink,line width=1pt] (0,.95) ellipse (.45 and .6);
+  \draw[scVariables!75!black,line width=3pt,line cap=round] (-.78,1.45)--(-.5,1.4) (-.78,1.15)--(-.52,1.12) (.78,1.45)--(.5,1.4) (.78,1.15)--(.52,1.12);
+  % bracos
+  \draw[ink,line width=12pt,line cap=round] (-.7,1.5)--(-1.25,.9);
+  \draw[scControl,line width=8.5pt,line cap=round] (-.7,1.5)--(-1.25,.9);
+  \draw[ink,line width=12pt,line cap=round] (.7,1.55)--(1.3,2.4);
+  \draw[scControl,line width=8.5pt,line cap=round] (.7,1.55)--(1.3,2.4);
+  \draw[fill=white,draw=ink,line width=1pt] (-1.28,.86) circle(.16) (1.33,2.46) circle(.16);
+  % orelhas
+  \draw[fill=scControl,draw=ink,line width=1.3pt,line join=round,rounded corners=3pt] (-1.1,2.65)--(-1.0,3.75)--(-.2,3.15)--cycle (1.1,2.65)--(1.0,3.75)--(.2,3.15)--cycle;
+  \draw[fill=scMyBlocks!55!white,draw=none,line join=round,rounded corners=2pt] (-.95,2.95)--(-.9,3.45)--(-.45,3.12)--cycle (.95,2.95)--(.9,3.45)--(.45,3.12)--cycle;
+  % cabeca
+  \draw[top color=scControl!75!white,bottom color=scControl,draw=ink,line width=1.3pt] (0,2.45) ellipse (1.2 and .98);
+  % listras da testa
+  \draw[scVariables!75!black,line width=2.6pt,line cap=round] (-.2,3.3)--(-.16,3.0) (0,3.37)--(0,3.05) (.2,3.3)--(.16,3.0);
+  % focinho
+  \draw[fill=white,draw=none] (0,2.05) ellipse (.62 and .42);
+  % olhos
+  \draw[fill=white,draw=ink,line width=1.1pt] (-.45,2.62) ellipse (.3 and .36) (.45,2.62) ellipse (.3 and .36);
+  \fill[ink] (-.38,2.6) ellipse (.13 and .17) (.52,2.6) ellipse (.13 and .17);
+  \fill[white] (-.34,2.68) circle(.05) (.56,2.68) circle(.05);
+  % bochechas
+  \fill[scMyBlocks,opacity=.4] (-.95,2.2) circle(.14) (.95,2.2) circle(.14);
+  % nariz e boca
+  \draw[fill=scMyBlocks,draw=ink,line width=.9pt] (0,2.28) ellipse (.12 and .08);
+  \draw[fill=ink,draw=ink,line width=1pt,line join=round] (-.3,1.98) to[out=-70,in=-110] (.3,1.98) -- cycle;
+  \fill[scMyBlocks] (-.11,1.85) to[bend left=60] (.11,1.85) -- cycle;
+  \draw[ink,line width=.9pt,line cap=round] (0,2.2)--(0,2.0);
+  % bigodes
+  \draw[ink,line width=.8pt,line cap=round] (-.7,2.15)--(-1.45,2.28) (-.7,2.05)--(-1.4,2.0) (.7,2.15)--(1.45,2.28) (.7,2.05)--(1.4,2.0);
+  % brilho
+  \draw[white,line width=2.2pt,line cap=round,opacity=.85] (-1.0,2.85) to[bend left=30] (-.7,3.1);}
+
+% Gato OFICIAL do Scratch (SVG convertido para PDF em Pictures/)
+\newcommand{\gatinho}{\fill[ink,opacity=.14] (0,-.05) ellipse (1.1 and .18);
+\node[anchor=south,inner sep=0pt,transform shape] at (0,.05) {\includegraphics[height=3.9cm]{gato_a.pdf}};}
+\newcommand{\gatinhob}{\fill[ink,opacity=.14] (0,-.05) ellipse (1.1 and .18);
+\node[anchor=south,inner sep=0pt,transform shape] at (0,.05) {\includegraphics[height=3.9cm]{gato_b.pdf}};}
+
+% Posiciona um adesivo: \put{x}{y}{escala}{rotacao}{comando}
+\newcommand{\colocar}[5]{\begin{scope}[shift={(#1,#2)},scale=#3,rotate=#4]#5\end{scope}}
+
+% --- Fundo de todas as paginas ---
+\newcommand{\fundopagina}{%
+  \begin{tikzpicture}
+    \fill[paper] (0,0) rectangle (\paperwidth,\paperheight);
+    \foreach \x in {0,.5,...,21}{\draw[gridc,line width=.3pt] (\x cm,0) -- (\x cm,\paperheight);}
+    \foreach \y in {0,.5,...,30}{\draw[gridc,line width=.3pt] (0,\y cm) -- (\paperwidth,\y cm);}
+    \ifodd\value{page}
+      \colocar{20.3}{28.9}{.95}{15}{\stkgear[scMotion]}
+      \colocar{19.0}{29.2}{.6}{-10}{\stkgear[scControl]}
+      \colocar{20.5}{27.7}{.5}{0}{\stkbolt}
+      \colocar{.9}{1.1}{.75}{-12}{\stkbulb}
+      \colocar{2.2}{.7}{.5}{20}{\stkstar[scEvents]}
+    \else
+      \colocar{.7}{28.9}{.95}{-15}{\stkgear[scLooks]}
+      \colocar{2.0}{29.2}{.6}{10}{\stkgear[scControl]}
+      \colocar{.5}{27.7}{.5}{0}{\stkbolt}
+      \colocar{20.1}{1.1}{.75}{12}{\stkbulb}
+      \colocar{18.8}{.7}{.5}{-20}{\stkstar[scEvents]}
+    \fi
+  \end{tikzpicture}}
+\AddToShipoutPictureBG{\AtPageLowerLeft{\fundopagina}}
+
+%----------------------------------------------------------------------------------------
+%	BLOCOS DO SCRATCH (para desenhar codigo no livro)
+%----------------------------------------------------------------------------------------
+
+% --- Pecas inline (encaixes redondos, menus, booleanos, variaveis) ---
+\newcommand{\entrada}[1]{\tikz[baseline=(e.base)]\node(e)[fill=white,rounded corners=7pt,text=ink,inner xsep=5pt,inner ysep=2pt,minimum width=17pt,font=\sffamily\bfseries\small]{#1};}
+\newcommand{\menu}[1]{\tikz[baseline=(e.base)]\node(e)[fill=black!20,rounded corners=3pt,text=white,inner xsep=5pt,inner ysep=2pt,font=\sffamily\bfseries\small]{#1\,\scriptsize$\blacktriangledown$};}
+\newcommand{\variavel}[1]{\tikz[baseline=(e.base)]\node(e)[fill=scVariables,draw=scVariables!60!black,line width=.7pt,rounded corners=7pt,text=white,inner xsep=5pt,inner ysep=2pt,font=\sffamily\bfseries\small]{#1};}
+\newcommand{\reporter}[2][scOperators]{\tikz[baseline=(e.base)]\node(e)[fill=#1,draw=#1!60!black,line width=.7pt,rounded corners=7pt,text=white,inner xsep=5pt,inner ysep=2pt,font=\sffamily\bfseries\small]{#2};}
+\newcommand{\booleano}[1]{\tikz[baseline=(e.base)]\node(e)[chamfered rectangle,chamfered rectangle xsep=6pt,chamfered rectangle ysep=6pt,fill=scOperators,draw=scOperators!60!black,line width=.7pt,text=white,inner xsep=3pt,inner ysep=1pt,minimum height=17pt,font=\sffamily\bfseries\small]{#1};}
+\newcommand{\bandeira}{\tikz[baseline=-1pt]{\draw[line width=1.4pt,white,line cap=round] (0,-3pt)--(0,10pt);\fill[scOperators,draw=white,line width=.5pt] (0,10pt)--(10pt,7.5pt)--(0,4pt)--cycle;}}
+
+% --- Bloco solto, inline no texto: \bloco[cor]{texto} ---
+\newcommand{\bloco}[2][scMotion]{\tikz[baseline=(b.base)]\node(b)[fill=#1,draw=#1!60!black,line width=.8pt,rounded corners=3pt,text=white,inner xsep=7pt,inner ysep=4pt,font=\sffamily\bfseries\small]{#2};}
+
+% --- Pilhas de blocos (ambiente 'pilha') ---
+\newdimen\sbx \newdimen\sby \newdimen\sbnw \newcount\sblev
+\newcommand{\sbw}{310pt}
+\tikzset{sbnode/.style={anchor=north west,inner xsep=9pt,inner ysep=0pt,align=left,text=white,font=\sffamily\bfseries\small,line width=.9pt,rounded corners=3pt}}
+
+\newcommand{\sbtabdraw}[3]{%
+  \fill[#1] (#2+10pt,#3) -- ++(3pt,-4pt) -- ++(14pt,0) -- ++(3pt,4pt) -- cycle;
+  \draw[#1!60!black,line width=.9pt] (#2+10pt,#3) -- ++(3pt,-4pt) -- ++(14pt,0) -- ++(3pt,4pt);
+  \draw[#1,line width=1.5pt] (#2+11.5pt,#3) -- ++(17pt,0);}
+\def\sbpend{}
+\newcommand{\sbsettab}[1]{\edef\sbpend{\noexpand\sbtabdraw{#1}{\the\sbx}{\the\sby}}}
+\newcommand{\sbplace}[3]{%
+  \sbnw=\sbw \advance\sbnw by -\sbx \advance\sbnw by -18pt
+  \node[sbnode,fill=#1,draw=#1!60!black,minimum height=#2,text width=\sbnw] at (\the\sbx,\the\sby) {#3};
+  \sbpend\def\sbpend{}%
+  \advance\sby by -#2\relax}
+
+% bloco comum
+\newcommand{\bk}[2][scMotion]{\sbplace{#1}{24pt}{#2}\sbsettab{#1}}
+% bloco de chapeu (eventos)
+\newcommand{\sbh}[2][scEvents]{%
+  \sbplace{#1}{32pt}{#2}%
+  \draw[fill=#1,draw=#1!60!black,line width=.9pt] (0,0) arc[start angle=180,end angle=0,x radius=46pt,y radius=15pt] -- cycle;
+  \draw[#1,line width=1.6pt] (1.2pt,0)--(90.8pt,0);
+  \sbsettab{#1}}
+% bloco em C (repita, sempre, se...)
+\newcommand{\sbc}[2][scControl]{%
+  \advance\sblev by 1
+  \sbplace{#1}{36pt}{#2}%
+  \expandafter\xdef\csname sbcc\the\sblev\endcsname{#1}%
+  \expandafter\xdef\csname sbcy\the\sblev\endcsname{\the\sby}%
+  \advance\sbx by 14pt
+  \sbsettab{#1}}
+\newcommand{\sbarm}{%
+  \edef\sbcol{\csname sbcc\the\sblev\endcsname}%
+  \fill[\sbcol] (\the\sbx-14pt,\csname sbcy\the\sblev\endcsname) rectangle (\the\sbx,\the\sby);
+  \draw[\sbcol!60!black,line width=.9pt] (\the\sbx-14pt,\csname sbcy\the\sblev\endcsname)--(\the\sbx-14pt,\the\sby) (\the\sbx,\csname sbcy\the\sblev\endcsname)--(\the\sbx,\the\sby);}
+\newcommand{\sbcelse}[1]{%
+  \sbarm
+  \advance\sbx by -14pt
+  \edef\sbcol{\csname sbcc\the\sblev\endcsname}%
+  \sbplace{\sbcol}{26pt}{#1}%
+  \expandafter\xdef\csname sbcy\the\sblev\endcsname{\the\sby}%
+  \advance\sbx by 14pt
+  \sbsettab{\sbcol}}
+\newcommand{\sbcend}[1][]{%
+  \sbarm
+  \advance\sbx by -14pt
+  \edef\sbcol{\csname sbcc\the\sblev\endcsname}%
+  \sbplace{\sbcol}{22pt}{#1}%
+  \sbsettab{\sbcol}%
+  \advance\sblev by -1 }
+
+\newenvironment{pilha}{%
+  \par\medskip\noindent\sbx=0pt \sby=0pt \sblev=0 \def\sbpend{}%
+  \begin{tikzpicture}[baseline=(current bounding box.north)]}{%
+  \sbpend\end{tikzpicture}\par\medskip}
+
+%----------------------------------------------------------------------------------------
+%	CAIXAS COLORIDAS (equivalentes aos teoremas/exercicios do template)
+%----------------------------------------------------------------------------------------
+
+\newcommand{\icolampada}{\tikz[baseline=-2pt,scale=.3,transform shape]{\stkbulb}}
+\newcommand{\icoestrela}{\tikz[baseline=-2pt,scale=.3,transform shape]{\stkstar}}
+\newcommand{\icobug}{\tikz[baseline=-2pt,scale=.3,transform shape]{\stkbug}}
+\newcommand{\icoraio}{\tikz[baseline=-2pt,scale=.3,transform shape]{\stkbolt}}
+\newcommand{\icoengrenagem}{\tikz[baseline=-2pt,scale=.3,transform shape]{\stkgear}}
+\newcommand{\icocheck}{\tikz[baseline=-2pt]{\draw[white,line width=2pt,line cap=round,line join=round] (0,0)--(3pt,-3.5pt)--(9pt,4pt);}}
+
+\tcbset{
+  caixa/.style={enhanced,breakable,arc=8pt,boxrule=1.5pt,colframe=ink,colback=white,
+    fonttitle=\sffamily\bfseries,coltitle=white,top=19pt,bottom=8pt,left=10pt,right=10pt,
+    before skip=18pt,after skip=12pt,
+    attach boxed title to top left={xshift=14pt,yshift=-\tcboxedtitleheight/2-2pt},
+    boxed title style={colback=#1,colframe=ink,boxrule=1.2pt,arc=7pt,top=3pt,bottom=3pt},
+    drop shadow=ink!22},
+}
+
+% Missao (laranja) -- objetivo / tarefa principal
+\newtcolorbox{missao}[1][Missão]{caixa=scControl,colback=scControl!9,title={\icoestrela\ #1}}
+% Dica (amarelo)
+\newtcolorbox{dica}[1][Dica]{caixa=scEvents,colback=scEvents!10,coltitle=ink,title={\icolampada\ #1}}
+% Cuidado / Bug (roxo com fita de perigo)
+\newtcolorbox{cuidado}[1][Cuidado com o Bug!]{caixa=scLooks,colback=scLooks!7,title={\icobug\ #1},
+  overlay={\fill[pattern=north east lines,pattern color=ink] ([xshift=60pt]frame.south west) rectangle ([yshift=-5pt]frame.south east);}}
+% Vocabulario (azul)
+\newtcolorbox{vocabulario}[1][Vocabulário]{caixa=scMotion,colback=scMotion!8,title={\icoengrenagem\ #1}}
+% Curiosidade (azul claro)
+\newtcolorbox{curiosidade}[1][Você sabia?]{caixa=scSensing,colback=scSensing!10,title={\icoraio\ #1}}
+% Pense assim (analogia com a vida real)
+\newtcolorbox{pensaassim}[1][Pense assim]{caixa=scSound,colback=scSound!9,title={\icolampada\ #1}}
+% Objetivos do capitulo (verde)
+\newtcolorbox{objetivos}[1][Nesta missão você vai aprender]{caixa=scOperators,colback=scOperators!9,title={\icoestrela\ #1}}
+% Definicao simples, estilo "cartao" tracejado
+\newtcolorbox{definicao}[1][]{enhanced,arc=6pt,colback=white,frame hidden,boxrule=0pt,overlay={\draw[ink!70,line width=1.1pt,dash pattern=on 5pt off 3pt,rounded corners=6pt] (frame.south west) rectangle (frame.north east);},
+  top=6pt,bottom=6pt,before skip=10pt,after skip=10pt,title={#1},fonttitle=\sffamily\bfseries,coltitle=ink,colbacktitle=white,
+  attach title to upper={\par\smallskip}}
+% Area de codigo (figura com pilhas de blocos)
+\newtcolorbox{codigo}[1][]{enhanced,breakable,arc=8pt,colback=white,colframe=ink!55,boxrule=1.1pt,
+  top=6pt,bottom=6pt,before skip=10pt,after skip=10pt,title={#1},fonttitle=\sffamily\bfseries\small,coltitle=ink,colbacktitle=ink!8,
+  attach boxed title to top left={xshift=10pt,yshift=-\tcboxedtitleheight/2},boxed title style={arc=5pt,boxrule=.8pt,colframe=ink!55},
+  halign=left}
+% Exercicio (numerado por capitulo, roxo)
+\newtcolorbox[auto counter,number within=chapter]{exercicio}[1][]{caixa=scLooks,colback=scLooks!6,
+  title={\icolampada\ Exercício~\thetcbcounter\if\relax\detokenize{#1}\relax\else:~#1\fi}}
+% Desafio (rosa)
+\newtcolorbox[auto counter,number within=chapter]{desafio}[1][]{caixa=scMyBlocks,colback=scMyBlocks!8,
+  title={\icoestrela\ Desafio~\thetcbcounter\if\relax\detokenize{#1}\relax\else:~#1\fi}}
+% Resolucao (verde)
+\newtcolorbox{resolucaobox}[1][Resolução]{caixa=scOperators,colback=scOperators!9,title={\icocheck\ #1}}
+
+% Resolucoes podem ser ligadas/desligadas em main.tex (\solucoestrue / \solucoesfalse)
+\newif\ifsolucoes
+\AtBeginDocument{%
+  \ifsolucoes
+    \specialcomment{solucao}{\begin{resolucaobox}}{\end{resolucaobox}}
+  \else
+    \excludecomment{solucao}
+  \fi}
+
+% Passo a passo com bolinhas numeradas
+\newcommand{\bolinha}[1]{\tikz[baseline=(n.base)]\node(n)[circle,fill=\chapcolorname,draw=ink,line width=.7pt,text=white,inner sep=0pt,minimum size=15pt,font=\sffamily\bfseries\small]{#1};}
+\newcommand{\estrelinha}{\tikz[baseline=-.4ex,scale=.28,transform shape]{\stkstar}}
+\newlist{passos}{enumerate}{1}
+\setlist[passos]{label={\protect\bolinha{\arabic*}},leftmargin=28pt,itemsep=5pt}
+% Lista de itens com estrelinha
+\setlist[itemize,1]{label={\protect\estrelinha},leftmargin=22pt,itemsep=3pt}
+
+%----------------------------------------------------------------------------------------
+%	TITULOS: CAPITULOS, SECOES
+%----------------------------------------------------------------------------------------
+
+\usepackage{titlesec}
+\usepackage{etoolbox}
+
+\newcommand{\setchapcolor}{%
+  \ifcase\numexpr\value{chapter}-5*(\value{chapter}/5)\relax
+    \gdef\chapcolorname{scOperators}\or % 1
+    \gdef\chapcolorname{scControl}\or   % 2
+    \gdef\chapcolorname{scMotion}\or    % 3
+    \gdef\chapcolorname{scLooks}\or     % 4
+    \gdef\chapcolorname{scMyBlocks}\else\gdef\chapcolorname{scControl}\fi}
+
+% Faixa colorida no topo da pagina do capitulo
+\newcommand{\faixacapitulo}[2]{% #1 = rotulo (ex: Capitulo 1), #2 = titulo
+  \begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
+    \fill[\chapcolorname] (0,0) rectangle (\paperwidth,-6.2cm);
+    \fill[white,opacity=.18] (\paperwidth-2cm,-6.2cm) circle(2.4cm) (3cm,-6.2cm) circle(1.5cm);
+    \draw[ink,line width=1.6pt] (0,-6.2cm)--(\paperwidth,-6.2cm);
+    \colocar{18.6cm}{-1.3cm}{.9}{10}{\stkgear[white]}
+    \colocar{17.2cm}{-.8cm}{.55}{0}{\stkstar}
+    \colocar{19.7cm}{-3.2cm}{.6}{-15}{\stkbolt}
+    \colocar{16.8cm}{-5.4cm}{.6}{15}{\stkbug}
+    \if\relax\detokenize{#1}\relax\else\node[anchor=west,fill=white,draw=ink,line width=1.3pt,rounded corners=10pt,inner xsep=12pt,inner ysep=4pt,
+      font=\sffamily\bfseries\large,text=ink] at (2.6cm,-1.9cm) {#1};\fi
+    \node[anchor=west,text width=12.2cm,align=left,text=white,font=\fontsize{30}{33}\selectfont\sffamily\bfseries] at (2.6cm,-3.9cm) {#2};
+  \end{tikzpicture}}
+
+% Capitulos: mesmo metodo do template original (redefine os "makechapterhead")
+\makeatletter
+\def\@makechapterhead#1{\setchapcolor\faixacapitulo{\chaptername\ \thechapter}{#1}\par\vspace*{3.8cm}}
+\def\@makeschapterhead#1{\gdef\chapcolorname{scMotion}\faixacapitulo{}{#1}\par\vspace*{3.8cm}}
+\makeatother
+
+\titleformat{\section}{\sffamily\bfseries\Large\color{ink}}
+  {\tikz[baseline=(n.base)]\node(n)[fill=\chapcolorname,draw=ink,line width=.8pt,text=white,rounded corners=5pt,inner xsep=6pt,inner ysep=3pt,font=\sffamily\bfseries\normalsize]{\thesection};}{.7em}{}
+\titlespacing*{\section}{0pt}{22pt plus 4pt minus 2pt}{8pt}
+\titleformat{\subsection}{\sffamily\bfseries\large\color{\chapcolorname!85!black}}
+  {\tikz[baseline=-.5ex]\fill[\chapcolorname,draw=ink,line width=.6pt] (0,0) circle(4pt);}{.6em}{}
+\titlespacing*{\subsection}{0pt}{14pt plus 3pt minus 2pt}{5pt}
+\titleformat{\subsubsection}{\sffamily\bfseries\normalsize\color{ink}}{}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{10pt}{3pt}
+
+%----------------------------------------------------------------------------------------
+%	CABECALHO / RODAPE
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{26pt}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ ·\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
+\fancyhf{}
+\newcommand{\selopagina}{\tikz[baseline=(p.base)]\node(p)[circle,fill=\chapcolorname,draw=ink,line width=.9pt,text=white,minimum size=.8cm,inner sep=0pt,font=\sffamily\bfseries]{\thepage};}
+\newcommand{\cabecalhotexto}{\textcolor{ink!75}{\sffamily\footnotesize \leftmark \quad|\quad \rightmark}}
+\newcommand{\rodapetexto}[1]{\textcolor{ink!75}{\sffamily\footnotesize #1}}
+\fancyhead[L]{\cabecalhotexto}
+\fancyhead[R]{\selopagina}
+\fancyfoot[L]{\rodapetexto{Universidade de Rio Verde}}
+\fancyfoot[C]{\rodapetexto{Engenharia de Software}}
+\fancyfoot[R]{\rodapetexto{Programação com Scratch}}
+\renewcommand{\footrule}{\vskip-\footruleskip\vskip-2.4pt{\color{\chapcolorname}\hrule height 2.4pt width\headwidth}\vskip\footruleskip}
+\renewcommand{\footrulewidth}{2.4pt}
+\fancypagestyle{plain}{\fancyhf{}%
+  \fancyhead[R]{\selopagina}%
+  \fancyfoot[L]{\rodapetexto{Universidade de Rio Verde}}%
+  \fancyfoot[C]{\rodapetexto{Engenharia de Software}}%
+  \fancyfoot[R]{\rodapetexto{Programação com Scratch}}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{2.4pt}}
+\renewcommand{\headrule}{{\color{\chapcolorname}\hrule height 2.4pt width\headwidth}\vskip-2.4pt}
+\renewcommand{\headrulewidth}{2.4pt}
+
+%----------------------------------------------------------------------------------------
+%	SUMARIO
+%----------------------------------------------------------------------------------------
+
+\usepackage{titletoc}
+\contentsmargin{0cm}
+\titlecontents{part}[0cm]{\addvspace{18pt}\sffamily\bfseries\Large\color{scLooks!85!black}}{Parte \thecontentslabel\ ---\ }{}{}
+\titlecontents{chapter}[2.3em]{\addvspace{9pt}\sffamily\bfseries\large}
+  {\color{scControl!90!black}\contentslabel{2.3em}}{\hspace*{-2.3em}}{\ \titlerule*[5pt]{.}\contentspage}
+\titlecontents{section}[4.6em]{\sffamily\small}{\contentslabel{2.3em}}{}{\ \titlerule*[4pt]{.}\contentspage}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{2}
+
+%----------------------------------------------------------------------------------------
+%	PAGINA DE PARTE (separador colorido)
+%----------------------------------------------------------------------------------------
+
+\newcommand{\parte}[2]{% #1 = titulo, #2 = subtitulo
+  \cleardoublepage
+  \refstepcounter{part}%
+  \addcontentsline{toc}{part}{\protect\numberline{\thepart}#1}%
+  \thispagestyle{empty}%
+  \begin{tikzpicture}[remember picture,overlay,shift={(current page.south west)}]
+    \fill[scLooks!22] (0,0) rectangle (\paperwidth,\paperheight);
+    \foreach \x in {0,.5,...,21}{\draw[white,opacity=.55,line width=.3pt] (\x cm,0) -- (\x cm,\paperheight);}
+    \foreach \y in {0,.5,...,30}{\draw[white,opacity=.55,line width=.3pt] (0,\y cm) -- (\paperwidth,\y cm);}
+    \node[text=scLooks!55,font=\fontsize{210}{210}\selectfont\sffamily\bfseries] at (10.5,23) {\Roman{part}};
+    \node[fill=white,draw=ink,line width=2pt,rounded corners=18pt,inner sep=20pt,text width=13cm,align=center,
+      font=\sffamily,drop shadow={ink!25}] at (10.5,15.2)
+      {{\Large\bfseries\color{scMotion!90!black}Parte \Roman{part}}\\[6pt]{\fontsize{30}{34}\selectfont\bfseries\color{ink}#1}\\[8pt]{\large\color{ink!80}#2}};
+    \colocar{4}{1.8}{1.9}{0}{\robozinho}
+    \colocar{17}{1.8}{1.8}{0}{\gatinhob}
+    \colocar{2.5}{26}{1.3}{15}{\stkgear[scMotion]}
+    \colocar{18.5}{27}{1.5}{-10}{\stkgear[scControl]}
+    \colocar{9.5}{27.7}{1}{10}{\stkstar}
+    \colocar{19}{15.5}{.9}{0}{\stkbulb}
+    \colocar{2}{16.5}{.9}{0}{\stkbug}
+  \end{tikzpicture}
+  \clearpage}
+
+%----------------------------------------------------------------------------------------
+%	CAPA
+%----------------------------------------------------------------------------------------
+
+\newcommand{\capalivro}[3]{% #1 = subtitulo, #2 = autor, #3 = faixa inferior
+  \thispagestyle{empty}
+  \begin{tikzpicture}[remember picture,overlay,shift={(current page.south west)}]
+    % titulo em letras coloridas
+    \foreach \l/\c/\r [count=\i from 0] in {S/scControl/-4, c/scMotion/3, r/scLooks/-3, a/scOperators/4, t/scMyBlocks/-4, c/scEvents/3, h/scSensing/-3}{
+      \node[rotate=\r,text=ink,font=\fontsize{96}{96}\selectfont\sffamily\bfseries] at (3.1+\i*2.4+.12,22.9-.12) {\l};
+      \node[rotate=\r,text=\c,font=\fontsize{96}{96}\selectfont\sffamily\bfseries] at (3.1+\i*2.4,22.9) {\l};}
+    \node[fill=white,draw=ink,line width=1.6pt,rounded corners=16pt,inner xsep=18pt,inner ysep=9pt,
+      font=\Large\sffamily\bfseries,text width=14cm,align=center,drop shadow={ink!25}] at (10.5,19.9) {#1};
+    \colocar{4.7}{7.4}{2.5}{0}{\robozinho}
+    \colocar{16.3}{7.4}{2.4}{0}{\gatinho}
+    \colocar{10.5}{14.2}{1.3}{8}{\stkstar}
+    \colocar{9.2}{16.6}{.9}{-12}{\stkstar[scMyBlocks]}
+    \colocar{12.2}{16.9}{.8}{14}{\stkstar[scMotion]}
+    \colocar{1.7}{18.2}{1.4}{10}{\stkgear[scMotion]}
+    \colocar{19.2}{18.3}{1.5}{-10}{\stkgear[scControl]}
+    \colocar{1.8}{25.6}{1.2}{-15}{\stkbulb}
+    \colocar{19.2}{26.2}{1.1}{15}{\stkbolt}
+    \colocar{10.6}{10.0}{1.4}{0}{\stkbug}
+    \colocar{9.4}{12.0}{1.0}{0}{\stkbug[scMyBlocks]}
+    \colocar{2.0}{4.9}{.9}{15}{\stkbolt}
+    \colocar{19.2}{5.0}{.9}{-15}{\stkstar[scMotion]}
+    % faixa inferior
+    \node[fill=scMotion,draw=ink,line width=1.8pt,rounded corners=14pt,text=white,inner xsep=24pt,inner ysep=10pt,
+      font=\Large\sffamily\bfseries,drop shadow={ink!25}] at (10.5,3.6) {#3};
+    \node[font=\normalsize\sffamily\bfseries,text=ink,align=center,text width=15cm] at (10.5,1.6) {#2};
+  \end{tikzpicture}
+  \clearpage}
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref}
+\hypersetup{hidelinks,colorlinks=false,breaklinks=true,pdftitle={Scratch - Guia Completo},pdfauthor={Autor}}

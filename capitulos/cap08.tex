@@ -1,0 +1,133 @@
+\chapter{Sensores: Percebendo o Mundo}
+
+\begin{objetivos}
+\begin{itemize}
+\item Descobrir quando um ator toca em algo ou em uma cor;
+\item Ler o teclado e a posição do mouse;
+\item Fazer perguntas ao jogador e usar a resposta.
+\end{itemize}
+\end{objetivos}
+
+\section{Os blocos azul-claros}
+
+Os blocos \bloco[scSensing]{Sensores} deixam o programa \textbf{perceber} o que acontece: se dois atores se tocam, qual tecla está apertada, onde está o mouse. Eles têm formato de \textbf{hexágono} ou \textbf{redondo}, porque \textbf{respondem} a uma pergunta ou entregam um valor.
+
+\begin{pensaassim}[Pense assim: os sentidos]
+Você usa os olhos, o tato e os ouvidos para perceber o mundo. Os sensores são os \textbf{sentidos do seu personagem}: ``estou tocando na parede?'' é o tato, ``qual tecla apertaram?'' é a audição. Sem sensores, o personagem não percebe nada ao seu redor.
+\end{pensaassim}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{@{}ll@{}}
+\booleano{tocando em \menu{borda}?} & sim ou não: está tocando? \\
+\booleano{tocando na cor \menu{cor}?} & sim ou não: está sobre essa cor? \\
+\booleano{tecla \menu{espaço} pressionada?} & sim ou não: a tecla está apertada? \\
+\booleano{mouse pressionado?} & sim ou não: o botão está apertado? \\
+\variavel{posição x do mouse} & número: onde o mouse está \\
+\end{tabular}
+\end{center}
+
+\begin{vocabulario}[Vocabulário: verdadeiro e falso]
+Os blocos hexagonais respondem sempre \textbf{verdadeiro} (sim) ou \textbf{falso} (não). Essas respostas se chamam \textbf{valores booleanos}.
+\end{vocabulario}
+
+\section{Usando um sensor com o bloco se}
+
+Um sensor sozinho não faz nada: ele precisa de um bloco que \textbf{decida}. O mais comum é o \bloco[scControl]{se \booleano{...} então}. Vamos aprender a fundo no capítulo de Condições, mas já podemos usar:
+
+\begin{codigo}[Gato assustado]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{tocando em \menu{mouse}?} então}
+\bk[scLooks]{diga \entrada{Ai!} por \entrada{0.5} segundos}
+\sbcend
+\sbcend
+\end{pilha}
+\end{codigo}
+
+\begin{dica}
+Veja que o \bloco[scControl]{se} fica \textbf{dentro} do \bloco[scControl]{sempre}. O ``sempre'' vigia o tempo todo, e o ``se'' decide o que fazer a cada olhada.
+\end{dica}
+
+\section{Perguntando ao jogador}
+
+Com \bloco[scSensing]{pergunte \entrada{Qual é o seu nome?} e espere}, o Scratch mostra uma caixinha de texto na tela. O que o jogador digitar fica guardado no bloco \variavel{resposta}.
+
+\begin{missao}[Missão 8: O gatinho curioso]
+Faça o gatinho perguntar o nome do jogador e depois cumprimentar usando a resposta.
+\end{missao}
+
+\begin{codigo}[Perguntar e cumprimentar]
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scSensing]{pergunte \entrada{Qual é o seu nome?} e espere}
+\bk[scLooks]{diga \reporter{junte \entrada{Olá, } \variavel{resposta}} por \entrada{3} segundos}
+\end{pilha}
+\end{codigo}
+
+O bloco \bloco[scOperators]{junte \entrada{Olá, } \variavel{resposta}} (da categoria Operadores) cola dois textos em um só. Se o jogador digitar ``Ana'', o gatinho diz ``Olá, Ana''.
+
+\begin{cuidado}
+Não esqueça do espaço depois da vírgula em \entrada{Olá, }, senão o gatinho vai dizer ``Olá,Ana'' tudo junto.
+\end{cuidado}
+
+\section{Hora de praticar}
+
+\begin{exercicio}[Qual é a sua idade?]
+Faça o gatinho perguntar a idade do jogador e depois dizer a resposta por 2 segundos.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scSensing]{pergunte \entrada{Qual é a sua idade?} e espere}
+\bk[scLooks]{diga \variavel{resposta} por \entrada{2} segundos}
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Siga o mouse]
+Faça o gatinho \textbf{ir para o ponteiro do mouse} o tempo todo.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\bk[scMotion]{vá para \menu{ponteiro do mouse}}
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{exercicio}[Bateu na parede]
+Faça o gatinho andar sempre, e dizer ``Ui!'' sempre que tocar na borda do palco.
+\end{exercicio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\bk[scMotion]{mova \entrada{5} passos}
+\sbc[scControl]{se \booleano{tocando em \menu{borda}?} então}
+\bk[scLooks]{diga \entrada{Ui!} por \entrada{0.5} segundos}
+\bk[scMotion]{gire \entrada{180} graus}
+\sbcend
+\sbcend
+\end{pilha}
+\end{solucao}
+
+\begin{desafio}[Adivinha a cor]
+Faça o gatinho dizer ``Estou na cor vermelha!'' sempre que estiver tocando em uma área vermelha do cenário. Dica: use \booleano{tocando na cor \menu{cor}?} e escolha a cor com o conta-gotas.
+\end{desafio}
+
+\begin{solucao}
+\begin{pilha}
+\bk[scEvents]{quando \bandeira\ for clicado}
+\sbc[scControl]{sempre}
+\sbc[scControl]{se \booleano{tocando na cor \menu{vermelho}?} então}
+\bk[scLooks]{diga \entrada{Estou na cor vermelha!}}
+\sbcend
+\sbcend
+\end{pilha}
+Depois de mover o gatinho para longe do vermelho, o balão continua na tela. Para limpá-lo, acrescente um \bloco[scLooks]{diga \entrada{}} quando ele sair.
+\end{solucao}
