@@ -5,15 +5,17 @@
 % Como compilar:  pdflatex main   (rode 2 vezes: o sumario e as
 % faixas dos capitulos precisam de duas passagens)
 %
-% Chave de resolucoes: \solucoestrue  -> mostra as caixas "Resolucao"
-%                      \solucoesfalse -> esconde (versao do aluno)
+% Atualize a versão e a data quando publicar uma revisão do livro.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[12pt,openany]{book}
 
 \input{structure}
 
-\solucoestrue % <-- troque para \solucoesfalse para esconder as resolucoes
+\newcommand{\versaodolivro}{1.0.0}
+\newcommand{\datadaversao}{18 de novembro de 2026}
+\solucoestrue
+\hypersetup{pdftitle={Scratch - O Guia Completo - v\versaodolivro}}
 
 \begin{document}
 
@@ -24,7 +26,7 @@
 \capalivro
   {O Guia Completo\\[2pt]\normalfont\normalsize do zero ao seu primeiro jogo!}
   {Gilberto Aparecido Dias Junior \\ Maycon Garcia Silva \\ Vinicius Félix de Paula}
-  {Missões · Exercícios · Resoluções}
+  {Missões · Exercícios · Resoluções · v\versaodolivro}
 
 %----------------------------------------------------------------------------------------
 %	FICHA / DIREITOS
@@ -35,7 +37,7 @@
 \noindent\textbf{Scratch: o Guia Completo}\\
 Copyright \copyright\ \the\year\ Gilberto Aparecido Dias Junior, Maycon Garcia Silva e Vinicius Félix de Paula\\[6pt]
 Scratch é um projeto do Scratch Foundation, em colaboração com o Lifelong Kindergarten Group do MIT Media Lab. Mais informações em \texttt{scratch.mit.edu}.\\[6pt]
-\textit{Primeira edição.}
+\textit{Primeira edição. Versão \versaodolivro, \datadaversao.}
 \clearpage
 
 %----------------------------------------------------------------------------------------

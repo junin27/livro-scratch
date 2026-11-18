@@ -2,7 +2,7 @@
 
 **Autores (ordem alfabética):** Gilberto Aparecido Dias Junior · Maycon Garcia Silva · Vinicius Félix de Paula
 
-**Status: todos os 20 capítulos e os apêndices estão escritos (✔).** O livro compila em `main.tex` (rode `pdflatex main` duas vezes). A chave `\solucoestrue` / `\solucoesfalse` mostra ou esconde as resoluções.
+**Status: todos os 20 capítulos e os apêndices estão escritos (✔).** O livro compila em `main.tex` (rode `pdflatex main` duas vezes). O PDF oficial inclui as resoluções. A versão e a data ficam na ficha do livro, com histórico no README.
 
 Cada capítulo segue o mesmo molde: **Objetivos → explicação com blocos desenhados → Missão (passo a passo) → Exercícios (fácil → médio) → Desafio → Resoluções**.
 
@@ -44,6 +44,3 @@ Cada capítulo segue o mesmo molde: **Objetivos → explicação com blocos dese
 - Tabela de todos os blocos por cor
 - Bugs comuns e como consertar
 - Gabarito de todos os exercícios
-
-## Próximos passos possíveis
-- Gerar a versão do aluno (`\solucoesfalse`).

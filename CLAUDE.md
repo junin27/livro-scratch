@@ -16,7 +16,7 @@ Rodapé fixo de todas as páginas: "Universidade de Rio Verde" (esquerda), "Enge
 - `structure.tex`: **todo o estilo**. Cores, blocos do Scratch desenhados em TikZ, caixas coloridas, títulos, cabeçalho/rodapé, sumário. Alterações visuais globais vão aqui.
 - `capitulos/capNN.tex`: um arquivo por capítulo (cap01 a cap20) + `apendices.tex`.
 - `Pictures/`: imagens. `PLANO_DO_LIVRO.md`: plano e status.
-- PDFs finais: `Scratch_Guia_Completo.pdf` e `Scratch_Guia_Completo_otimizado.pdf`.
+- PDF oficial: `Scratch_Guia_Completo.pdf`, com as resoluções.
 
 ## Como compilar e conferir
 
@@ -29,7 +29,7 @@ grep -c "^!" main.log                        # deve dar 0 (zero erros)
 - Sempre compile duas vezes (sumário e faixas de capítulo).
 - O log deve ter **0 erros**. Se houver erro, corrija antes de entregar.
 - Depois de mudanças visuais, abra algumas páginas do PDF e confira (cabeçalho, rodapé, caixas, quebras de página).
-- `main.pdf` e arquivos `.aux/.log/.toc/.out` são locais e estão no `.gitignore`. Para atualizar os PDFs finais, copie `main.pdf` para `Scratch_Guia_Completo.pdf` e gere a versão otimizada (ex.: PyMuPDF com `garbage=4, deflate=True, clean=True`).
+- `main.pdf` e arquivos `.aux/.log/.toc/.out` são locais e estão no `.gitignore`. Para publicar uma revisão, atualize a versão e a data em `main.tex` e no histórico do README. Após compilar, copie `main.pdf` para `Scratch_Guia_Completo.pdf`.
 
 ## Molde obrigatório de cada capítulo
 
@@ -94,5 +94,5 @@ Cada capítulo tem em média 125–170 linhas. Mantenha o tamanho e o tom pareci
 1. Leia o capítulo (e o `PLANO_DO_LIVRO.md`) antes de editar.
 2. Siga o molde e as regras de escrita acima.
 3. Compile duas vezes, confira o log e olhe as páginas alteradas.
-4. Se a mudança afetar o plano, os apêndices ou os PDFs finais, atualize também.
+4. Se a mudança afetar o plano, os apêndices ou o PDF oficial, atualize também.
 5. Diga ao autor o que mudou e o que não foi verificado.

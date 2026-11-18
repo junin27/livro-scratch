@@ -4,6 +4,8 @@
 
 Projeto da **Universidade de Rio Verde (UniRV)**, curso de **Engenharia de Software**.
 
+**[Baixar o PDF oficial](Scratch_Guia_Completo.pdf)** · Versão **1.0.0** · 18 de novembro de 2026
+
 ## Autores
 
 Em ordem alfabética:
@@ -41,8 +43,7 @@ O plano completo está em [PLANO_DO_LIVRO.md](PLANO_DO_LIVRO.md).
 │   └── apendices.tex
 ├── Pictures/                # imagens (gatinhos em SVG/PDF)
 ├── PLANO_DO_LIVRO.md        # plano e status dos capítulos
-├── Scratch_Guia_Completo.pdf             # PDF final (com resoluções)
-├── Scratch_Guia_Completo_otimizado.pdf   # PDF final comprimido
+├── Scratch_Guia_Completo.pdf # PDF oficial com resoluções
 ├── CLAUDE.md                # regras do projeto para quem usa IA (Claude Code)
 └── README.md
 ```
@@ -60,14 +61,15 @@ pdflatex main.tex
 
 O resultado é o arquivo `main.pdf`.
 
-### Versão do professor e versão do aluno
+## Histórico de versões
 
-Em [main.tex](main.tex), a chave abaixo mostra ou esconde as caixas verdes de **Resolução**:
+O livro é distribuído em um único PDF, com as resoluções nos capítulos. O número aparece na capa, na ficha e no título dos metadados. O nome do arquivo permanece estável para manter o link de download.
 
-```latex
-\solucoestrue    % mostra as resoluções (versão do professor)
-\solucoesfalse   % esconde as resoluções (versão do aluno)
-```
+| Versão | Data | Mudanças |
+|---|---|---|
+| **1.0.0** | 18/11/2026 | Primeira versão numerada. Inclui a revisão de analogias, as 20 correções de instruções e o teste individual no desafio final. A validação pós-revisão cobriu os 147 itens do livro. |
+
+Ao publicar uma revisão, atualize o número e a data em [main.tex](main.tex), registre as mudanças nesta tabela e substitua o PDF oficial pelo arquivo recompilado. Use o último número para correções pontuais (1.0.1), o número do meio para novidades didáticas (1.1.0) e o primeiro para uma nova edição (2.0.0).
 
 ## Como contribuir
 
