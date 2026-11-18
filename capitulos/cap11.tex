@@ -68,7 +68,7 @@ Faça o gatinho andar \textbf{só enquanto} a seta para a direita estiver aperta
 \bk[scEvents]{quando \bandeira\ for clicado}
 \sbc[scControl]{sempre}
 \sbc[scControl]{se \booleano{tecla \menu{seta direita} pressionada?} então}
-\bk[scMotion]{mova \entrada{5} passos}
+\bk[scMotion]{mude x em \entrada{5}}
 \bk[scLooks]{diga \entrada{} }
 \sbcelse{senão}
 \bk[scLooks]{diga \entrada{Parei}}
@@ -103,7 +103,7 @@ Um \bloco[scControl]{se} pode ficar dentro de outro. A primeira condição filtr
 \end{codigo}
 
 \begin{cuidado}
-Cuidado com a ordem! O \bloco[scControl]{se} de dentro só é olhado quando o de fora for verdadeiro. Se você inverter a ordem, o resultado muda.
+O \bloco[scControl]{se} de dentro só é verificado quando o de fora for verdadeiro. Se você inverter a ordem neste exemplo, muda qual pergunta vem primeiro. A fala ainda exige as duas condições.
 \end{cuidado}
 
 \section{Hora de praticar}
@@ -125,8 +125,8 @@ Faça o gatinho dizer ``Leve o guarda-chuva!'' se estiver tocando na cor azul (`
 \end{pilha}
 \end{solucao}
 
-\begin{exercicio}[Cabeça ou cauda]
-Faça o gatinho, ao ser clicado, perguntar a si mesmo: se o mouse estiver pressionado, diga ``Clique!''; senão, diga ``Esperando\ldots''.
+\begin{exercicio}[Mouse pressionado ou solto]
+Clique na bandeira verde. Enquanto o botão do mouse estiver pressionado, o gatinho deve dizer ``Clique!''. Ao soltar, ele deve dizer ``Esperando\ldots''.
 \end{exercicio}
 
 \begin{solucao}
@@ -150,6 +150,8 @@ Faça o gatinho andar para a direita e voltar para a esquerda ao tocar na borda,
 \begin{pilha}
 \bk[scEvents]{quando \bandeira\ for clicado}
 \bk[scMotion]{defina o estilo de rotação \menu{esquerda-direita}}
+\bk[scMotion]{vá para x: \entrada{0} y: \entrada{0}}
+\bk[scMotion]{aponte para a direção \entrada{90}}
 \sbc[scControl]{sempre}
 \bk[scMotion]{mova \entrada{5} passos}
 \bk[scMotion]{se tocar na borda, volte}

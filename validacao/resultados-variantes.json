@@ -1,0 +1,332 @@
+{
+  "motor": "@scratch/scratch-vm 15.3.0",
+  "fontes_sha256": {
+    "capitulos/cap01.tex": "a430a4617ad2216d94d815590043d0c181ea59938005e4eb202feebdf459dacb",
+    "capitulos/cap02.tex": "4826287ec7e5697a9fb2518b029b7d8340206c1c64dd822c39a43742239cd709",
+    "capitulos/cap03.tex": "98e934f3edcfbb2af1e65632943997cf41e4d3e77f2dda89400caa1912b13ea2",
+    "capitulos/cap04.tex": "59b1cf671d73295e1737878f2a624d72c36d3b989721d34df5eddf7e7f68d4ad",
+    "capitulos/cap05.tex": "9ac359bcd2625d8e878fefa002cb4a8facc47914cbd111e5fb5668bca49263f9",
+    "capitulos/cap06.tex": "37665b58a299bb83ece2ffdaacd1a3610a35547d514b17f51be9f824641087d9",
+    "capitulos/cap07.tex": "518c2bb825e63621f448dcdc4cb26ba2888498a9305fd310f05d96570b232022",
+    "capitulos/cap08.tex": "9606f7a51678010a0f9da429907fece6a5c9be4cdcc29321e7ae7eca2b6e8e9d",
+    "capitulos/cap09.tex": "a30d92ac49dba6d8ce1c38a22f4c166ae113587364d30dabc1f01fcdca54af08",
+    "capitulos/cap10.tex": "b1e8d9c3e1c91ebe0e3158f67a72eaa618e9ec5d933421640be7b90dc86cf8e7",
+    "capitulos/cap11.tex": "1e035ad67be43ee1f8085230094a81d4549293697a175516a87f53da8b060003",
+    "capitulos/cap12.tex": "448492a52aa15b8808f7e0f3b0bbac0feff2d284aa037104a8b108a388a8a452",
+    "capitulos/cap13.tex": "ef1dd682745513b8470386b45e8c0be8ffd8f0a1943ea7a27c17826e888cdd0f",
+    "capitulos/cap14.tex": "995b42e17054f12e8f7b15f9fd945ec6daa21420e3831286d215280f9cb6226d",
+    "capitulos/cap15.tex": "9ae3351d6611698df8bdf856d02960e3d976e67f9a560fd021fa37b9e83029ab",
+    "capitulos/cap16.tex": "a50f7fc1e3bc75ec2b90cd1b1b15cf08477898ecc691d0c29d46054de714457c",
+    "capitulos/cap17.tex": "adaf76d6099b09c44cde56f79aee0e3b5d80e09d03d289d42d29931bd5a50178",
+    "capitulos/cap18.tex": "b4cd57c602a99403822c3e7f7e76ca588c9e555b955ee04b29595c03f13415ab",
+    "capitulos/cap19.tex": "3e1947a4ca88965b6755c43f9120a14836ed9a3227bda7bdb9999958b3f03a3b",
+    "capitulos/cap20.tex": "2fe71ba3313b0b00dbca654b206c29a4dc72ca90155a83e1f2e7bdcf851f72a5"
+  },
+  "resultados": [
+    {
+      "projeto": "C18-quarta-pergunta",
+      "itens": [
+        "C18-EXERCICIO-01"
+      ],
+      "cenario": "Quatro pares cadastrados; responde todas corretamente",
+      "checagens": [
+        {
+          "nome": "Número de perguntas",
+          "esperado": 4,
+          "observado": 4,
+          "passou": true
+        },
+        {
+          "nome": "Pontos",
+          "esperado": 4,
+          "observado": 4,
+          "passou": true
+        },
+        {
+          "nome": "Anúncio final",
+          "esperado": "Você fez 4 pontos!",
+          "observado": "Você fez 4 pontos!",
+          "passou": true
+        }
+      ],
+      "passou": true,
+      "limite": "Motor local, sem palco gráfico. Não marca execução no navegador."
+    },
+    {
+      "projeto": "C18-mensagem-vitoria",
+      "itens": [
+        "C18-EXERCICIO-02"
+      ],
+      "cenario": "Todos os acertos",
+      "checagens": [
+        {
+          "nome": "Mensagem de encerramento",
+          "esperado": "Parabéns, você é demais!",
+          "observado": "Parabéns, você é demais!",
+          "passou": true
+        }
+      ],
+      "passou": true,
+      "limite": "Motor local, sem palco gráfico. Não marca execução no navegador."
+    },
+    {
+      "projeto": "C18-mensagem-vitoria",
+      "itens": [
+        "C18-EXERCICIO-02"
+      ],
+      "cenario": "Um erro",
+      "checagens": [
+        {
+          "nome": "Mensagem de encerramento",
+          "esperado": "Tente de novo!",
+          "observado": "Tente de novo!",
+          "passou": true
+        }
+      ],
+      "passou": true,
+      "limite": "Motor local, sem palco gráfico. Não marca execução no navegador."
+    },
+    {
+      "projeto": "C18-placar-visual",
+      "itens": [
+        "C18-DESAFIO-01"
+      ],
+      "cenario": "Ganha 3 pontos; clica na bandeira para nova partida",
+      "checagens": [
+        {
+          "nome": "Fantasia triste preparada para o início",
+          "esperado": 3,
+          "observado": 3,
+          "passou": true
+        },
+        {
+          "nome": "Fantasia alegre após o terceiro ponto",
+          "esperado": 2,
+          "observado": 2,
+          "passou": true
+        },
+        {
+          "nome": "Pontos reiniciados",
+          "esperado": 0,
+          "observado": 0,
+          "passou": true
+        },
+        {
+          "nome": "Fantasia volta a triste no reinício",
+          "esperado": 3,
+          "observado": 2,
+          "passou": false
+        }
+      ],
+      "passou": false,
+      "limite": "Motor local, sem palco gráfico. Não marca execução no navegador."
+    },
+    {
+      "projeto": "C19-recorde-inicializacao-na-bandeira",
+      "itens": [
+        "C19-DESAFIO-01"
+      ],
+      "cenario": "Isola a atualização de recorde e substitui o acionamento gráfico da vitória pela tecla V; recorde prévio de 4 segundos e nova tentativa de 9 segundos",
+      "checagens": [
+        {
+          "nome": "Recorde no início da segunda partida",
+          "esperado": 999,
+          "observado": 999,
+          "passou": true
+        },
+        {
+          "nome": "Partida mais lenta deve preservar recorde anterior",
+          "esperado": 4,
+          "observado": 9,
+          "passou": false
+        }
+      ],
+      "passou": false,
+      "limite": "Motor local, sem palco gráfico. Não marca execução no navegador."
+    },
+    {
+      "projeto": "C19-recorde-inicializacao-unica",
+      "itens": [
+        "C19-DESAFIO-01"
+      ],
+      "cenario": "Isola a atualização de recorde e substitui o acionamento gráfico da vitória pela tecla V; recorde prévio de 4 segundos e nova tentativa de 9 segundos",
+      "checagens": [
+        {
+          "nome": "Recorde no início da segunda partida",
+          "esperado": 4,
+          "observado": 4,
+          "passou": true
+        },
+        {
+          "nome": "Partida mais lenta deve preservar recorde anterior",
+          "esperado": 4,
+          "observado": 4,
+          "passou": true
+        }
+      ],
+      "passou": true,
+      "limite": "Motor local, sem palco gráfico. Não marca execução no navegador."
+    },
+    {
+      "projeto": "C20-reinicio-literal",
+      "itens": [
+        "C20-EXERCICIO-02"
+      ],
+      "cenario": "Tecla R com 9 pontos e ator em x=80",
+      "checagens": [
+        {
+          "nome": "Envia a mensagem começar",
+          "esperado": 1,
+          "observado": 1,
+          "passou": true
+        },
+        {
+          "nome": "Pontos voltam a zero",
+          "esperado": 0,
+          "observado": 9,
+          "passou": false
+        },
+        {
+          "nome": "Ator volta à posição inicial",
+          "esperado": 0,
+          "observado": 80,
+          "passou": false
+        }
+      ],
+      "passou": false,
+      "limite": "Motor local, sem palco gráfico. Não marca execução no navegador."
+    },
+    {
+      "projeto": "C20-corrida-referencia",
+      "itens": [
+        "C20-MISSAO-01",
+        "C20-EXERCICIO-01",
+        "C20-EXERCICIO-02"
+      ],
+      "cenario": "Bandeira, espaço, dois passos e R, com receptor explícito",
+      "checagens": [
+        {
+          "nome": "Bandeira exibe início",
+          "esperado": 0,
+          "observado": 0,
+          "passou": true
+        },
+        {
+          "nome": "Espaço muda para o cenário do jogo",
+          "esperado": 1,
+          "observado": 1,
+          "passou": true
+        },
+        {
+          "nome": "Dois passos somam dois pontos",
+          "esperado": 2,
+          "observado": 2,
+          "passou": true
+        },
+        {
+          "nome": "Posição mudou durante a partida",
+          "esperado": 20,
+          "observado": 20,
+          "passou": true
+        },
+        {
+          "nome": "R zera pontos",
+          "esperado": 0,
+          "observado": 0,
+          "passou": true
+        },
+        {
+          "nome": "R restaura posição",
+          "esperado": 0,
+          "observado": 0,
+          "passou": true
+        }
+      ],
+      "passou": true,
+      "limite": "Motor local, sem palco gráfico. Não marca execução no navegador."
+    },
+    {
+      "projeto": "C20-jogo-final-corrida",
+      "itens": [
+        "C20-MISSAO-01",
+        "C20-DESAFIO-01"
+      ],
+      "cenario": "R durante a corrida e depois da chegada",
+      "checagens": [
+        {
+          "nome": "Ambos avançaram antes de R",
+          "esperado": "-110,-110",
+          "observado": "-110,-110",
+          "passou": true
+        },
+        {
+          "nome": "Posições após R durante a corrida",
+          "esperado": "-165,-165",
+          "observado": "-165,-165",
+          "passou": true
+        },
+        {
+          "nome": "Gato vence após cruzar a meta",
+          "esperado": "Gato venceu!",
+          "observado": "Gato venceu!",
+          "passou": true
+        },
+        {
+          "nome": "R após a vitória restaura a largada",
+          "esperado": "-165,-165",
+          "observado": "-165,-165",
+          "passou": true
+        },
+        {
+          "nome": "Revanche começa no estado de corrida",
+          "esperado": 1,
+          "observado": 1,
+          "passou": true
+        }
+      ],
+      "passou": true,
+      "limite": "Motor local, sem palco gráfico. Não marca execução no navegador."
+    },
+    {
+      "projeto": "C20-corrida-revisada",
+      "itens": [
+        "C20-DESAFIO-01"
+      ],
+      "cenario": "R durante a corrida e depois da chegada",
+      "checagens": [
+        {
+          "nome": "Ambos avançaram antes de R",
+          "esperado": "-110,-110",
+          "observado": "-110,-110",
+          "passou": true
+        },
+        {
+          "nome": "Posições após R durante a corrida",
+          "esperado": "-110,-110",
+          "observado": "-110,-110",
+          "passou": true
+        },
+        {
+          "nome": "Gato vence após cruzar a meta",
+          "esperado": "Gato venceu!",
+          "observado": "Gato venceu!",
+          "passou": true
+        },
+        {
+          "nome": "R após a vitória restaura a largada",
+          "esperado": "-165,-165",
+          "observado": "-165,-165",
+          "passou": true
+        },
+        {
+          "nome": "Revanche começa no estado de corrida",
+          "esperado": 1,
+          "observado": 1,
+          "passou": true
+        }
+      ],
+      "passou": true,
+      "limite": "Motor local, sem palco gráfico. Não marca execução no navegador."
+    }
+  ]
+}

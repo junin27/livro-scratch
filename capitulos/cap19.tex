@@ -68,7 +68,7 @@ Um laço \bloco[scControl]{sempre} vigia as cores o tempo todo:
 \bk[scMotion]{vá para x: \entrada{$-200$} y: \entrada{150}}
 \sbcend
 \sbc[scControl]{se \booleano{tocando na cor \menu{verde}?} então}
-\bk[scLooks]{diga \entrada{Venci!}}
+\bk[scLooks]{diga \entrada{Venci!} por \entrada{2} segundos}
 \bk[scControl]{pare \menu{tudo}}
 \sbcend
 \sbcend
@@ -90,7 +90,7 @@ Para saber quanto tempo você levou, o Scratch tem o sensor \variavel{cronômetr
 \end{pilha}
 \end{codigo}
 
-Coloque o \bloco[scSensing]{zere o cronômetro} no começo do jogo e o \bloco[scLooks]{diga} na vitória.
+Coloque o \bloco[scSensing]{zere o cronômetro} no começo do jogo. Na vitória, troque o bloco que diz \emph{Venci!} pelo que mostra o tempo, antes de parar tudo.
 
 \begin{curiosidade}
 Os melhores jogadores de labirinto de verdade treinam para decorar o caminho. Tente bater o seu próprio recorde!
@@ -134,14 +134,20 @@ Conte quantas vezes o gatinho bateu na parede. Use a variável \textbf{batidas}.
 \end{solucao}
 
 \begin{exercicio}[Segunda fase]
-Quando o gatinho chegar na meta, troque para um segundo cenário com outro labirinto.
+Quando o gatinho chegar na primeira meta, troque para um segundo cenário com outro labirinto. Ao clicar na bandeira verde, a partida sempre começa na fase 1.
 \end{exercicio}
 
 \begin{solucao}
+Chame os dois cenários de \textbf{labirinto 1} e \textbf{labirinto 2}. Na pilha Vigiando as cores, logo após a bandeira, mude o cenário para \textbf{labirinto 1}. Troque o ramo da meta pelo trecho abaixo. Deixe a entrada dos dois labirintos no mesmo ponto.
 \begin{pilha}
 \sbc[scControl]{se \booleano{tocando na cor \menu{verde}?} então}
+\sbc[scControl]{se \booleano{\variavel{nome do cenário} = \entrada{labirinto 1}} então}
 \bk[scLooks]{mude o cenário para \menu{labirinto 2}}
 \bk[scMotion]{vá para x: \entrada{$-200$} y: \entrada{150}}
+\sbcelse{senão}
+\bk[scLooks]{diga \entrada{Venci!} por \entrada{2} segundos}
+\bk[scControl]{pare \menu{tudo}}
+\sbcend
 \sbcend
 \end{pilha}
 \end{solucao}
@@ -151,10 +157,11 @@ Guarde o melhor tempo numa variável \textbf{recorde}. Ao vencer, se o cronômet
 \end{desafio}
 
 \begin{solucao}
-Comece com um valor grande, como 999:
+Monte este bloco solto e clique nele uma vez para definir o recorde inicial. Clique nele de novo só quando quiser apagar o recorde. Na pilha da bandeira, zere apenas o cronômetro.
 \begin{pilha}
 \bk[scVariables]{defina \menu{recorde} para \entrada{999}}
 \end{pilha}
+Encaixe a comparação no ramo da vitória, antes da fala e da parada:
 \begin{pilha}
 \sbc[scControl]{se \booleano{\variavel{cronômetro} $<$ \variavel{recorde}} então}
 \bk[scVariables]{defina \menu{recorde} para \variavel{cronômetro}}

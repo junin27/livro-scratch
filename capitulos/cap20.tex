@@ -4,7 +4,7 @@
 \begin{itemize}
 \item Planejar um jogo criado por você do começo ao fim;
 \item Testar, achar bugs e consertar;
-\item Compartilhar o projeto com o mundo.
+\item Melhorar o projeto depois de testar e aprender como compartilhá-lo.
 \end{itemize}
 \end{objetivos}
 
@@ -13,7 +13,7 @@
 Você já sabe tudo o que precisa: movimento, aparência, som, eventos, repetições, sensores, condições, variáveis, listas, clones e blocos próprios. Chegou a hora de criar o \textbf{seu} jogo!
 
 \begin{missao}[Missão 20: Crie o seu jogo]
-Invente, planeje, programe, teste e compartilhe um jogo ou uma história interativa.
+Invente, planeje, programe e teste um jogo ou uma história interativa. Se quiser, compartilhe o projeto depois.
 \end{missao}
 
 \section{Passo 1: escolha uma ideia}
@@ -83,9 +83,9 @@ Quando o jogo estiver pronto, você pode compartilhá-lo no site do Scratch:
 
 \begin{passos}
 \item Crie uma conta gratuita em \texttt{scratch.mit.edu} (com a ajuda de um adulto);
+\item Abra a mensagem enviada pelo Scratch e clique no link para confirmar o e-mail;
 \item Dê um nome ao projeto no editor e clique em \textbf{Compartilhar};
-\item Escreva em \textbf{Instruções} como se joga e em \textbf{Notas e créditos} quem fez o quê;
-\item Peça a amigos e à família para jogarem e dizerem o que acharam.
+\item Escreva em \textbf{Instruções} como se joga e em \textbf{Notas e créditos} quem fez o quê.
 \end{passos}
 
 \begin{curiosidade}
@@ -115,17 +115,28 @@ Faça o jogo recomeçar quando o jogador apertar a tecla R.
 \end{exercicio}
 
 \begin{solucao}
-Use o evento de tecla e uma mensagem de reinício, que zera as variáveis:
+Use o evento de tecla para enviar a mesma mensagem da tela de início:
 \begin{pilha}
 \bk[scEvents]{quando a tecla \menu{r} for pressionada}
 \bk[scEvents]{envie \menu{começar}}
 \end{pilha}
+No trecho da tela de início, mova a troca para o cenário \textbf{jogo} para uma pilha do Palco que recebe \textbf{começar}. Nessa pilha, zere também o placar. Crie a variável \textbf{pontos} se quiser testar este exemplo:
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{começar}}
+\bk[scLooks]{mude o cenário para \menu{jogo}}
+\bk[scVariables]{defina \menu{pontos} para \entrada{0}}
+\end{pilha}
+Em cada ator, encaixe no receptor da mensagem os blocos que restauram a posição, a fantasia e a visibilidade inicial. Se o jogo usa vidas, tempo ou clones, restaure esses estados também. Ao encerrar uma rodada, deixe o receptor de R disponível. Se houver laços que começam com a mensagem, encerre os da rodada anterior antes de começar outra. Teste R durante e depois de uma partida e confira se a próxima começa do zero.
 \end{solucao}
 
-\begin{desafio}[O jogo final]
-Publique o seu jogo e peça a três pessoas para jogar. Anote o que elas gostaram e o que elas sugeriram. Escolha uma sugestão e melhore o jogo!
+\begin{desafio}[O jogo final: teste e melhore]
+\begin{passos}
+\item Teste seu projeto no editor. Confira se a tela inicial aparece, se os controles funcionam, se o final esperado aparece e se dá para recomeçar. Se houver dois lados ou finais diferentes, teste um de cada vez.
+\item Anote o que você esperava e o que aconteceu. Escolha uma coisa para melhorar, como a dica de um controle ou uma regra de reinício.
+\item Faça a mudança e repita o mesmo teste. Compare o antes e o depois. Confira também se ainda dá para começar, terminar e jogar outra vez.
+\end{passos}
 \end{desafio}
 
 \begin{solucao}
-Não existe uma resposta única, e esse é o objetivo! Um bom jogo se melhora com os comentários de quem joga. \textbf{Parabéns, programador!}
+Exemplo da corrida. Ao apertar R por engano durante a disputa, os dois personagens voltavam à largada. A melhoria foi aceitar R só na tela final. Para conferir, mova os personagens e aperte R no meio da corrida: eles devem manter a posição. Termine a corrida e aperte R de novo: os dois devem voltar à largada. \textbf{Parabéns, programador!}
 \end{solucao}

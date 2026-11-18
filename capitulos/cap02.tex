@@ -73,13 +73,21 @@ Faça o gatinho andar, girar, andar de novo e deslizar de volta para o centro do
 
 Imagine ter que arrastar o mesmo bloco 4 vezes! Para isso existe o bloco laranja \bloco[scControl]{repita \entrada{4} vezes}. Tudo o que estiver dentro dele é repetido.
 
+Para deixar um traço no palco, clique em \textbf{Adicionar Extensão}, no canto inferior esquerdo, e escolha \textbf{Caneta}. Apague os traços antigos, leve o gatinho ao centro e abaixe a caneta antes de percorrer os lados. No fim, levante a caneta.
+
 \begin{codigo}[Desenhando um quadrado]
 \begin{pilha}
 \sbh[scEvents]{quando \bandeira\ for clicado}
+\bk[scPen]{levante a caneta}
+\bk[scPen]{apague tudo}
+\bk[scMotion]{vá para x: \entrada{0} y: \entrada{0}}
+\bk[scMotion]{aponte para a direção \entrada{90}}
+\bk[scPen]{abaixe a caneta}
 \sbc[scControl]{repita \entrada{4} vezes}
 \bk[scMotion]{mova \entrada{100} passos}
 \bk[scMotion]{gire \entrada{90} graus}
 \sbcend
+\bk[scPen]{levante a caneta}
 \end{pilha}
 \end{codigo}
 
@@ -123,8 +131,8 @@ Desenhe um triângulo com o gatinho usando \bloco[scControl]{repita}. Dica: em u
 \end{exercicio}
 
 \begin{solucao}
+Na pilha do quadrado, mantenha a preparação e os blocos da Caneta. Troque apenas o laço por este:
 \begin{pilha}
-\sbh[scEvents]{quando \bandeira\ for clicado}
 \sbc[scControl]{repita \entrada{3} vezes}
 \bk[scMotion]{mova \entrada{100} passos}
 \bk[scMotion]{gire \entrada{120} graus}
@@ -138,8 +146,8 @@ Descubra quantas vezes repetir e quantos graus girar para desenhar um \textbf{he
 
 \begin{solucao}
 Seis lados, então repita 6 vezes, girando $360 \div 6 = 60$ graus a cada lado.
+Use a mesma pilha do quadrado e troque apenas o laço:
 \begin{pilha}
-\sbh[scEvents]{quando \bandeira\ for clicado}
 \sbc[scControl]{repita \entrada{6} vezes}
 \bk[scMotion]{mova \entrada{60} passos}
 \bk[scMotion]{gire \entrada{60} graus}

@@ -63,17 +63,23 @@ Sempre \textbf{zere} a variável quando o jogo começar, com \bloco[scVariables]
 
 \section{Variável + condição = jogo}
 
-Variáveis ficam poderosas quando combinadas com decisões. Por exemplo, dar a vitória quando os pontos chegam a 10:
+Variáveis ficam poderosas quando combinadas com decisões. Mantenha a pilha da bandeira que zera os pontos e substitua a pilha de clique pela de baixo. O placar só aceita cliques enquanto estiver abaixo de 10.
 
 \begin{codigo}[Ganhou!]
 \begin{pilha}
-\bk[scEvents]{quando \bandeira\ for clicado}
-\sbc[scControl]{sempre}
+\bk[scEvents]{quando este ator for clicado}
+\sbc[scControl]{se \booleano{\variavel{pontos} $<$ \entrada{10}} então}
+\bk[scVariables]{mude \menu{pontos} em \entrada{1}}
+\bk[scSound]{inicie o som \menu{Miau}}
 \sbc[scControl]{se \booleano{\variavel{pontos} = \entrada{10}} então}
-\bk[scLooks]{diga \entrada{Você venceu!}}
+\bk[scEvents]{envie \menu{vitória}}
+\sbcend
+\sbcend
+\end{pilha}
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{vitória}}
+\bk[scLooks]{diga \entrada{Você venceu!} por \entrada{2} segundos}
 \bk[scControl]{pare \menu{tudo}}
-\sbcend
-\sbcend
 \end{pilha}
 \end{codigo}
 
@@ -84,21 +90,24 @@ Existe também a \textbf{variável local}: ``somente para este ator''. Só aquel
 \section{Hora de praticar}
 
 \begin{exercicio}[Vidas]
-Crie a variável \textbf{vidas}, começando com 3. Cada vez que o gatinho tocar na borda, perde 1 vida.
+Crie a variável \textbf{vidas}, começando com 3. Mova o gatinho até a borda e tire-o de lá para testar. Cada novo contato tira 1 vida. Ao chegar a zero, o jogo termina.
 \end{exercicio}
 
 \begin{solucao}
 \begin{pilha}
 \bk[scEvents]{quando \bandeira\ for clicado}
 \bk[scVariables]{defina \menu{vidas} para \entrada{3}}
-\sbc[scControl]{sempre}
-\sbc[scControl]{se \booleano{tocando em \menu{borda}?} então}
+\bk[scMotion]{vá para x: \entrada{0} y: \entrada{0}}
+\sbc[scControl]{repita \entrada{3} vezes}
+\bk[scControl]{espere até que \booleano{tocando em \menu{borda}?}}
 \bk[scVariables]{mude \menu{vidas} em \entrada{$-1$}}
-\bk[scControl]{espere \entrada{1} segundos}
+\sbc[scControl]{se \booleano{\variavel{vidas} $>$ \entrada{0}} então}
+\bk[scControl]{espere até que \booleano{não (tocando na borda?)}}
 \sbcend
 \sbcend
+\bk[scControl]{pare \menu{tudo}}
 \end{pilha}
-O \bloco[scControl]{espere} evita que as vidas acabem num instante!
+Monte a segunda espera encaixando o sensor de borda dentro do operador verde \textbf{não}. Teste com as setas do capítulo 6 ou arraste o gatinho no editor. Manter o gatinho na borda conta como um único contato.
 \end{solucao}
 
 \begin{exercicio}[Contador regressivo]
@@ -143,10 +152,12 @@ Faça um jogo de apertar a barra de espaço: a cada aperto, a variável \textbf{
 \end{pilha}
 \begin{pilha}
 \bk[scEvents]{quando a tecla \menu{espaço} for pressionada}
+\sbc[scControl]{se \booleano{\variavel{pontos} $<$ \entrada{5}} então}
 \bk[scVariables]{mude \menu{pontos} em \entrada{1}}
 \sbc[scControl]{se \booleano{\variavel{pontos} = \entrada{5}} então}
-\bk[scLooks]{diga \entrada{Vitória!}}
+\bk[scLooks]{diga \entrada{Vitória!} por \entrada{2} segundos}
 \bk[scControl]{pare \menu{tudo}}
+\sbcend
 \sbcend
 \end{pilha}
 \end{solucao}

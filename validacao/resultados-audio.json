@@ -1,0 +1,701 @@
+{
+  "metodo": "Scratch VM 15.3.0 e Scratch Audio 2.0.272 renderizados localmente em WAV pelo web-audio-engine 0.13.4",
+  "extensao_musica": "Amostras oficiais de piano e caixa do pacote Scratch VM, decodificadas pelo mpg123-decoder 1.0.3.",
+  "renderizador_comparacao": "node-web-audio-api 2.2.0, OfflineAudioContext.",
+  "limite": "Sinal digital local. Não mede os alto-falantes do navegador. Em C17, fornece o cenário de colisão ao sensor; o navegador verificou essa decisão separadamente.",
+  "resultados": [
+    {
+      "projeto": "C04-miau",
+      "eventos": [
+        {
+          "som": "Miau",
+          "ator": "Gato",
+          "ms": 100,
+          "audio_ms": 101.33333333333333,
+          "volume": 100,
+          "pico": 0.9544909596443176
+        }
+      ],
+      "falas": [
+        {
+          "ms": 100,
+          "texto": "Miau!"
+        }
+      ],
+      "pico": 0.9544909596443176,
+      "variaveis": {},
+      "sb3_sha256": "f09b7347c368ac7260938bcfc6ca6b2621c266786c583cc49be49f50e02de457",
+      "arquivo": "tmp/testes-scratch/audio/C04-miau.wav"
+    },
+    {
+      "projeto": "C04-espera-miau",
+      "eventos": [
+        {
+          "som": "Miau",
+          "ator": "Gato",
+          "ms": 0,
+          "audio_ms": 0,
+          "volume": 100,
+          "pico": 0.9544909596443176
+        }
+      ],
+      "falas": [
+        {
+          "ms": 860,
+          "texto": "Pronto!"
+        }
+      ],
+      "pico": 0.9544909596443176,
+      "variaveis": {
+        "espera": 0.86
+      },
+      "sb3_sha256": "ddaa2e237a9030d2a5e283ee49fe77428499e4d8698e85eb4022f87267202b71",
+      "arquivo": "tmp/testes-scratch/audio/C04-espera-miau.wav"
+    },
+    {
+      "projeto": "C04-volume-miau",
+      "eventos": [
+        {
+          "som": "Miau",
+          "ator": "Gato",
+          "ms": 20,
+          "audio_ms": 21.333333333333332,
+          "volume": 100,
+          "pico": 0.9544909596443176
+        },
+        {
+          "som": "Miau",
+          "ator": "Gato",
+          "ms": 900,
+          "audio_ms": 901.3333333333334,
+          "volume": 80,
+          "pico": 0.7635927796363831
+        },
+        {
+          "som": "Miau",
+          "ator": "Gato",
+          "ms": 1780,
+          "audio_ms": 1781.3333333333335,
+          "volume": 60,
+          "pico": 0.5726945996284485
+        }
+      ],
+      "falas": [],
+      "pico": 0.9544909596443176,
+      "variaveis": {
+        "volume final": 40
+      },
+      "sb3_sha256": "ef7fe8af89af1da3860830dc737838f10085b58b4e9eee45ff22200eb41c42c7",
+      "arquivo": "tmp/testes-scratch/audio/C04-volume-miau.wav"
+    },
+    {
+      "projeto": "C06-espaco-miau",
+      "eventos": [
+        {
+          "som": "Miau",
+          "ator": "Gato",
+          "ms": 0,
+          "audio_ms": 0,
+          "volume": 100,
+          "pico": 0.9544909596443176
+        }
+      ],
+      "falas": [
+        {
+          "ms": 0,
+          "texto": "Pronto!"
+        }
+      ],
+      "pico": 0.9544909596443176,
+      "variaveis": {},
+      "sb3_sha256": "4cddbefe4bb2a0ad1d69876a288765911486aac50bda473d42f1d59e30980898",
+      "arquivo": "tmp/testes-scratch/audio/C06-espaco-miau.wav"
+    },
+    {
+      "projeto": "C13-cliques-com-som",
+      "eventos": [
+        {
+          "som": "Miau",
+          "ator": "Gato",
+          "ms": 100,
+          "audio_ms": 101.33333333333333,
+          "volume": 100,
+          "pico": 0.9544909596443176
+        }
+      ],
+      "falas": [],
+      "pico": 0.9544909596443176,
+      "variaveis": {
+        "pontos": 1
+      },
+      "sb3_sha256": "a772af46f58afa1af6f3e1450cd002fb737527383d6eb6b6aa5b6009ce17bc82",
+      "arquivo": "tmp/testes-scratch/audio/C13-cliques-com-som.wav"
+    },
+    {
+      "projeto": "C10-historia-com-musica",
+      "eventos": [
+        {
+          "som": "Música",
+          "ator": "Stage",
+          "ms": 0,
+          "audio_ms": 0,
+          "volume": 100,
+          "pico": 0.9520330429077148
+        },
+        {
+          "som": "Música",
+          "ator": "Stage",
+          "ms": 10140,
+          "audio_ms": 10141.333333333334,
+          "volume": 100,
+          "pico": 0.9507006406784058
+        }
+      ],
+      "falas": [
+        {
+          "ms": 0,
+          "texto": "Vamos procurar o jardim?"
+        },
+        {
+          "ms": 1660,
+          "texto": "Vou mostrar o caminho."
+        },
+        {
+          "ms": 4000,
+          "texto": "Achamos as flores!"
+        },
+        {
+          "ms": 5660,
+          "texto": "Vamos regar antes de ir."
+        },
+        {
+          "ms": 8000,
+          "texto": "Até amanhã, Robô!"
+        },
+        {
+          "ms": 9660,
+          "texto": "Até amanhã, Gato!"
+        }
+      ],
+      "pico": 0.9520330429077148,
+      "variaveis": {
+        "voltas da trilha": 1
+      },
+      "sb3_sha256": "2bc45a2677b6e7432d064a1db5f07a8137c0fdc9d1f891cf75bf5895e1854547",
+      "arquivo": "tmp/testes-scratch/audio/C10-historia-com-musica.wav"
+    },
+    {
+      "projeto": "C17-pop-coleta",
+      "eventos": [
+        {
+          "som": "Pop",
+          "ator": "Maçã",
+          "ms": 20,
+          "audio_ms": 21.333333333333332,
+          "volume": 100,
+          "pico": 0.9941597580909729
+        },
+        {
+          "som": "Pop",
+          "ator": "Maçã",
+          "ms": 1020,
+          "audio_ms": 1021.3333333333334,
+          "volume": 100,
+          "pico": 0.9941597580909729
+        },
+        {
+          "som": "Pop",
+          "ator": "Maçã",
+          "ms": 2020,
+          "audio_ms": 2021.3333333333333,
+          "volume": 100,
+          "pico": 0.9941597580909729
+        }
+      ],
+      "falas": [],
+      "pico": 0.9941597580909729,
+      "variaveis": {
+        "pontos": 3,
+        "vidas": "3",
+        "acionamentos Pop": 3
+      },
+      "sb3_sha256": "73d1361b7ffc182b1f99ce418e2a0f2645d399ccc1396b7adc604db0478a8f93",
+      "arquivo": "tmp/testes-scratch/audio/C17-pop-coleta.wav"
+    },
+    {
+      "projeto": "C17-pop-sem-coleta",
+      "eventos": [],
+      "falas": [],
+      "pico": 0,
+      "variaveis": {
+        "pontos": "0",
+        "vidas": 0,
+        "acionamentos Pop": "0"
+      },
+      "sb3_sha256": "3286ed1924242598fd35d8e81e5e3aa7b09a23b34ef7c6c3aaab06291b6b2928",
+      "arquivo": "tmp/testes-scratch/audio/C17-pop-sem-coleta.wav"
+    },
+    {
+      "projeto": "C18-quiz-sons",
+      "eventos": [
+        {
+          "som": "Collect",
+          "ator": "Gato",
+          "ms": 180,
+          "audio_ms": 181.33333333333334,
+          "volume": 100,
+          "pico": 0.6380434036254883
+        },
+        {
+          "som": "Oops",
+          "ator": "Gato",
+          "ms": 1780,
+          "audio_ms": 1781.3333333333335,
+          "volume": 100,
+          "pico": 0.5200961828231812
+        },
+        {
+          "som": "Collect",
+          "ator": "Gato",
+          "ms": 3380,
+          "audio_ms": 3381.3333333333335,
+          "volume": 100,
+          "pico": 0.6380434036254883
+        }
+      ],
+      "falas": [
+        {
+          "ms": 0,
+          "texto": "Quanto é 2 + 2?"
+        },
+        {
+          "ms": 180,
+          "texto": "Acertou!"
+        },
+        {
+          "ms": 1180,
+          "texto": "Qual é a capital do Brasil?"
+        },
+        {
+          "ms": 1780,
+          "texto": "Errou!"
+        },
+        {
+          "ms": 2780,
+          "texto": "Quantos dias tem a semana?"
+        },
+        {
+          "ms": 3380,
+          "texto": "Acertou!"
+        },
+        {
+          "ms": 4380,
+          "texto": "Você fez 2 pontos!"
+        }
+      ],
+      "pico": 0.6380434036254883,
+      "variaveis": {
+        "pontos": 2,
+        "número": 4
+      },
+      "sb3_sha256": "5b13e79bebe0a30bb9772733b7fca82026d942a106192e8abca59049359d33e0",
+      "arquivo": "tmp/testes-scratch/audio/C18-quiz-sons.wav"
+    },
+    {
+      "projeto": "C20-jogo-final-corrida",
+      "eventos": [
+        {
+          "som": "Vitória",
+          "ator": "Gato",
+          "ms": 1080,
+          "audio_ms": 1082.6666666666667,
+          "volume": 100,
+          "pico": 0.6380434036254883
+        }
+      ],
+      "falas": [
+        {
+          "ms": 1080,
+          "texto": "Gato venceu!"
+        }
+      ],
+      "pico": 0.6380434036254883,
+      "variaveis": {
+        "partida": "2"
+      },
+      "sb3_sha256": "28d9fe880a5f12e3dcdb1bb3fd8593f4d27b47145f9d53336e0e49e684a4eda9",
+      "arquivo": "tmp/testes-scratch/audio/C20-jogo-final-corrida.wav"
+    },
+    {
+      "projeto": "C04-notas",
+      "eventos": [
+        {
+          "som": "nota 60",
+          "ator": "Gato",
+          "ms": 0,
+          "audio_ms": 0,
+          "volume": 100,
+          "tempos": 0.5,
+          "pico": 0.25647813081741333
+        },
+        {
+          "som": "nota 62",
+          "ator": "Gato",
+          "ms": 500,
+          "audio_ms": 501.3333333333333,
+          "volume": 100,
+          "tempos": 0.5,
+          "pico": 0.29551583528518677
+        },
+        {
+          "som": "nota 64",
+          "ator": "Gato",
+          "ms": 1000,
+          "audio_ms": 1002.6666666666666,
+          "volume": 100,
+          "tempos": 0.5,
+          "pico": 0.2939366102218628
+        }
+      ],
+      "falas": [],
+      "pico": 0.29551583528518677,
+      "variaveis": {},
+      "sb3_sha256": "75c83ac541faf38c85bd791332d11d7b667b5ac651804ac4c27533fb05188284",
+      "arquivo": "tmp/testes-scratch/audio/C04-notas.wav"
+    },
+    {
+      "projeto": "C04-parabens",
+      "eventos": [
+        {
+          "som": "nota 67",
+          "ator": "Gato",
+          "ms": 0,
+          "audio_ms": 0,
+          "volume": 100,
+          "tempos": 0.5,
+          "pico": 0.2559497058391571
+        },
+        {
+          "som": "nota 67",
+          "ator": "Gato",
+          "ms": 500,
+          "audio_ms": 501.3333333333333,
+          "volume": 100,
+          "tempos": 0.5,
+          "pico": 0.2701156437397003
+        },
+        {
+          "som": "nota 69",
+          "ator": "Gato",
+          "ms": 1000,
+          "audio_ms": 1002.6666666666666,
+          "volume": 100,
+          "tempos": 0.5,
+          "pico": 0.25896647572517395
+        },
+        {
+          "som": "nota 67",
+          "ator": "Gato",
+          "ms": 1500,
+          "audio_ms": 1501.3333333333335,
+          "volume": 100,
+          "tempos": 0.5,
+          "pico": 0.25201255083084106
+        }
+      ],
+      "falas": [],
+      "pico": 0.2701156437397003,
+      "variaveis": {},
+      "sb3_sha256": "bed2bdf78f5837a35721cd02ed68d96710d13322df89ad4b76f8dbf4e4f1cac7",
+      "arquivo": "tmp/testes-scratch/audio/C04-parabens.wav"
+    },
+    {
+      "projeto": "C04-danca",
+      "eventos": [
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 0,
+          "audio_ms": 0,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5970789194107056
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 260,
+          "audio_ms": 261.3333333333333,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.004908319562673569
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 520,
+          "audio_ms": 522.6666666666666,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 780,
+          "audio_ms": 781.3333333333334,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5970789194107056
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 1040,
+          "audio_ms": 1040,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5965739488601685
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 1300,
+          "audio_ms": 1301.3333333333333,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.004908319562673569
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 1560,
+          "audio_ms": 1560,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5970789194107056
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 1820,
+          "audio_ms": 1821.3333333333333,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5953799486160278
+        }
+      ],
+      "falas": [],
+      "pico": 0.5970789194107056,
+      "variaveis": {},
+      "sb3_sha256": "c40757bb880cc8ef67e2b88ddd5f7f0d0859f41610348258d75bf0e4b3125a1b",
+      "arquivo": "tmp/testes-scratch/audio/C04-danca.wav",
+      "pulsos_com_sinal": 7,
+      "observacao": "O primeiro renderizador deixou janelas sem sinal. A contraprova nativa está registrada abaixo."
+    },
+    {
+      "projeto": "C07-batidas-medidas",
+      "eventos": [
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 0,
+          "audio_ms": 0,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5970789194107056
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 760,
+          "audio_ms": 762.6666666666667,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5970789194107056
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 1520,
+          "audio_ms": 1520,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5970789194107056
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 2280,
+          "audio_ms": 2280,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 3040,
+          "audio_ms": 3042.666666666667,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5970789194107056
+        }
+      ],
+      "falas": [],
+      "pico": 0.5970789194107056,
+      "variaveis": {},
+      "sb3_sha256": "d0b731d279b15527bea60fcb9a430a6a32d05181db3b1a264b5d42c66a37c61b",
+      "arquivo": "tmp/testes-scratch/audio/C07-batidas-medidas.wav",
+      "pulsos_com_sinal": 4,
+      "observacao": "O primeiro renderizador deixou janelas sem sinal. A contraprova nativa está registrada abaixo.",
+      "intervalos_ms": [
+        760,
+        760,
+        760,
+        760
+      ]
+    }
+  ],
+  "comparacao_web_audio_nativo": [
+    {
+      "projeto": "C04-danca",
+      "eventos": [
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 0,
+          "audio_ms": 0,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5966982841491699
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 260,
+          "audio_ms": 261.3333333333333,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5950775742530823
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 520,
+          "audio_ms": 520,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5960975885391235
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 780,
+          "audio_ms": 781.3333333333334,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5950775742530823
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 1040,
+          "audio_ms": 1040,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5960975885391235
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 1300,
+          "audio_ms": 1301.3333333333333,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5950775742530823
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 1560,
+          "audio_ms": 1560,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5960975885391235
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 1820,
+          "audio_ms": 1821.3333333333333,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5950775742530823
+        }
+      ],
+      "falas": [],
+      "pico": 0.5966982841491699,
+      "variaveis": {},
+      "sb3_sha256": "c40757bb880cc8ef67e2b88ddd5f7f0d0859f41610348258d75bf0e4b3125a1b",
+      "arquivo": "tmp/testes-scratch/audio/C04-danca-web-audio-nativo.wav",
+      "pulsos_com_sinal": 8
+    },
+    {
+      "projeto": "C07-batidas-medidas",
+      "eventos": [
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 0,
+          "audio_ms": 0,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5966982841491699
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 760,
+          "audio_ms": 760,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5966982841491699
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 1520,
+          "audio_ms": 1520,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5966982841491699
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 2280,
+          "audio_ms": 2280,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5966982841491699
+        },
+        {
+          "som": "tambor 1",
+          "ator": "Gato",
+          "ms": 3040,
+          "audio_ms": 3040,
+          "volume": 100,
+          "tempos": 0.25,
+          "pico": 0.5966982841491699
+        }
+      ],
+      "falas": [],
+      "pico": 0.5966982841491699,
+      "variaveis": {},
+      "sb3_sha256": "d0b731d279b15527bea60fcb9a430a6a32d05181db3b1a264b5d42c66a37c61b",
+      "arquivo": "tmp/testes-scratch/audio/C07-batidas-medidas-web-audio-nativo.wav",
+      "pulsos_com_sinal": 5
+    }
+  ]
+}

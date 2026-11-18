@@ -36,19 +36,19 @@ Ninguém abre a porta sem ouvir a campainha. O \textbf{toque} é o evento, e \te
 Faça o gatinho andar para a direita ou para a esquerda quando você apertar as setas do teclado.
 \end{missao}
 
-Para cada tecla, usamos uma pilha separada com o seu próprio bloco de evento:
+Para cada tecla, usamos uma pilha separada. Mudar x desloca o gatinho para os lados, mesmo que ele esteja apontando para cima ou para baixo.
 
 \begin{codigo}[Seta para a direita]
 \begin{pilha}
 \bk[scEvents]{quando a tecla \menu{seta para a direita} for pressionada}
-\bk[scMotion]{mova \entrada{10} passos}
+\bk[scMotion]{mude x em \entrada{10}}
 \end{pilha}
 \end{codigo}
 
 \begin{codigo}[Seta para a esquerda]
 \begin{pilha}
 \bk[scEvents]{quando a tecla \menu{seta para a esquerda} for pressionada}
-\bk[scMotion]{mova \entrada{$-10$} passos}
+\bk[scMotion]{mude x em \entrada{$-10$}}
 \end{pilha}
 \end{codigo}
 

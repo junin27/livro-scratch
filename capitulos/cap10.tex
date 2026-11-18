@@ -10,6 +10,10 @@
 
 \section{Planejando antes de programar}
 
+\begin{pensaassim}[Pense assim: combinar uma brincadeira]
+Antes de brincar de faz de conta, você combina quem será cada personagem, onde a aventura acontece e o que acontece primeiro. O roteiro guarda essas escolhas para ajudar você a montar a história no Scratch, uma parte de cada vez.
+\end{pensaassim}
+
 Todo bom projeto começa no \textbf{papel}. Antes de arrastar blocos, responda:
 
 \begin{passos}
@@ -25,7 +29,11 @@ Todo bom projeto começa no \textbf{papel}. Antes de arrastar blocos, responda:
 
 \section{Cenas e cenários}
 
-Uma \textbf{cena} é um momento da história em um mesmo lugar. Cada cena pode ter o seu cenário. Para trocar de cena, o Palco avisa os atores:
+Uma \textbf{cena} é um momento da história em um mesmo lugar. Cada cena pode ter o seu cenário. Para trocar de cena, o Palco avisa os atores.
+
+\begin{pensaassim}[Pense assim: o sinal combinado na apresentação]
+Em uma apresentação, vocês podem combinar que um aceno avisa a hora de entrar ou falar. As mensagens fazem esse papel no Scratch: os atores com código preparado para aquele aviso executam sua parte ao recebê-lo. Trocar o fundo e enviar o aviso são duas ações diferentes.
+\end{pensaassim}
 
 \begin{codigo}[O Palco comanda as cenas]
 \begin{pilha}
@@ -52,12 +60,22 @@ Personagem B:
 \begin{pilha}
 \bk[scEvents]{quando eu receber \menu{resposta}}
 \bk[scLooks]{diga \entrada{Tudo ótimo!} por \entrada{2} segundos}
-\bk[scEvents]{envie \menu{despedida}}
+\end{pilha}
+No mesmo personagem B, monte outra pilha. O Palco envia este aviso depois de trocar o cenário:
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{cena 2}}
+\bk[scLooks]{diga \entrada{Até amanhã!} por \entrada{2} segundos}
+\end{pilha}
+No personagem A, acrescente:
+\begin{pilha}
+\bk[scEvents]{quando eu receber \menu{cena 2}}
+\bk[scControl]{espere \entrada{2} segundos}
+\bk[scLooks]{diga \entrada{Até amanhã!} por \entrada{2} segundos}
 \end{pilha}
 \end{codigo}
 
 \begin{dica}
-Dê nomes claros às mensagens, como \textbf{resposta} e \textbf{despedida}, em vez de ``mensagem1'' e ``mensagem2''. Fica bem mais fácil de entender depois!
+Dê nomes claros às mensagens, como \textbf{resposta} e \textbf{cena 2}, em vez de ``mensagem1'' e ``mensagem2''. Fica bem mais fácil de entender depois!
 \end{dica}
 
 \section{Entrando e saindo de cena}
@@ -106,6 +124,7 @@ Troque o cenário depois de 5 segundos, e faça o gatinho dizer ``Chegamos à pr
 No Palco:
 \begin{pilha}
 \bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{mude o cenário para \menu{início}}
 \bk[scControl]{espere \entrada{5} segundos}
 \bk[scLooks]{mude o cenário para \menu{praia}}
 \bk[scEvents]{envie \menu{praia}}

@@ -1,0 +1,1970 @@
+{
+  "ambiente": "Editor oficial https://scratch.mit.edu/projects/editor/ no navegador integrado",
+  "resultados": [
+    {
+      "item": "C01-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "x=10, y=0, balão Olá!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C01-CODIGO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C01-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "x=50 antes da fala Cheguei!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C01-CODIGO-02.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C01-CODIGO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Durante a fala x=0; depois x=50",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C01-CODIGO-03-inicio.jpg",
+        "tmp/testes-scratch/C01-CODIGO-03-final.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C01-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Durante Oi! x=10; ao terminar x=20",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C01-DESAFIO-01-inicio.jpg",
+        "tmp/testes-scratch/C01-DESAFIO-01-final.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C01-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "x=10; fala Maria com duração configurada de 3 segundos",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C01-EXERCICIO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C01-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "x=20; fala Cheguei!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C01-EXERCICIO-02.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C01-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "x=10, y=0, balão Olá!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C01-CODIGO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C02-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Move, gira, move e desliza ao centro; final (0,0), direção 180",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C02-CODIGO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C02-CODIGO-02",
+      "metodo": "montagem manual dos blocos e clique na bandeira verde",
+      "precondicoes": {
+        "x": 0,
+        "y": 0,
+        "direcao": 90
+      },
+      "blocos": {
+        "repita": 4,
+        "mova": 100,
+        "gire": 90
+      },
+      "observado": {
+        "x": 0,
+        "y": 0,
+        "direcao": 90,
+        "traco_visivel": false
+      },
+      "contraprova": "Com uma única repetição, x=100, y=0 e direção=180, confirmando execução dos comandos.",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L01",
+      "imagem": "tmp/testes-scratch/quadrado-sem-caneta.jpg"
+    },
+    {
+      "item": "C02-DESAFIO-01",
+      "metodo": "alteração manual dos valores da pilha para os valores da resolução e clique na bandeira",
+      "precondicoes": {
+        "x": 0,
+        "y": 0,
+        "direcao": 90
+      },
+      "blocos": {
+        "repita": 6,
+        "mova": 60,
+        "gire": 60
+      },
+      "observado": {
+        "x": 0,
+        "y": 0,
+        "direcao": 90,
+        "traco_visivel": false
+      },
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L01",
+      "imagem": "tmp/testes-scratch/hexagono-sem-caneta.jpg"
+    },
+    {
+      "item": "C02-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Centro do ator em (200,150)",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C02-EXERCICIO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C02-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Retorna a (0,0), direção final -90",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C02-EXERCICIO-02.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C02-EXERCICIO-03",
+      "metodo": "alteração manual dos valores da pilha anterior para os valores da resolução e clique na bandeira",
+      "precondicoes": {
+        "x": 0,
+        "y": 0,
+        "direcao": 90
+      },
+      "blocos": {
+        "repita": 3,
+        "mova": 100,
+        "gire": 120
+      },
+      "observado": {
+        "x": 0,
+        "y": 0,
+        "direcao": 90,
+        "traco_visivel": false
+      },
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L01",
+      "imagem": "tmp/testes-scratch/triangulo-sem-caneta.jpg"
+    },
+    {
+      "item": "C02-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Move, gira, move e desliza ao centro; final (0,0), direção 180",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C02-CODIGO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C03-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Trocas de fantasia e avanço observados; final x=100",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C03-CODIGO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C03-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Laço terminou; gato com efeito de cor alterado",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C03-DESAFIO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C03-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Pensamento Que dia lindo! e, após 3 segundos, fala Vamos brincar!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C03-EXERCICIO-01-pensamento.jpg",
+        "tmp/testes-scratch/C03-EXERCICIO-01-fala.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C03-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Campo Size=200 e ator ampliado; depois Size=100 e tamanho restaurado",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C03-EXERCICIO-02-200.jpg",
+        "tmp/testes-scratch/C03-EXERCICIO-02-final.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C03-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Ator escondido no início; reaparece e termina visível após cinco ciclos",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C03-EXERCICIO-03-escondido.jpg",
+        "tmp/testes-scratch/C03-EXERCICIO-03-final.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C03-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Trocas de fantasia e avanço observados; final x=100",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C03-CODIGO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C04-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com Miau de 0,85 s carregado, o clique executou a pilha iniciar som e mostrou Miau! sem esperar o fim da amostra",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C04-miau-aba-sons.jpg",
+        "tmp/testes-scratch/C04-miau-balao.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C04-miau.wav"
+        ]
+      }
+    },
+    {
+      "item": "C04-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O monitor após cada bloco da extensão Música registrou 60, 62 e 64, na ordem",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C04-notas-monitor.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C04-notas.wav"
+        ]
+      }
+    },
+    {
+      "item": "C04-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O monitor após cada bloco de tambor registrou oito mudanças de fantasia, alternando entre 2 e 1",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C04-danca-monitor.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C04-danca-web-audio-nativo.wav"
+        ]
+      }
+    },
+    {
+      "item": "C04-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O monitor após toque até o fim registrou esperas de 0,848 s e 0,858 s em duas execuções com o Miau da biblioteca. O balão Pronto! veio depois",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C04-espera-miau-antes.jpg",
+        "tmp/testes-scratch/C04-espera-miau-pronto.jpg",
+        "tmp/testes-scratch/C04-espera-miau-monitor.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C04-espera-miau.wav"
+        ]
+      }
+    },
+    {
+      "item": "C04-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O monitor antes de cada toque registrou 100%, 80% e 60%. Depois da terceira redução, o volume ficou em 40%",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C04-volume-miau-monitor.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C04-volume-miau.wav"
+        ]
+      }
+    },
+    {
+      "item": "C04-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O monitor após cada bloco de Música registrou 67, 67, 69 e 67, na ordem",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C04-parabens-monitor.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C04-parabens.wav"
+        ]
+      }
+    },
+    {
+      "item": "C04-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com Miau de 0,85 s carregado, o clique executou a pilha iniciar som e mostrou Miau! sem esperar o fim da amostra",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C04-miau-aba-sons.jpg",
+        "tmp/testes-scratch/C04-miau-balao.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C04-miau.wav"
+        ]
+      }
+    },
+    {
+      "item": "C05-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O gato disse Oi! Tudo bem?; o amigo, representado por um robô, disse Tudo ótimo! depois da espera de dois segundos",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C05-dialogo-gato.jpg",
+        "tmp/testes-scratch/C05-dialogo-amigo.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C05-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O gato disse Oi! Tudo bem?; o amigo, representado por um robô, disse Tudo ótimo! depois da espera de dois segundos",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C05-dialogo-gato.jpg",
+        "tmp/testes-scratch/C05-dialogo-amigo.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C05-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A história preparada começou em casa, mudou para festa e mostrou as duas falas criadas para a segunda cena. Ao clicar novamente na bandeira, a primeira fala saiu em festa e o próximo cenário voltou para casa",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L13",
+      "imagens": [
+        "tmp/testes-scratch/C05-historia-casa.jpg",
+        "tmp/testes-scratch/C05-historia-gato-na-festa.jpg",
+        "tmp/testes-scratch/C05-historia-amigo-na-festa.jpg",
+        "tmp/testes-scratch/C05-historia-reinicio.jpg",
+        "tmp/testes-scratch/C05-historia-reinicio-casa.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C05-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Adicionei Beach Malibu pela biblioteca e selecionei o primeiro cenário. Logo após a bandeira, ainda aparecia início. Depois da espera, o palco mostrou Beach Malibu",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C05-biblioteca-inicio.jpg",
+        "tmp/testes-scratch/C05-biblioteca-praia.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C05-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Na orientação 90, o gato foi de x=-150 a x=-50 e o segundo ator disse Bem-vindo!. Com orientação 0, o gato manteve x=-150 e subiu até y=100. O amigo é um robô de teste",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L02",
+      "imagens": [
+        "tmp/testes-scratch/C05-dois-amigos-resultado.jpg",
+        "tmp/testes-scratch/C05-dois-amigos-direcao-zero.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C05-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com os atores sobrepostos e gato inicialmente na frente, a bandeira fez o gato recuar uma camada. O robô passou a encobrir parte do gato",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C05-camada-frente.jpg",
+        "tmp/testes-scratch/C05-camada-atras.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C05-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O gato disse Oi! Tudo bem?; o amigo, representado por um robô, disse Tudo ótimo! depois da espera de dois segundos",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C05-dialogo-gato.jpg",
+        "tmp/testes-scratch/C05-dialogo-amigo.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C06-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com direção 90, direita leva x a 10 e esquerda retorna x a 0. Com direção 0, direita leva y a 10",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L02",
+      "imagens": [
+        "tmp/testes-scratch/C06-setas-direita.jpg",
+        "tmp/testes-scratch/C06-setas-esquerda.jpg",
+        "tmp/testes-scratch/C06-setas-direcao-alterada.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C06-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com direção 90, direita leva x a 10 e esquerda retorna x a 0. Com direção 0, direita leva y a 10",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L02",
+      "imagens": [
+        "tmp/testes-scratch/C06-setas-direita.jpg",
+        "tmp/testes-scratch/C06-setas-esquerda.jpg",
+        "tmp/testes-scratch/C06-setas-direcao-alterada.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C06-CODIGO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O gato disse Sua vez! e o ator Amigo respondeu Agora sou eu! ao receber a mensagem. Ambos usaram a fantasia padrão e ficaram separados no palco",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C06-aviso-emissor.jpg",
+        "tmp/testes-scratch/C06-aviso-receptor.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C06-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A fala 1!, depois B fala 2!, depois C fala 3! Foi!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C06-cadeia-inicio.jpg",
+        "tmp/testes-scratch/C06-cadeia-B.jpg",
+        "tmp/testes-scratch/C06-cadeia-final.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C06-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Clique no ator, sem bandeira, produz Ai! Você me clicou!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C06-EXERCICIO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C06-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Cima leva y a 10; baixo retorna y a 0",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C06-EXERCICIO-02-cima.jpg",
+        "tmp/testes-scratch/C06-EXERCICIO-02-baixo.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C06-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com o Miau carregado no ator, Espaço executou a pilha de som e mostrou Pronto!",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C06-espaco-miau-balao.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C06-espaco-miau.wav"
+        ]
+      }
+    },
+    {
+      "item": "C06-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com direção 90, direita leva x a 10 e esquerda retorna x a 0. Com direção 0, direita leva y a 10",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L02",
+      "imagens": [
+        "tmp/testes-scratch/C06-setas-direita.jpg",
+        "tmp/testes-scratch/C06-setas-esquerda.jpg",
+        "tmp/testes-scratch/C06-setas-direcao-alterada.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C07-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Pilhas executadas separadamente: repita 4 encerrou em x=40; sempre continuou ativo na borda até o botão Parar",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C07-repita-quatro-resultado.jpg",
+        "tmp/testes-scratch/C07-sempre-resultado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C07-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Na direção inicial 90, a patrulha mudou para -90 e depois voltou a 90. O gato apareceu de cabeça para baixo numa das viradas, como prevê o aviso sobre estilo de rotação",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C07-patrulha-esquerda.jpg",
+        "tmp/testes-scratch/C07-patrulha-direita.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C07-CODIGO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "No cenário de teste com parede em x=70, o gato ultrapassou o obstáculo e parou na borda, em x=195",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L18",
+      "imagens": [
+        "tmp/testes-scratch/C07-parede-resultado.jpg",
+        "tmp/testes-scratch/C07-parede-atingiu-borda.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C07-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Partindo de x=120, o gato alternou fantasias durante a corrida e mostrou Cheguei! em x=200 ao alcançar a borda",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C07-corrida-quadro-1.jpg",
+        "tmp/testes-scratch/C07-corrida-quadro-2.jpg",
+        "tmp/testes-scratch/C07-corrida-cheguei.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C07-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Balões exibiram 3, 2, 1 e Já! na ordem",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C07-contagem-3.jpg",
+        "tmp/testes-scratch/C07-contagem-2.jpg",
+        "tmp/testes-scratch/C07-contagem-1.jpg",
+        "tmp/testes-scratch/C07-contagem-ja.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C07-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O gato ficou em (0,0) e a direção mudou de 120 para 160 durante a execução antes de pressionar Parar",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C07-giro-inicio.jpg",
+        "tmp/testes-scratch/C07-giro-depois.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C07-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com Música habilitada a 60 bpm, o cronômetro registrou cinco inícios do bloco de tambor em 0, 0,817, 1,573, 2,333 e 3,093 s. A saída sonora não foi ouvida",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L19",
+      "imagens": [
+        "tmp/testes-scratch/C07-batidas-instantes.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C07-batidas-medidas-web-audio-nativo.wav"
+        ]
+      }
+    },
+    {
+      "item": "C07-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Na direção inicial 90, a patrulha mudou para -90 e depois voltou a 90. O gato apareceu de cabeça para baixo numa das viradas, como prevê o aviso sobre estilo de rotação",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C07-patrulha-esquerda.jpg",
+        "tmp/testes-scratch/C07-patrulha-direita.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C08-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Ao posicionar o ponteiro longe do gato mediante clique no palco, não havia fala. Ao posicioná-lo sobre o gato, surgiu Ai!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C08-assustado-sem-ponteiro.jpg",
+        "tmp/testes-scratch/C08-assustado-no-ponteiro.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C08-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Resposta Ana resulta em Olá, Ana, com espaço",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C08-CODIGO-02.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C08-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Na faixa vermelha pura o gato falou Estou na cor vermelha!; saiu da faixa e o balão permaneceu, como informa a resolução. Na contraprova com diga vazio no senão, o balão sumiu ao sair",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C08-vermelho-literal-dentro.jpg",
+        "tmp/testes-scratch/C08-vermelho-literal-fora.jpg",
+        "tmp/testes-scratch/C08-vermelho-com-senao-dentro.jpg",
+        "tmp/testes-scratch/C08-vermelho-com-senao-fora.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C08-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Resposta à idade 10 é exibida no balão",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C08-EXERCICIO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C08-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Em dois posicionamentos no palco, o gato ficou exatamente em (100,50) e (-50,-50), conforme os campos x e y",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C08-segue-100.jpg",
+        "tmp/testes-scratch/C08-segue--50.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C08-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Partindo em x=175, o gato disse Ui! em x=195 e depois voltou na direção -90",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C08-borda-ui.jpg",
+        "tmp/testes-scratch/C08-borda-voltou.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C08-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Resposta Ana resulta em Olá, Ana, com espaço",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C08-CODIGO-02.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C09-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "As fantasias alternaram no laço enquanto x e y ficaram em zero",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C09-animacao-quadro-1.jpg",
+        "tmp/testes-scratch/C09-animacao-quadro-2.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C09-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A seta direita levou o gato de x=0 a x=10 e trocou a fantasia",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C09-andar-antes.jpg",
+        "tmp/testes-scratch/C09-andar-direita.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C09-CODIGO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A esquerda levou a x=-10 e direção -90; a direita restaurou x=0 e direção 90. A fantasia mudou; a rotação padrão virou o gato de cabeça para baixo, como o capítulo explica",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C09-lados-esquerda.jpg",
+        "tmp/testes-scratch/C09-lados-direita.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C09-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Integrei as setas da missão e o pulo. Direita levou x a 10; esquerda trouxe x a 0; cima elevou y a 50 e voltou a 0. Com rotação esquerda-direita, o gato ficou em pé ao virar",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C09-passeio-direita.jpg",
+        "tmp/testes-scratch/C09-passeio-esquerda.jpg",
+        "tmp/testes-scratch/C09-passeio-pulo.jpg",
+        "tmp/testes-scratch/C09-passeio-chao.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C09-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Monitor de teste incrementado logo após próxima fantasia registrou dez trocas e a execução terminou",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C09-danca-durante.jpg",
+        "tmp/testes-scratch/C09-danca-dez.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C09-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O campo x atingiu 150 no primeiro deslize e voltou a 0 no segundo, com y=0",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C09-deslize-direita.jpg",
+        "tmp/testes-scratch/C09-deslize-centro.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C09-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Campo Size lido em 130 durante crescimento e em 100 após término. Leitura e captura podem ocorrer em quadros diferentes",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C09-EXERCICIO-03-aumento.jpg",
+        "tmp/testes-scratch/C09-EXERCICIO-03-final.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C09-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A esquerda levou a x=-10 e direção -90; a direita restaurou x=0 e direção 90. A fantasia mudou; a rotação padrão virou o gato de cabeça para baixo, como o capítulo explica",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C09-lados-esquerda.jpg",
+        "tmp/testes-scratch/C09-lados-direita.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C10-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com o gato preparado em x=160, a bandeira ativou cena 1 e o escondeu. Ao trocar para cena 2, o gato apareceu, passou por x=60 e chegou a x=0",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C10-cenas-antes.jpg",
+        "tmp/testes-scratch/C10-cenas-durante.jpg",
+        "tmp/testes-scratch/C10-cenas-depois.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C10-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A disse Oi, tudo bem? e, ao terminar, B respondeu Tudo ótimo! na cena 1",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C10-historia-fala-A.jpg",
+        "tmp/testes-scratch/C10-historia-fala-B.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C10-CODIGO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com o gato preparado em x=160, a bandeira ativou cena 1 e o escondeu. Ao trocar para cena 2, o gato apareceu, passou por x=60 e chegou a x=0",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C10-cenas-antes.jpg",
+        "tmp/testes-scratch/C10-cenas-durante.jpg",
+        "tmp/testes-scratch/C10-cenas-depois.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C10-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Roteiro próprio com Gato e Robô desenhado. O navegador mostrou Praça, Jardim e Casa e as duas falas em cada cenário. A pilha independente chegou a uma volta da trilha de 10,14 s enquanto a terceira cena estava em execução",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C10-historia-praca-gato.jpg",
+        "tmp/testes-scratch/C10-historia-praca-robo.jpg",
+        "tmp/testes-scratch/C10-historia-jardim-gato.jpg",
+        "tmp/testes-scratch/C10-historia-jardim-robo.jpg",
+        "tmp/testes-scratch/C10-historia-casa-gato.jpg",
+        "tmp/testes-scratch/C10-historia-casa-robo.jpg",
+        "tmp/testes-scratch/C10-historia-trilha-repetida.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C10-historia-com-musica.wav"
+        ]
+      }
+    },
+    {
+      "item": "C10-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Gato, deslocado para x=-104 no teste, disse Olá, amigo!; o ator Cachorro respondeu Au au! Oi!. Os dois usaram a fantasia padrão de gato no projeto importado",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C10-gato-fala.jpg",
+        "tmp/testes-scratch/C10-cachorro-responde.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C10-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Inicialmente o palco mostrou início. Após cinco segundos a mensagem praia acionou Chegamos à praia!. Na segunda bandeira, o cenário já estava em praia durante a espera e a fala repetiu após cinco segundos",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L13",
+      "imagens": [
+        "tmp/testes-scratch/C10-duas-cenas-antes.jpg",
+        "tmp/testes-scratch/C10-duas-cenas-reinicio.jpg",
+        "tmp/testes-scratch/C10-duas-cenas-fala.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C10-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Bandeira escondeu o gato em x=200. Usando um emissor de entrar acrescentado ao Palco para o teste, o gato apareceu, passou por x=167 e terminou em x=0",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C10-surpresa-escondido.jpg",
+        "tmp/testes-scratch/C10-surpresa-durante.jpg",
+        "tmp/testes-scratch/C10-surpresa-centro.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C10-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Montagem literal com os exemplos de Palco e falas exibiu a conversa na cena 1. Cena 2 abriu sem despedida. Acrescentar um receptor de cena 2 exibiu Até amanhã! no cenário correto",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L12",
+      "imagens": [
+        "tmp/testes-scratch/C10-historia-fala-A.jpg",
+        "tmp/testes-scratch/C10-historia-fala-B.jpg",
+        "tmp/testes-scratch/C10-historia-sem-despedida.jpg",
+        "tmp/testes-scratch/C10-historia-com-despedida.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C11-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com o gato em x=175 e direção 90, a execução virou para -90 perto da borda e voltou para o centro, com x medido em 115 e depois 60",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C11-borda-virada.jpg",
+        "tmp/testes-scratch/C11-borda-retorno.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C11-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Sem pressionar Espaço, o gato disse Solto!; com a tecla mantida pressionada, disse Apertado!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C11-espaco-solto.jpg",
+        "tmp/testes-scratch/C11-espaco-apertado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C11-CODIGO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com direção 90, segurar a direita 480 ms levou x de 0 a 75. Ao soltar, x permaneceu 75 e apareceu Parei. Com direção 0, a mesma tecla fez y subir de 0 a 80 e x permaneceu 75",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L02",
+      "imagens": [
+        "tmp/testes-scratch/C11-gato-parado-inicio.jpg",
+        "tmp/testes-scratch/C11-gato-parado-final.jpg",
+        "tmp/testes-scratch/C11-gato-direcao-zero.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C11-CODIGO-04",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Na ordem do livro e na contraprova invertida, o primeiro balão apareceu só na combinação borda e tecla Espaço pressionada. Centro com ou sem Espaço e borda sem Espaço ficaram sem fala",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L14",
+      "imagens": [
+        "tmp/testes-scratch/C11-condicoes-encaixadas-centro-solto.jpg",
+        "tmp/testes-scratch/C11-condicoes-encaixadas-centro-chave.jpg",
+        "tmp/testes-scratch/C11-condicoes-encaixadas-borda-solto.jpg",
+        "tmp/testes-scratch/C11-condicoes-encaixadas-borda-chave.jpg",
+        "tmp/testes-scratch/C11-condicoes-invertidas-centro-solto.jpg",
+        "tmp/testes-scratch/C11-condicoes-invertidas-centro-chave.jpg",
+        "tmp/testes-scratch/C11-condicoes-invertidas-borda-solto.jpg",
+        "tmp/testes-scratch/C11-condicoes-invertidas-borda-chave.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C11-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Sem tecla, o gato disse Pare; com A manteve Atenção; com V manteve Pode ir. Capturas dos estados observados individualmente",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C11-semaforo-pare.jpg",
+        "tmp/testes-scratch/C11-semaforo-atencao.jpg",
+        "tmp/testes-scratch/C11-semaforo-pode-ir.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C11-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "No cenário preparado com branco e azul puro, x=0 produziu Dia de sol! e x=155 produziu Leve o guarda-chuva!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C11-guarda-sol.jpg",
+        "tmp/testes-scratch/C11-guarda-chuva-azul.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C11-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Clique antes da bandeira não iniciou fala. Após iniciar, manter o botão apertado mostrou Clique! e soltá-lo mostrou Esperando...",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L03",
+      "imagens": [
+        "tmp/testes-scratch/C11-EXERCICIO-02-clique.jpg",
+        "tmp/testes-scratch/C11-EXERCICIO-02-bandeira.jpg",
+        "tmp/testes-scratch/C11-mouse-pressionado.jpg",
+        "tmp/testes-scratch/C11-mouse-solto.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C11-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com direção inicial 90, o gato voltou da borda em pé, espelhado, na direção -90. Após parar e posicionar o gato em x=0, a bandeira manteve a direção -90 e o primeiro trecho foi para a esquerda",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L02",
+      "imagens": [
+        "tmp/testes-scratch/C11-ping-pong-virada.jpg",
+        "tmp/testes-scratch/C11-ping-pong-retorno.jpg",
+        "tmp/testes-scratch/C11-ping-pong-reinicio.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C11-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com direção 90, segurar a direita 480 ms levou x de 0 a 75. Ao soltar, x permaneceu 75 e apareceu Parei. Com direção 0, a mesma tecla fez y subir de 0 a 80 e x permaneceu 75",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L02",
+      "imagens": [
+        "tmp/testes-scratch/C11-gato-parado-inicio.jpg",
+        "tmp/testes-scratch/C11-gato-parado-final.jpg",
+        "tmp/testes-scratch/C11-gato-direcao-zero.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C12-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Cliques no gato produziram resultados distintos dentro do intervalo, incluindo 3 e 5 nas capturas verificadas. Não mede a distribuição do sorteio",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C12-dado-2.jpg",
+        "tmp/testes-scratch/C12-dado-3.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C12-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Em quatro partidas na mesma aba, 11 e 19 produziram Está na faixa!; 10 e 20 ficaram sem balão",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C12-faixa-valor-10.jpg",
+        "tmp/testes-scratch/C12-faixa-valor-11.jpg",
+        "tmp/testes-scratch/C12-faixa-valor-19.jpg",
+        "tmp/testes-scratch/C12-faixa-valor-20.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C12-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Balão mostra 28 para 12+(8*2)",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C12-EXERCICIO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C12-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "17 produz Ainda não; 18 produz Pode entrar",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C12-idade-17.jpg",
+        "tmp/testes-scratch/C12-idade-18.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C12-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com cliques no gato, observaram-se os dois ramos: Cara e Coroa",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C12-moeda-2.jpg",
+        "tmp/testes-scratch/C12-moeda-3.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C12-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Cliques no gato produziram resultados distintos dentro do intervalo, incluindo 3 e 5 nas capturas verificadas. Não mede a distribuição do sorteio",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C12-dado-2.jpg",
+        "tmp/testes-scratch/C12-dado-3.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C13-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Três cliques subiram o placar e a bandeira zerou. Na segunda variante, Meow foi carregado como Miau de 0,85 s e o clique com essa amostra vinculada marcou um ponto",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C13-cliques-tres.jpg",
+        "tmp/testes-scratch/C13-cliques-zero.jpg",
+        "tmp/testes-scratch/C13-cliques-com-som.jpg",
+        "tmp/testes-scratch/C13-cliques-aba-sons.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C13-cliques-com-som.wav"
+        ]
+      }
+    },
+    {
+      "item": "C13-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com as pilhas de placar e vitória reunidas, o décimo clique resultou em 10 pontos, a pilha parou sem balão visível e o clique seguinte pontuou 11",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L07, L15",
+      "imagens": [
+        "tmp/testes-scratch/C13-dez-antes.jpg",
+        "tmp/testes-scratch/C13-dez-sem-balao.jpg",
+        "tmp/testes-scratch/C13-dez-depois.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C13-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Quatro apertos produziram 4 pontos; o quinto marcou 5 sem balão e o sexto marcou 6 mesmo após Pare tudo. Inserir espera de dois segundos antes da parada tornou Vitória! visível",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L07, L15",
+      "imagens": [
+        "tmp/testes-scratch/C13-cinco-aperto-4.jpg",
+        "tmp/testes-scratch/C13-cinco-aperto-5.jpg",
+        "tmp/testes-scratch/C13-cinco-aperto-6.jpg",
+        "tmp/testes-scratch/C13-cinco-com-espera.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C13-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "No centro, vidas iniciou em 3. Um só contato contínuo com a borda reduziu a 1 em cerca de 1,4 s e, em execução mais longa, chegou a -7. De volta ao centro, o valor deixou de cair",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L16",
+      "imagens": [
+        "tmp/testes-scratch/C13-vidas-centro.jpg",
+        "tmp/testes-scratch/C13-vidas-um-contato.jpg",
+        "tmp/testes-scratch/C13-vidas-contato-continuo.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C13-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O relógio iniciou em 10, chegou a zero e exibiu Acabou o tempo!",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C13-tempo-dez.jpg",
+        "tmp/testes-scratch/C13-tempo-zero.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C13-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Respostas 12 e 8 ficaram nas variáveis a e b e renderam o balão 20",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C13-soma-vinte.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C13-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Após bandeira, três cliques no gato produziram 1, 2 e 3 pontos e nova bandeira zerou o placar. O som do trecho não foi verificado",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C13-cliques-tres.jpg",
+        "tmp/testes-scratch/C13-cliques-zero.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C14-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A bandeira carregou Maçã, Banana, Uva e Pera, com lista de comprimento 4. Um clique falou Pera e outros Uva. Nova bandeira manteve quatro entradas. O monitor da lista foi ativado no editor",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C14-fruta-1.jpg",
+        "tmp/testes-scratch/C14-lista-e-sorteio.jpg",
+        "tmp/testes-scratch/C14-lista-apos-bandeira.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C14-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A bandeira carregou Maçã, Banana, Uva e Pera, com lista de comprimento 4. Um clique falou Pera e outros Uva. Nova bandeira manteve quatro entradas. O monitor da lista foi ativado no editor",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C14-fruta-1.jpg",
+        "tmp/testes-scratch/C14-lista-e-sorteio.jpg",
+        "tmp/testes-scratch/C14-lista-apos-bandeira.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C14-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Lista previamente preenchida: falas Ana, Bruno e Carla em sequência",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C14-DESAFIO-01-Ana.jpg",
+        "tmp/testes-scratch/C14-DESAFIO-01-Bruno.jpg",
+        "tmp/testes-scratch/C14-DESAFIO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C14-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Segundo nome da lista: Bruno",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C14-EXERCICIO-01.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C14-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Lista do exercício anterior, com 3 itens, resulta em balão 3",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C14-EXERCICIO-02.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C14-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Três respostas Ana, Bruno, Carla. Monitor da lista marcado manualmente para observação mostrou os três itens em ordem",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C14-EXERCICIO-03.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C14-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A bandeira carregou Maçã, Banana, Uva e Pera, com lista de comprimento 4. Um clique falou Pera e outros Uva. Nova bandeira manteve quatro entradas. O monitor da lista foi ativado no editor",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C14-fruta-1.jpg",
+        "tmp/testes-scratch/C14-lista-e-sorteio.jpg",
+        "tmp/testes-scratch/C14-lista-apos-bandeira.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C15-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O original ficou escondido em y=170. Clones apareceram em posições diferentes e caíram. Em uma execução acompanhada, o primeiro nasceu em x=84, desceu na mesma coluna e desapareceu enquanto outros continuaram caindo. Parar removeu os clones",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C15-chuva-em-queda.jpg",
+        "tmp/testes-scratch/C15-chuva-parada.jpg",
+        "tmp/testes-scratch/C15-chuva-primeira-maca.jpg",
+        "tmp/testes-scratch/C15-chuva-primeira-desce.jpg",
+        "tmp/testes-scratch/C15-chuva-primeira-sumiu.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C15-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O original ficou escondido em y=170. Clones apareceram em posições diferentes e caíram. Em uma execução acompanhada, o primeiro nasceu em x=84, desceu na mesma coluna e desapareceu enquanto outros continuaram caindo. Parar removeu os clones",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C15-chuva-em-queda.jpg",
+        "tmp/testes-scratch/C15-chuva-parada.jpg",
+        "tmp/testes-scratch/C15-chuva-primeira-maca.jpg",
+        "tmp/testes-scratch/C15-chuva-primeira-desce.jpg",
+        "tmp/testes-scratch/C15-chuva-primeira-sumiu.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C15-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Em duas quedas controladas, uma maçã alinhada à cesta marcou o primeiro ponto; nas quedas fora da cesta, o total permaneceu zero. A cesta foi de x=0 a x=90 com seis setas direitas, usando os blocos do capítulo 17 para completar a montagem",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C15-coleta-primeiro-ponto.jpg",
+        "tmp/testes-scratch/C15-coleta-pontua.jpg",
+        "tmp/testes-scratch/C15-queda-sem-ponto.jpg",
+        "tmp/testes-scratch/C15-cesta-direita.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C15-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Um clique produziu um clone girado e deslocado; o gato original ficou em (0,0). O título sugere dois clones, embora o palco mostre o original e uma cópia",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L17",
+      "imagens": [
+        "tmp/testes-scratch/C15-dois-clones.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C15-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O clone criado por clique ainda estava visível logo após nascer e havia sumido após a espera de 3 segundos. O original permaneceu",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C15-clone-presente.jpg",
+        "tmp/testes-scratch/C15-clone-removido.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C15-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A bandeira criou cinco clones. Ao deslocar o original a x=230 depois do laço, ficaram visíveis cinco cópias e o original separado. As estrelas permaneceram visíveis, sem programação para piscar",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L17",
+      "imagens": [
+        "tmp/testes-scratch/C15-estrelas-antes.jpg",
+        "tmp/testes-scratch/C15-estrelas-depois.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C15-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O original ficou escondido em y=170. Clones apareceram em posições diferentes e caíram. Em uma execução acompanhada, o primeiro nasceu em x=84, desceu na mesma coluna e desapareceu enquanto outros continuaram caindo. Parar removeu os clones",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C15-chuva-em-queda.jpg",
+        "tmp/testes-scratch/C15-chuva-parada.jpg",
+        "tmp/testes-scratch/C15-chuva-primeira-maca.jpg",
+        "tmp/testes-scratch/C15-chuva-primeira-desce.jpg",
+        "tmp/testes-scratch/C15-chuva-primeira-sumiu.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C16-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Definição e chamadas a quadrado executadas juntas: o gato terminou em (100,0), direção 90, sem traço. O deslocamento final corresponde ao avanço entre as duas chamadas",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C16-quadrado-simples-resultado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C16-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Definição e chamadas a quadrado executadas juntas: o gato terminou em (100,0), direção 90, sem traço. O deslocamento final corresponde ao avanço entre as duas chamadas",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C16-quadrado-simples-resultado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C16-CODIGO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Após chamadas com 40 e 100, o gato voltou ao ponto inicial e não deixou desenho. Com os mesmos movimentos e a Caneta abaixada, apareceram os dois quadrados, com um canto em comum",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L01",
+      "imagens": [
+        "tmp/testes-scratch/C16-quadrado-parametro-resultado.jpg",
+        "tmp/testes-scratch/C16-quadrados-com-caneta-resultado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C16-CODIGO-04",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Após chamadas com 40 e 100, o gato voltou ao ponto inicial e não deixou desenho. Com os mesmos movimentos e a Caneta abaixada, apareceram os dois quadrados, com um canto em comum",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L01",
+      "imagens": [
+        "tmp/testes-scratch/C16-quadrado-parametro-resultado.jpg",
+        "tmp/testes-scratch/C16-quadrados-com-caneta-resultado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C16-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A chamada polígono (5) (60), indicada no texto, terminou em (0,0), direção 90, sem pentágono visível. O motor local registrou cinco movimentos e giros de 72 graus",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L01",
+      "imagens": [
+        "tmp/testes-scratch/C16-poligono-resultado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C16-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Seta para cima acionou pular. O campo y passou a 50 durante a espera e voltou a 0 ao terminar",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C16-pulo-alto.jpg",
+        "tmp/testes-scratch/C16-pulo-chao.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C16-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A chamada auxiliar executou triângulo com três movimentos de 80 e giros de 120. O gato voltou a (0,0), direção 90, sem desenhar no palco",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L01",
+      "imagens": [
+        "tmp/testes-scratch/C16-triangulo-resultado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C16-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com o monitor pontos habilitado, o primeiro clique levou a 5 e o segundo a 10",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C16-pontos-clique-1.jpg",
+        "tmp/testes-scratch/C16-pontos-clique-2.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C16-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Após chamadas com 40 e 100, o gato voltou ao ponto inicial e não deixou desenho. Com os mesmos movimentos e a Caneta abaixada, apareceram os dois quadrados, com um canto em comum",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L01",
+      "imagens": [
+        "tmp/testes-scratch/C16-quadrado-parametro-resultado.jpg",
+        "tmp/testes-scratch/C16-quadrados-com-caneta-resultado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C17-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Partida original com posições aleatórias terminou em pontos 2 e vidas 0, cenário Fim de jogo selecionado. Em casos controlados, pegar aumenta pontos e perder maçãs reduz vidas. Setas da cesta: x=15 e retorno a x=0",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C17-jogo-base-cenario-final.jpg",
+        "tmp/testes-scratch/C17-colisao-controlada.jpg",
+        "tmp/testes-scratch/C17-queda-controlada.jpg",
+        "tmp/testes-scratch/C17-setas.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C17-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Nova bandeira após derrota reinicia vidas em 3, mas mantém o cenário Fim de jogo. O jogo funciona, porém falta restaurar o cenário inicial",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L06",
+      "imagens": [
+        "tmp/testes-scratch/C17-reinicio-cenario.jpg",
+        "tmp/testes-scratch/C17-jogo-base-cenario-final.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C17-CODIGO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Partida original com posições aleatórias terminou em pontos 2 e vidas 0, cenário Fim de jogo selecionado. Em casos controlados, pegar aumenta pontos e perder maçãs reduz vidas. Setas da cesta: x=15 e retorno a x=0",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C17-jogo-base-cenario-final.jpg",
+        "tmp/testes-scratch/C17-colisao-controlada.jpg",
+        "tmp/testes-scratch/C17-queda-controlada.jpg",
+        "tmp/testes-scratch/C17-setas.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C17-CODIGO-04",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Partida original com posições aleatórias terminou em pontos 2 e vidas 0, cenário Fim de jogo selecionado. Em casos controlados, pegar aumenta pontos e perder maçãs reduz vidas. Setas da cesta: x=15 e retorno a x=0",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C17-jogo-base-cenario-final.jpg",
+        "tmp/testes-scratch/C17-colisao-controlada.jpg",
+        "tmp/testes-scratch/C17-queda-controlada.jpg",
+        "tmp/testes-scratch/C17-setas.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C17-CODIGO-05",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Partida original com posições aleatórias terminou em pontos 2 e vidas 0, cenário Fim de jogo selecionado. Em casos controlados, pegar aumenta pontos e perder maçãs reduz vidas. Setas da cesta: x=15 e retorno a x=0",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C17-jogo-base-cenario-final.jpg",
+        "tmp/testes-scratch/C17-colisao-controlada.jpg",
+        "tmp/testes-scratch/C17-queda-controlada.jpg",
+        "tmp/testes-scratch/C17-setas.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C17-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "No protótipo com estrela e gato, errar todas as coletas encerrou a partida com vidas=0 e tempo=26. Com todas as estrelas alinhadas ao gato, o cronômetro chegou a 0 e preservou 29 pontos no monitor preparado",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L11",
+      "imagens": [
+        "tmp/testes-scratch/C17-tempo-vidas-zero.jpg",
+        "tmp/testes-scratch/C17-tempo-zero.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C17-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Em ensaio sem colisão, dez aplicações da fórmula a partir de y=170 levaram a y=140 com 0 pontos e a y=120 com 10 pontos. Cada pilha de teste foi iniciada por clique no editor",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C17-velocidade-zero.jpg",
+        "tmp/testes-scratch/C17-velocidade-dez.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C17-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com a segunda fantasia fixada, as coletas reduziram vidas sem pontuar. Com sorteio entre fantasias 1 e 2 e maçãs alinhadas à cesta, uma partida terminou com 1 ponto e 0 vidas, exercitando os dois ramos",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C17-podre-controlada.jpg",
+        "tmp/testes-scratch/C17-fantasias-sorteadas.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C17-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Pop da biblioteca carregado na Maçã. Na queda alinhada à cesta, pontos e passagens pelo bloco Pop subiram juntos, com 13 de cada na leitura. Fora da cesta, ambos ficaram em zero até o fim das vidas",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C17-pop-coleta-resultado.jpg",
+        "tmp/testes-scratch/C17-pop-sem-coleta-resultado.jpg",
+        "tmp/testes-scratch/C17-pop-biblioteca.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C17-pop-coleta.wav",
+          "tmp/testes-scratch/audio/C17-pop-sem-coleta.wav"
+        ]
+      }
+    },
+    {
+      "item": "C17-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Nova bandeira após derrota reinicia vidas em 3, mas mantém o cenário Fim de jogo. O jogo funciona, porém falta restaurar o cenário inicial",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L06",
+      "imagens": [
+        "tmp/testes-scratch/C17-reinicio-cenario.jpg",
+        "tmp/testes-scratch/C17-jogo-base-cenario-final.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C18-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Cadastro confirmado pelo quiz integrado que apresentou as três perguntas e aceitou as três respostas",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C18-primeira-pergunta.jpg",
+        "tmp/testes-scratch/C18-integrado-todos-acertos.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C18-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Pilhas separadas: perguntas não começam pela bandeira. Ligando O jogo ao cadastro: 4, brasília e 7 resultam em Você fez 3 pontos!",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L04",
+      "imagens": [
+        "tmp/testes-scratch/C18-pilhas-separadas.jpg",
+        "tmp/testes-scratch/C18-primeira-pergunta.jpg",
+        "tmp/testes-scratch/C18-integrado-todos-acertos.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C18-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O ator começou na fantasia triste preparada no projeto de teste, mudou para alegre aos três pontos e permaneceu alegre após nova bandeira, com zero pontos",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L08",
+      "imagens": [
+        "tmp/testes-scratch/C18-placar-inicial.jpg",
+        "tmp/testes-scratch/C18-placar-tres-pontos.jpg",
+        "tmp/testes-scratch/C18-placar-reinicio.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C18-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "O quiz integrado apresentou Quantos lados tem um triângulo? como quarta pergunta. Respostas 4, Brasília, 7 e 3 resultaram em quatro pontos",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C18-quarta-pergunta-enunciado.jpg",
+        "tmp/testes-scratch/C18-quarta-pergunta-resultado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C18-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Em quiz de três perguntas, 4, Brasília e 7 exibiram Parabéns, você é demais!; na segunda partida, 4, Rio e 7 exibiram Tente de novo! com dois pontos",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C18-vitoria-tres-acertos.jpg",
+        "tmp/testes-scratch/C18-vitoria-um-erro.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C18-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com Collect e Oops da biblioteca, as respostas 4, Rio e 7 passaram pelos blocos de som na ordem Collect, Oops, Collect",
+      "status": "execucao_observada_com_audio_local",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C18-quiz-sons-resultado.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C18-quiz-sons.wav"
+        ]
+      }
+    },
+    {
+      "item": "C18-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Pilhas separadas: perguntas não começam pela bandeira. Ligando O jogo ao cadastro: 4, brasília e 7 resultam em Você fez 3 pontos!",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L04",
+      "imagens": [
+        "tmp/testes-scratch/C18-pilhas-separadas.jpg",
+        "tmp/testes-scratch/C18-primeira-pergunta.jpg",
+        "tmp/testes-scratch/C18-integrado-todos-acertos.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C19-CODIGO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Quatro teclas movimentam cinco passos: direita (-195,150), cima (-195,155), esquerda (-200,155), baixo (-200,150). Percurso até a área verde feito pelo teclado",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C19-quatro-setas.jpg",
+        "tmp/testes-scratch/C19-meta-sem-balao.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C19-CODIGO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Colisão com parede retorna a (-200,150); chegada à meta encerra a pilha, mas o balão Venci! não fica visível",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L07",
+      "imagens": [
+        "tmp/testes-scratch/C19-parede.jpg",
+        "tmp/testes-scratch/C19-meta-sem-balao.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C19-CODIGO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com reset no início e fala temporizada antes de parar, chegada controlada à meta exibiu Tempo: 0.697 no navegador",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C19-cronometro-vitoria.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C19-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com a meta acionada pelos campos de posição, inicializar 999 na bandeira apagou o recorde de 0,848 s e aceitou 8,028 s na segunda tentativa. Inicializando 999 uma única vez, a segunda tentativa preservou o recorde de 0,8 s da primeira",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L09",
+      "imagens": [
+        "tmp/testes-scratch/C19-recorde-na-bandeira-primeira.jpg",
+        "tmp/testes-scratch/C19-recorde-na-bandeira-segunda-inicio.jpg",
+        "tmp/testes-scratch/C19-recorde-na-bandeira-segunda-final.jpg",
+        "tmp/testes-scratch/C19-recorde-uma-vez-primeira.jpg",
+        "tmp/testes-scratch/C19-recorde-uma-vez-segunda-final.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C19-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Gato posicionado em (80,-130) no corredor livre. Conforme o fantasma se deslocou pelo corredor, o gato foi devolvido a (-200,150)",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C19-fantasma-aproxima.jpg",
+        "tmp/testes-scratch/C19-fantasma-volta-inicio.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C19-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Duas colocações controladas sobre a parede resultaram em batidas=2, sem reset indevido do contador; ator retornou ao início",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C19-batidas.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C19-EXERCICIO-03",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "A partir de labirinto 1, após bandeira verde, a colocação controlada na meta (170,-130) ativou labirinto 2 e devolveu o gato a (-200,150). Nova bandeira manteve labirinto 2",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L10",
+      "imagens": [
+        "tmp/testes-scratch/C19-segunda-fase.jpg",
+        "tmp/testes-scratch/C19-segunda-fase-reinicio.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C19-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Colisão com parede retorna a (-200,150); chegada à meta encerra a pilha, mas o balão Venci! não fica visível",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L07",
+      "imagens": [
+        "tmp/testes-scratch/C19-parede.jpg",
+        "tmp/testes-scratch/C19-meta-sem-balao.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C20-DESAFIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Corrida local entre Gato (A) e Robô (L). Espaço abriu a pista, ambos os atores venceram em partidas diferentes, teclas de movimento ficaram inativas no menu e após a vitória, R reiniciou a disputa e a bandeira restaurou o menu. Teste funcional feito pelo agente",
+      "status": "execucao_parcial_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C20-corrida-menu-teclas.jpg",
+        "tmp/testes-scratch/C20-corrida-largada.jpg",
+        "tmp/testes-scratch/C20-corrida-gato-venceu.jpg",
+        "tmp/testes-scratch/C20-corrida-entrada-bloqueada.jpg",
+        "tmp/testes-scratch/C20-corrida-reiniciada.jpg",
+        "tmp/testes-scratch/C20-corrida-robo-venceu.jpg",
+        "tmp/testes-scratch/C20-corrida-bandeira-menu.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C20-jogo-final-corrida.wav"
+        ]
+      },
+      "pendente": "Compartilhar no Scratch. Para o desafio, coletar retorno de três jogadores e verificar uma melhoria baseada nas sugestões."
+    },
+    {
+      "item": "C20-EXERCICIO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "No protótipo, a bandeira exibiu Corrida do gato e o aviso Aperte espaço para começar. Com foco no palco, segurar Espaço por 240 ms mudou o cenário de início para jogo e acionou o receptor que zerou os pontos e restaurou a posição",
+      "status": "execucao_observada_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C20-tela-inicio.jpg",
+        "tmp/testes-scratch/C20-tela-jogo.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C20-EXERCICIO-02",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Com foco no palco, R manteve pontos=9 e x=80 na pilha da resolução. Na contraprova com receptor, a seta direita elevou pontos a 10 e x a 90; R restaurou ambos a 0",
+      "status": "lacuna_confirmada_no_navegador",
+      "lacuna": "L05",
+      "imagens": [
+        "tmp/testes-scratch/C20-reinicio-literal.jpg",
+        "tmp/testes-scratch/C20-reinicio-contraprova.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica."
+    },
+    {
+      "item": "C20-MISSAO-01",
+      "metodo": "Importação de .sb3 com blocos transcritos do livro; operação pela interface e leitura de campos DOM e screenshots. Não usa acesso à VM interna do navegador.",
+      "observado": "Corrida local entre Gato (A) e Robô (L). Espaço abriu a pista, ambos os atores venceram em partidas diferentes, teclas de movimento ficaram inativas no menu e após a vitória, R reiniciou a disputa e a bandeira restaurou o menu. Teste funcional feito pelo agente",
+      "status": "execucao_parcial_no_navegador",
+      "lacuna": null,
+      "imagens": [
+        "tmp/testes-scratch/C20-corrida-menu-teclas.jpg",
+        "tmp/testes-scratch/C20-corrida-largada.jpg",
+        "tmp/testes-scratch/C20-corrida-gato-venceu.jpg",
+        "tmp/testes-scratch/C20-corrida-entrada-bloqueada.jpg",
+        "tmp/testes-scratch/C20-corrida-reiniciada.jpg",
+        "tmp/testes-scratch/C20-corrida-robo-venceu.jpg",
+        "tmp/testes-scratch/C20-corrida-bandeira-menu.jpg"
+      ],
+      "limite": "Evidência da execução descrita. Não comprova todas as instruções de criação na interface, nem qualidade pedagógica.",
+      "audio": {
+        "metodo": "Sinal digital verificado em WAV gerado pelo motor Scratch, sem medição dos alto-falantes.",
+        "arquivos": [
+          "tmp/testes-scratch/audio/C20-jogo-final-corrida.wav"
+        ]
+      },
+      "pendente": "Compartilhar no Scratch. Para o desafio, coletar retorno de três jogadores e verificar uma melhoria baseada nas sugestões."
+    }
+  ],
+  "fontes_sha256": {
+    "capitulos/cap01.tex": "a430a4617ad2216d94d815590043d0c181ea59938005e4eb202feebdf459dacb",
+    "capitulos/cap02.tex": "4826287ec7e5697a9fb2518b029b7d8340206c1c64dd822c39a43742239cd709",
+    "capitulos/cap03.tex": "98e934f3edcfbb2af1e65632943997cf41e4d3e77f2dda89400caa1912b13ea2",
+    "capitulos/cap04.tex": "59b1cf671d73295e1737878f2a624d72c36d3b989721d34df5eddf7e7f68d4ad",
+    "capitulos/cap05.tex": "9ac359bcd2625d8e878fefa002cb4a8facc47914cbd111e5fb5668bca49263f9",
+    "capitulos/cap06.tex": "37665b58a299bb83ece2ffdaacd1a3610a35547d514b17f51be9f824641087d9",
+    "capitulos/cap07.tex": "518c2bb825e63621f448dcdc4cb26ba2888498a9305fd310f05d96570b232022",
+    "capitulos/cap08.tex": "9606f7a51678010a0f9da429907fece6a5c9be4cdcc29321e7ae7eca2b6e8e9d",
+    "capitulos/cap09.tex": "a30d92ac49dba6d8ce1c38a22f4c166ae113587364d30dabc1f01fcdca54af08",
+    "capitulos/cap10.tex": "b1e8d9c3e1c91ebe0e3158f67a72eaa618e9ec5d933421640be7b90dc86cf8e7",
+    "capitulos/cap11.tex": "1e035ad67be43ee1f8085230094a81d4549293697a175516a87f53da8b060003",
+    "capitulos/cap12.tex": "448492a52aa15b8808f7e0f3b0bbac0feff2d284aa037104a8b108a388a8a452",
+    "capitulos/cap13.tex": "ef1dd682745513b8470386b45e8c0be8ffd8f0a1943ea7a27c17826e888cdd0f",
+    "capitulos/cap14.tex": "995b42e17054f12e8f7b15f9fd945ec6daa21420e3831286d215280f9cb6226d",
+    "capitulos/cap15.tex": "9ae3351d6611698df8bdf856d02960e3d976e67f9a560fd021fa37b9e83029ab",
+    "capitulos/cap16.tex": "a50f7fc1e3bc75ec2b90cd1b1b15cf08477898ecc691d0c29d46054de714457c",
+    "capitulos/cap17.tex": "adaf76d6099b09c44cde56f79aee0e3b5d80e09d03d289d42d29931bd5a50178",
+    "capitulos/cap18.tex": "b4cd57c602a99403822c3e7f7e76ca588c9e555b955ee04b29595c03f13415ab",
+    "capitulos/cap19.tex": "3e1947a4ca88965b6755c43f9120a14836ed9a3227bda7bdb9999958b3f03a3b",
+    "capitulos/cap20.tex": "2fe71ba3313b0b00dbca654b206c29a4dc72ca90155a83e1f2e7bdcf851f72a5"
+  },
+  "nota_preparacao": "Projetos importados usam os gatos SVG do repositório, fantasias nominais e cenários auxiliares identificados por texto. Monitores inicialmente ocultos; quando necessários são ativados na interface. Essa preparação não valida as instruções de criação dos assets ou o estado padrão de monitores recém-criados."
+}

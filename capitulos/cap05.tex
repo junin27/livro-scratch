@@ -26,6 +26,10 @@ Para apagar um ator, clique no pequeno \textbf{X} no canto da miniatura dele. Pa
 
 \section{Cada ator, o seu código}
 
+\begin{pensaassim}[Pense assim: o papel de cada um na peça]
+Em uma peça da escola, cada participante recebe suas próprias falas e ações. No Scratch, cada ator também tem seu código. Selecionar o gatinho antes de montar os blocos é como entregar as instruções ao participante que faz o papel do gato.
+\end{pensaassim}
+
 \begin{cuidado}
 O código fica no \textbf{ator selecionado}. Se você montar blocos com o gatinho selecionado, só o gatinho obedece! Para dar ordens a outro ator, clique nele na lista antes de montar os blocos.
 \end{cuidado}
@@ -33,6 +37,10 @@ O código fica no \textbf{ator selecionado}. Se você montar blocos com o gatinh
 \section{Cenários}
 
 O \textbf{cenário} é o fundo do palco. Ele é o ator especial chamado \textbf{Palco}, no canto inferior direito, que não anda nem gira, mas pode ter fantasias (cenários diferentes) e código próprio.
+
+\begin{pensaassim}[Pense assim: o fundo de um teatro de bonecos]
+Um pano pintado de floresta faz a história acontecer na mata. Trocando o pano por um desenho de praia, você muda o lugar da história sem trocar os bonecos. No Scratch, os cenários são esses fundos; os atores são os personagens que aparecem na frente deles.
+\end{pensaassim}
 
 \begin{center}
 \renewcommand{\arraystretch}{1.8}
@@ -55,13 +63,23 @@ O \textbf{editor de desenho} tem ferramentas como pincel, linha, círculo, retâ
 \item[\textbf{Bitmap}] O desenho é feito de pontinhos (pixels), como uma pintura. Dá efeitos mais livres.
 \end{description}
 
+\begin{pensaassim}[Pense assim: formas de papel e um mosaico]
+Montar um desenho com círculos e retângulos de papel lembra o modo vetor: você pode ajustar cada forma. Um mosaico de quadradinhos lembra o modo bitmap: a imagem é feita de pequenos pontos de cor. Ao ampliar bastante um bitmap, esses pontos ficam mais visíveis.
+\end{pensaassim}
+
 \begin{dica}
 Clique no \textbf{ponto central} do desenho: é ele que define em torno de qual ponto o ator gira e cresce. Coloque-o no meio do ator!
 \end{dica}
 
 \section{Camadas}
 
-Se dois atores ocupam o mesmo lugar, um aparece \textbf{na frente} do outro. Isso se chama \textbf{camada}. Para mudar, use:
+Se dois atores ocupam o mesmo lugar, um aparece \textbf{na frente} do outro. Isso se chama \textbf{camada}.
+
+\begin{pensaassim}[Pense assim: uma pilha de recortes]
+Coloque um recorte de gato sobre um recorte de árvore. O gato cobre parte da árvore. Se você passar o gato para baixo do outro recorte, a árvore fica na frente. As camadas mudam essa ordem, sem precisar mover os atores para os lados.
+\end{pensaassim}
+
+Para mudar a camada, use:
 
 \begin{center}
 \renewcommand{\arraystretch}{1.8}
@@ -119,6 +137,7 @@ Adicione um ator da biblioteca. Faça o gatinho andar 100 passos para a direita 
 Código do gatinho:
 \begin{pilha}
 \bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scMotion]{aponte para a direção \entrada{90}}
 \bk[scMotion]{mova \entrada{100} passos}
 \end{pilha}
 Código do outro ator:
@@ -148,8 +167,10 @@ Crie uma cena com \textbf{dois atores} e \textbf{dois cenários}. No primeiro ce
 Sugestão de código do Palco:
 \begin{pilha}
 \bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{mude o cenário para \menu{casa}}
 \bk[scControl]{espere \entrada{5} segundos}
-\bk[scLooks]{próximo cenário}
+\bk[scLooks]{mude o cenário para \menu{festa}}
 \end{pilha}
+Use os nomes dos seus dois cenários no menu de cada bloco.
 O ator 1 fala logo; o ator 2 espera 2 segundos para responder; e depois que o cenário mudar, use \bloco[scControl]{espere \entrada{6} segundos} e um novo \bloco[scLooks]{diga} em cada ator.
 \end{solucao}

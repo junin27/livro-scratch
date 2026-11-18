@@ -44,6 +44,8 @@ Crie as listas \textbf{perguntas} e \textbf{respostas}. No começo do jogo, apag
 
 Para cada pergunta, o gatinho pergunta, espera a resposta e compara com a resposta certa, que está \textbf{na mesma posição} da outra lista.
 
+Encaixe os blocos abaixo na mesma pilha da bandeira, logo depois de cadastrar a última resposta. Assim, o quiz só começa depois que as duas listas estiverem prontas.
+
 \begin{codigo}[O jogo]
 \renewcommand{\sbw}{410pt}
 \begin{pilha}
@@ -78,7 +80,7 @@ Adicione uma quarta pergunta ao quiz. Do que você precisa mudar?
 \end{exercicio}
 
 \begin{solucao}
-Só precisa cadastrar mais uma pergunta e mais uma resposta, \textbf{na mesma ordem}:
+Acrescente a nova pergunta e a resposta ao fim do cadastro, antes do trecho O jogo:
 \begin{pilha}
 \bk[scLists]{adicione \entrada{Quantos lados tem um triângulo?} a \menu{perguntas}}
 \bk[scLists]{adicione \entrada{3} a \menu{respostas}}
@@ -113,7 +115,7 @@ Faça um segundo ator que muda de fantasia conforme os pontos: triste com 0, ale
 \end{desafio}
 
 \begin{solucao}
-No quiz, depois de \bloco[scVariables]{mude \menu{pontos} em \entrada{1}}, acrescente \bloco[scEvents]{envie \menu{atualizou}}. No segundo ator:
+No quiz, envie \bloco[scEvents]{envie \menu{atualizou}} em dois lugares: logo depois de zerar \textbf{pontos} e logo depois de somar 1. No segundo ator:
 \begin{pilha}
 \bk[scEvents]{quando eu receber \menu{atualizou}}
 \sbc[scControl]{se \booleano{\variavel{pontos} $>$ \entrada{2}} então}

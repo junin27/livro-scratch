@@ -1,0 +1,1031 @@
+{
+  "fontes_sha256": {
+    "capitulos/cap01.tex": "a430a4617ad2216d94d815590043d0c181ea59938005e4eb202feebdf459dacb",
+    "capitulos/cap02.tex": "e397b9be846c561138ccf2b9d742ee28d1f723e74954be537338e34c8911ac5e",
+    "capitulos/cap03.tex": "98e934f3edcfbb2af1e65632943997cf41e4d3e77f2dda89400caa1912b13ea2",
+    "capitulos/cap04.tex": "59b1cf671d73295e1737878f2a624d72c36d3b989721d34df5eddf7e7f68d4ad",
+    "capitulos/cap05.tex": "0a709242c4ed004d85e77c0bbf3b5dda95df3221b09e8adf23731b09a24d3689",
+    "capitulos/cap06.tex": "f77cc9d3f415d14d3ff5445dcb4d11a84a44d5eebbfb529d7652e2ad0bc8f83f",
+    "capitulos/cap07.tex": "748471a0f7441376cb55028cac18e4d668a1e45de98addcf51fb8eb37560fcf1",
+    "capitulos/cap08.tex": "9606f7a51678010a0f9da429907fece6a5c9be4cdcc29321e7ae7eca2b6e8e9d",
+    "capitulos/cap09.tex": "a30d92ac49dba6d8ce1c38a22f4c166ae113587364d30dabc1f01fcdca54af08",
+    "capitulos/cap10.tex": "252d6d5a246465fb36ff44c4965a3a77b18bb0813784913f7849971185cc2339",
+    "capitulos/cap11.tex": "f1559e0b0ab83526cd08e0bbe64036c477d2537ec4808ace456516064047fda8",
+    "capitulos/cap12.tex": "448492a52aa15b8808f7e0f3b0bbac0feff2d284aa037104a8b108a388a8a452",
+    "capitulos/cap13.tex": "a842af9f66c9b92d04117448740c9471277c77dfed99d36e7ceda613a3161eef",
+    "capitulos/cap14.tex": "995b42e17054f12e8f7b15f9fd945ec6daa21420e3831286d215280f9cb6226d",
+    "capitulos/cap15.tex": "6a990140cc2d04112f40bf5c41826c33a9109f6e0d5754f4a75b699fb7ee117e",
+    "capitulos/cap16.tex": "4e4613184f281839df2b689324600b47334af06496ba85a3dd8cc65a17fa811e",
+    "capitulos/cap17.tex": "cb07927c254523742b508b47d2313f7c1e59e6ae5f4f8079df8d998130e32827",
+    "capitulos/cap18.tex": "bc7d9e199d86294d9d88980b13270380ef1a241dee111beab20dfe672dcfd25d",
+    "capitulos/cap19.tex": "a03911465fc2986db1b7ae99c7d18e9d47547f211003a252bbeb628187a28b2f",
+    "capitulos/cap20.tex": "8ea092d215cfe634dc4e8f41669f3e4cb46a3b3a025ce2e8584f98b6b940f9b9"
+  },
+  "escopo": {
+    "total": 147,
+    "rodada_anterior": 91,
+    "itens_adicionais": 56
+  },
+  "cenarios_navegador": 53,
+  "projetos_audio": 14,
+  "limites": [
+    "Montagens de referência com comandos de teste, controle de entradas e, em casos indicados, posições fixadas.",
+    "O navegador usa Scratch VM, Scratch Render e Scratch Storage em página local. O áudio também foi verificado por sinal WAV, sem medição dos alto-falantes."
+  ],
+  "resultados": [
+    {
+      "item": "C04-CODIGO-01",
+      "titulo": "Gato que mia ao ser clicado",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Clique executou o Miau sem bloquear a fala",
+          "registro": "tmp/retestes/navegador-som.json",
+          "projeto": "C04-miau",
+          "sb3_sha256": "8cf0cd510775d804c7602ee9c952039427586a6b53f91305bf6e5dff4bd21d3f"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "1/1 janelas com sinal",
+          "registro": "tmp/retestes/audio/C04-miau.wav",
+          "sb3_sha256": "8cf0cd510775d804c7602ee9c952039427586a6b53f91305bf6e5dff4bd21d3f",
+          "projeto": "C04-miau"
+        }
+      ]
+    },
+    {
+      "item": "C04-CODIGO-02",
+      "titulo": "Dó, ré, mi",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Dó, ré, mi: 60, 62, 64",
+          "registro": "tmp/retestes/navegador-som.json",
+          "projeto": "C04-notas",
+          "sb3_sha256": "a554d77509a70cad3625be80333e11b7678af8cff0adbd01c7162d60f0f43165"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "3/3 janelas com sinal",
+          "registro": "tmp/retestes/audio/C04-notas.wav",
+          "sb3_sha256": "a554d77509a70cad3625be80333e11b7678af8cff0adbd01c7162d60f0f43165",
+          "projeto": "C04-notas"
+        }
+      ]
+    },
+    {
+      "item": "C04-DESAFIO-01",
+      "titulo": "Dançando no ritmo",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Oito batidas e oito trocas de fantasia",
+          "registro": "tmp/retestes/navegador-som.json",
+          "projeto": "C04-danca",
+          "sb3_sha256": "e154ad94175a5ae6d779b2c34c3864f3f27d43708a12d4f78f63aae6605441fa"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "8/8 janelas com sinal",
+          "registro": "tmp/retestes/audio/C04-danca-web-audio-nativo.wav",
+          "sb3_sha256": "e154ad94175a5ae6d779b2c34c3864f3f27d43708a12d4f78f63aae6605441fa",
+          "projeto": "C04-danca"
+        }
+      ]
+    },
+    {
+      "item": "C04-EXERCICIO-01",
+      "titulo": "Silêncio, por favor",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Pronto apareceu após 0.865 s",
+          "registro": "tmp/retestes/navegador-som.json",
+          "projeto": "C04-espera-miau",
+          "sb3_sha256": "b443c79bc39bccd4ecf46b2d14feb9f297c5032530287d315fbfce1bc6503942"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "1/1 janelas com sinal",
+          "registro": "tmp/retestes/audio/C04-espera-miau.wav",
+          "sb3_sha256": "b443c79bc39bccd4ecf46b2d14feb9f297c5032530287d315fbfce1bc6503942",
+          "projeto": "C04-espera-miau"
+        }
+      ]
+    },
+    {
+      "item": "C04-EXERCICIO-02",
+      "titulo": "Música para baixo",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Volume 100%, 80%, 60%; após o último toque, 40%",
+          "registro": "tmp/retestes/navegador-som.json",
+          "projeto": "C04-volume-miau",
+          "sb3_sha256": "fa84875c1a2ca2277aee812c86b7609b0b12153b7f7fb6416e4b5a43e4e1c812"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "3/3 janelas com sinal",
+          "registro": "tmp/retestes/audio/C04-volume-miau.wav",
+          "sb3_sha256": "fa84875c1a2ca2277aee812c86b7609b0b12153b7f7fb6416e4b5a43e4e1c812",
+          "projeto": "C04-volume-miau"
+        }
+      ]
+    },
+    {
+      "item": "C04-EXERCICIO-03",
+      "titulo": "Parabéns a você",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Trecho de Parabéns a você: 67, 67, 69, 67",
+          "registro": "tmp/retestes/navegador-som.json",
+          "projeto": "C04-parabens",
+          "sb3_sha256": "2ee1a29b7e5683d36686ea8df697d4bded9e6b95cacbee6e85730c6b33d66e73"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "4/4 janelas com sinal",
+          "registro": "tmp/retestes/audio/C04-parabens.wav",
+          "sb3_sha256": "2ee1a29b7e5683d36686ea8df697d4bded9e6b95cacbee6e85730c6b33d66e73",
+          "projeto": "C04-parabens"
+        }
+      ]
+    },
+    {
+      "item": "C04-MISSAO-01",
+      "titulo": "Missão 4: O gato que mia",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Clique executou o Miau sem bloquear a fala",
+          "registro": "tmp/retestes/navegador-som.json",
+          "projeto": "C04-miau",
+          "sb3_sha256": "8cf0cd510775d804c7602ee9c952039427586a6b53f91305bf6e5dff4bd21d3f"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "1/1 janelas com sinal",
+          "registro": "tmp/retestes/audio/C04-miau.wav",
+          "sb3_sha256": "8cf0cd510775d804c7602ee9c952039427586a6b53f91305bf6e5dff4bd21d3f",
+          "projeto": "C04-miau"
+        }
+      ]
+    },
+    {
+      "item": "C05-DESAFIO-01",
+      "titulo": "Minha pequena história",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "casa → festa; dois atores falaram; nova bandeira restaurou casa",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C05-historia-dupla",
+          "sb3_sha256": "a0426a07adf31c8718a04b773ae02aa359ed09a04fa6900d662159ad8396513c"
+        }
+      ]
+    },
+    {
+      "item": "C05-EXERCICIO-03",
+      "titulo": "Quem está na frente?",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Gato recuou para trás do Amigo no renderizador WebGL",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C05-camadas",
+          "sb3_sha256": "7764ab51db44c92cb8c7efc34a78340e42a13563f797f851b0f3a227b78e1d45"
+        }
+      ]
+    },
+    {
+      "item": "C06-EXERCICIO-03",
+      "titulo": "Espaço para falar",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Espaço disparou a pilha de Miau e Pronto!",
+          "registro": "tmp/retestes/navegador-som.json",
+          "projeto": "C06-espaco-miau",
+          "sb3_sha256": "ed7c49a5e84939ec03c2bf29811249b5df82b5c356fcb4f819876be65bb4bef1"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "1/1 janelas com sinal",
+          "registro": "tmp/retestes/audio/C06-espaco-miau.wav",
+          "sb3_sha256": "ed7c49a5e84939ec03c2bf29811249b5df82b5c356fcb4f819876be65bb4bef1",
+          "projeto": "C06-espaco-miau"
+        }
+      ]
+    },
+    {
+      "item": "C07-CODIGO-01",
+      "titulo": "Os três laços",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "x=40 depois de quatro movimentos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C07-repita-quatro",
+          "sb3_sha256": "75dab263bbceb0016bb8dc0fc199cc34aea8f58ec20d04d450fb55d8c71bdf5d"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "O laço continuou até o comando Parar",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C07-sempre",
+          "sb3_sha256": "9222737e24ad3018d094d7ba9c664d3645c8f4b0c9b0dcd9b4908dc3e870e178"
+        }
+      ]
+    },
+    {
+      "item": "C07-CODIGO-02",
+      "titulo": "Patrulha",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Direção 90 → -90 → 90, com colisão nas duas bordas",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C07-patrulha",
+          "sb3_sha256": "b69f639c8d9c823d61e2e29bb87c3df1d1796df6beec74df8e770d10b1969ba5"
+        }
+      ]
+    },
+    {
+      "item": "C07-CODIGO-03",
+      "titulo": "Andar até a borda do palco",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Atravessou a parede desenhada e parou na borda em x=195",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C07-parede",
+          "sb3_sha256": "d4490a0e271fa471dcb170e2c12a39bb60d0945556c9c56585396347e4fb0b5b"
+        }
+      ]
+    },
+    {
+      "item": "C07-DESAFIO-01",
+      "titulo": "Corrida até a borda do palco",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Fantasia mudou e o ator anunciou Cheguei! na borda",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C07-corrida",
+          "sb3_sha256": "cb50b052c7551a04680a686005538b941ddace6075746fd469420c50e9e002e6"
+        }
+      ]
+    },
+    {
+      "item": "C07-EXERCICIO-03",
+      "titulo": "Cinco batidas",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Cinco inícios em segundos: 0.00, 0.73, 1.49, 2.25, 3.04",
+          "registro": "tmp/retestes/navegador-som.json",
+          "projeto": "C07-batidas-medidas",
+          "sb3_sha256": "3664a32d85c013bbccdd7243c47e514129c40c942ee747536994d4694bda6140"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "5/5 janelas com sinal",
+          "registro": "tmp/retestes/audio/C07-batidas-medidas-web-audio-nativo.wav",
+          "sb3_sha256": "3664a32d85c013bbccdd7243c47e514129c40c942ee747536994d4694bda6140",
+          "projeto": "C07-batidas-medidas"
+        }
+      ]
+    },
+    {
+      "item": "C07-MISSAO-01",
+      "titulo": "Missão 7: Gato guarda-noturno",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Direção 90 → -90 → 90, com colisão nas duas bordas",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C07-patrulha",
+          "sb3_sha256": "b69f639c8d9c823d61e2e29bb87c3df1d1796df6beec74df8e770d10b1969ba5"
+        }
+      ]
+    },
+    {
+      "item": "C08-CODIGO-01",
+      "titulo": "Gato assustado",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Ponteiro longe sem fala, sobre o ator com Ai!",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C08-assustado",
+          "sb3_sha256": "eadf5fc778a2c2aa7cd30bc9f2066edd8456d53906fc371976a6f41303ddd6af"
+        }
+      ]
+    },
+    {
+      "item": "C08-DESAFIO-01",
+      "titulo": "Adivinha a cor",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Reconheceu a faixa vermelha e conservou o balão ao sair",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C08-vermelho",
+          "sb3_sha256": "0ce54f477e5536d894f51c8743456eec370f8de78bd1e4090fe0f330d077b43e"
+        }
+      ]
+    },
+    {
+      "item": "C08-EXERCICIO-03",
+      "titulo": "Bateu na parede",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Sensor de borda disparou Ui! e a direção voltou a -90",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C08-borda",
+          "sb3_sha256": "04e3109f18bd5dcc060bde07916d1df543659bff92bf0ad85ce3cce80797b798"
+        }
+      ]
+    },
+    {
+      "item": "C10-DESAFIO-01",
+      "titulo": "Minha história completa",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Praça → Jardim → Casa, seis falas e uma volta da trilha",
+          "registro": "tmp/retestes/navegador-som.json",
+          "projeto": "C10-historia-com-musica",
+          "sb3_sha256": "b564a7fbb4e8e04c3aaeab193b0ad592426b11ab05d52460e5bf227759d77ca3"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "2/2 janelas com sinal",
+          "registro": "tmp/retestes/audio/C10-historia-com-musica.wav",
+          "sb3_sha256": "b564a7fbb4e8e04c3aaeab193b0ad592426b11ab05d52460e5bf227759d77ca3",
+          "projeto": "C10-historia-com-musica"
+        }
+      ]
+    },
+    {
+      "item": "C10-MISSAO-01",
+      "titulo": "Missão 10: Uma história em duas cenas",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "A e B conversaram na cena 1 e se despediram na cena 2",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C10-historia-literal",
+          "sb3_sha256": "cd937bd4edf09690cb1ce3817304c3e38dc27c432ec172d6a27965a4dea4dc2a"
+        }
+      ]
+    },
+    {
+      "item": "C11-CODIGO-01",
+      "titulo": "Se tocar na borda, vira",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Gato inverteu a direção na borda",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C11-borda",
+          "sb3_sha256": "16f222f0e4900c4a6aa0a0baf83174c8ed1dfe0cffcc296234feede13a4072f8"
+        }
+      ]
+    },
+    {
+      "item": "C11-CODIGO-04",
+      "titulo": "Dois ses encaixados",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Entre quatro combinações, só disparou com borda e Espaço",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C11-condicoes-encaixadas",
+          "sb3_sha256": "303a5828f93ed1278a8079d9684b709f73a58190a515726be4238daa97724e68"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Entre quatro combinações, só disparou com borda e Espaço",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C11-condicoes-invertidas",
+          "sb3_sha256": "1d6801ef6d183eb376111e8a17d0352fa05429be216edfc8e06a13ca178990bc"
+        }
+      ]
+    },
+    {
+      "item": "C11-EXERCICIO-01",
+      "titulo": "Guarda-chuva",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Branco → Dia de sol!; azul → Leve o guarda-chuva!",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C11-guarda-chuva",
+          "sb3_sha256": "9cd613375b4b7a57c14150e6b5a4524fe77de4945bf7e607a48948c2870ef6b6"
+        }
+      ]
+    },
+    {
+      "item": "C11-EXERCICIO-03",
+      "titulo": "Ping-pong",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Voltou da borda espelhado; no reinício, saiu para a direita",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C11-ping-pong",
+          "sb3_sha256": "d7e242e4e6cde93b049ee5932ef512ebccf2aa04b43abc8a0001464fe7cec29c"
+        }
+      ]
+    },
+    {
+      "item": "C13-CODIGO-01",
+      "titulo": "Placar de cliques",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Três cliques: 1, 2 e 3 pontos. Bandeira: 0.",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C13-cliques",
+          "sb3_sha256": "ee132059cfe2d4e32c2f2f135d2f7ce9ef0968324b08763cf1de1ce8beec89fb"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "1/1 janelas com sinal",
+          "registro": "tmp/retestes/audio/C13-cliques-com-som.wav",
+          "sb3_sha256": "ad504703b36cf327485c92edc01726a6c874e12f7b816d9f86d5987d3af58dee",
+          "projeto": "C13-cliques-com-som"
+        }
+      ]
+    },
+    {
+      "item": "C13-EXERCICIO-01",
+      "titulo": "Vidas",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Um desconto por contato; três contatos chegaram a zero",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C13-vidas",
+          "sb3_sha256": "77fa56a021497341934bffdb56a338681ec03b49a37007caa8618a742706e401"
+        }
+      ]
+    },
+    {
+      "item": "C13-MISSAO-01",
+      "titulo": "Missão 13: O contador de cliques",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Três cliques: 1, 2 e 3 pontos. Bandeira: 0.",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C13-cliques",
+          "sb3_sha256": "ee132059cfe2d4e32c2f2f135d2f7ce9ef0968324b08763cf1de1ce8beec89fb"
+        }
+      ]
+    },
+    {
+      "item": "C15-CODIGO-01",
+      "titulo": "Ator original: a fábrica de clones",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Original oculto; clone nasceu, caiu na mesma coluna e desapareceu",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C15-chuva",
+          "sb3_sha256": "613a45fd5ca0b8ed391294eb57a154626936b0385838df971905f85a0caee964"
+        }
+      ]
+    },
+    {
+      "item": "C15-CODIGO-02",
+      "titulo": "Clone: a maçã que cai",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Original oculto; clone nasceu, caiu na mesma coluna e desapareceu",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C15-chuva",
+          "sb3_sha256": "613a45fd5ca0b8ed391294eb57a154626936b0385838df971905f85a0caee964"
+        }
+      ]
+    },
+    {
+      "item": "C15-DESAFIO-01",
+      "titulo": "Pegando as maçãs",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "A maçã tocou na cesta pelo sensor gráfico e somou um ponto",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C15-cesta-pega",
+          "sb3_sha256": "b374c71ef307319970783c536baf25bdd17680be910b2af1d925e29c513c8d55"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Queda fora da cesta preservou zero pontos; seta moveu 15 passos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C15-cesta-perde",
+          "sb3_sha256": "b784a3abfbcc4ee6f8ac0b6e22da4df6477492ecc6acfed274cb79e808a74979"
+        }
+      ]
+    },
+    {
+      "item": "C15-MISSAO-01",
+      "titulo": "Missão 15: Chuva de maçãs",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Original oculto; clone nasceu, caiu na mesma coluna e desapareceu",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C15-chuva",
+          "sb3_sha256": "613a45fd5ca0b8ed391294eb57a154626936b0385838df971905f85a0caee964"
+        }
+      ]
+    },
+    {
+      "item": "C17-CODIGO-01",
+      "titulo": "Cesta",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Maçã clonada foi coletada e somou ponto; setas 0 → 15 → 0",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-colisao-controlada",
+          "sb3_sha256": "e5086d74b2feba3a82894027271e8b90fa9234a958d723868de1a6e5a06e6d93"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quedas encerraram em 0 vidas; bandeira restaurou Jogo, 3 vidas e 0 pontos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-queda-controlada",
+          "sb3_sha256": "118c12fbef2ba1feb4103d047729441fc87d3877c7354588c6c14a842f29c1b6"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Partida com sorteio terminou em 1 pontos; bandeira restaurou o cenário e os contadores",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C17-jogo-base",
+          "sb3_sha256": "8a973fb4e355b7101cb94e94146fb721307e7b06225353f77d96f4caf72a1d48"
+        }
+      ]
+    },
+    {
+      "item": "C17-CODIGO-02",
+      "titulo": "No Palco",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Maçã clonada foi coletada e somou ponto; setas 0 → 15 → 0",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-colisao-controlada",
+          "sb3_sha256": "e5086d74b2feba3a82894027271e8b90fa9234a958d723868de1a6e5a06e6d93"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quedas encerraram em 0 vidas; bandeira restaurou Jogo, 3 vidas e 0 pontos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-queda-controlada",
+          "sb3_sha256": "118c12fbef2ba1feb4103d047729441fc87d3877c7354588c6c14a842f29c1b6"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Partida com sorteio terminou em 1 pontos; bandeira restaurou o cenário e os contadores",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C17-jogo-base",
+          "sb3_sha256": "8a973fb4e355b7101cb94e94146fb721307e7b06225353f77d96f4caf72a1d48"
+        }
+      ]
+    },
+    {
+      "item": "C17-CODIGO-03",
+      "titulo": "Maçã original",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Maçã clonada foi coletada e somou ponto; setas 0 → 15 → 0",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-colisao-controlada",
+          "sb3_sha256": "e5086d74b2feba3a82894027271e8b90fa9234a958d723868de1a6e5a06e6d93"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quedas encerraram em 0 vidas; bandeira restaurou Jogo, 3 vidas e 0 pontos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-queda-controlada",
+          "sb3_sha256": "118c12fbef2ba1feb4103d047729441fc87d3877c7354588c6c14a842f29c1b6"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Partida com sorteio terminou em 1 pontos; bandeira restaurou o cenário e os contadores",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C17-jogo-base",
+          "sb3_sha256": "8a973fb4e355b7101cb94e94146fb721307e7b06225353f77d96f4caf72a1d48"
+        }
+      ]
+    },
+    {
+      "item": "C17-CODIGO-04",
+      "titulo": "Clone da maçã",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Maçã clonada foi coletada e somou ponto; setas 0 → 15 → 0",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-colisao-controlada",
+          "sb3_sha256": "e5086d74b2feba3a82894027271e8b90fa9234a958d723868de1a6e5a06e6d93"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quedas encerraram em 0 vidas; bandeira restaurou Jogo, 3 vidas e 0 pontos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-queda-controlada",
+          "sb3_sha256": "118c12fbef2ba1feb4103d047729441fc87d3877c7354588c6c14a842f29c1b6"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Partida com sorteio terminou em 1 pontos; bandeira restaurou o cenário e os contadores",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C17-jogo-base",
+          "sb3_sha256": "8a973fb4e355b7101cb94e94146fb721307e7b06225353f77d96f4caf72a1d48"
+        }
+      ]
+    },
+    {
+      "item": "C17-CODIGO-05",
+      "titulo": "No Palco",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Maçã clonada foi coletada e somou ponto; setas 0 → 15 → 0",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-colisao-controlada",
+          "sb3_sha256": "e5086d74b2feba3a82894027271e8b90fa9234a958d723868de1a6e5a06e6d93"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quedas encerraram em 0 vidas; bandeira restaurou Jogo, 3 vidas e 0 pontos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-queda-controlada",
+          "sb3_sha256": "118c12fbef2ba1feb4103d047729441fc87d3877c7354588c6c14a842f29c1b6"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Partida com sorteio terminou em 1 pontos; bandeira restaurou o cenário e os contadores",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C17-jogo-base",
+          "sb3_sha256": "8a973fb4e355b7101cb94e94146fb721307e7b06225353f77d96f4caf72a1d48"
+        }
+      ]
+    },
+    {
+      "item": "C17-DESAFIO-01",
+      "titulo": "Sua versão",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Fim por vidas com tempo restante: 26",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-tempo-sem-coletas",
+          "sb3_sha256": "6d1e8d5632e227b4d4173545ec867976a1e1dd9e0663c5378f293b2dd3d123d2"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Cronômetro chegou a zero com vidas restantes e 29 pontos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-tempo-com-coletas",
+          "sb3_sha256": "6661bbe010d3eac01bdea9840fd92448f02e4119f12cb6cf9e99294990fcddfd"
+        }
+      ]
+    },
+    {
+      "item": "C17-EXERCICIO-01",
+      "titulo": "Maçã mais rápida a cada ponto",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Dez passos da fórmula deslocaram 30 e 50 unidades, respectivamente",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-velocidade",
+          "sb3_sha256": "2b58d44d37e84006c07f968673da68f3258775e19f53936cd188842600c01301"
+        }
+      ]
+    },
+    {
+      "item": "C17-EXERCICIO-02",
+      "titulo": "Maçã podre",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "A colisão com maçã podre retirou vida e preservou zero pontos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-podre-controlada",
+          "sb3_sha256": "b36db848c2652f7671dfae74b3b00dcdd01fccfb6bd0c9b44fe8bce1815b1340"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Sorteio dirigido às duas fantasias validou ponto e perda de vida",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-fantasias-sorteadas",
+          "sb3_sha256": "77f73ac201337ee3a51f7f08b74a020b181512c5f53e64e68f4058cad9bc3d22"
+        }
+      ]
+    },
+    {
+      "item": "C17-EXERCICIO-03",
+      "titulo": "Som de ponto",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Colisão real produziu a mesma contagem de pontos e passagens por Pop",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-pop-coleta",
+          "sb3_sha256": "4084a61224c0129bef50218d4a2444fbcc7284ba0146de6755a3443110c1d4c7"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quedas fora da cesta encerraram sem ponto e sem acionar Pop",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-pop-sem-coleta",
+          "sb3_sha256": "6fdb11a1141e21af5ba6435018a7ecb16493adb9c40f7038dbdaaef3b89870dc"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "3/3 janelas com sinal",
+          "registro": "tmp/retestes/audio/C17-pop-coleta.wav",
+          "sb3_sha256": "4084a61224c0129bef50218d4a2444fbcc7284ba0146de6755a3443110c1d4c7",
+          "projeto": "C17-pop-coleta"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "0/0 janelas com sinal",
+          "registro": "tmp/retestes/audio/C17-pop-sem-coleta.wav",
+          "sb3_sha256": "6fdb11a1141e21af5ba6435018a7ecb16493adb9c40f7038dbdaaef3b89870dc",
+          "projeto": "C17-pop-sem-coleta"
+        }
+      ]
+    },
+    {
+      "item": "C17-MISSAO-01",
+      "titulo": "Missão 17: Monte o Jogo da Coleta",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Maçã clonada foi coletada e somou ponto; setas 0 → 15 → 0",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-colisao-controlada",
+          "sb3_sha256": "e5086d74b2feba3a82894027271e8b90fa9234a958d723868de1a6e5a06e6d93"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quedas encerraram em 0 vidas; bandeira restaurou Jogo, 3 vidas e 0 pontos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C17-queda-controlada",
+          "sb3_sha256": "118c12fbef2ba1feb4103d047729441fc87d3877c7354588c6c14a842f29c1b6"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Partida com sorteio terminou em 1 pontos; bandeira restaurou o cenário e os contadores",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C17-jogo-base",
+          "sb3_sha256": "8a973fb4e355b7101cb94e94146fb721307e7b06225353f77d96f4caf72a1d48"
+        }
+      ]
+    },
+    {
+      "item": "C18-DESAFIO-01",
+      "titulo": "Placar visual",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Alegre com 3 pontos, triste após reiniciar o placar em 0",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C18-placar-visual",
+          "sb3_sha256": "a81899be7ee032cfce9341427ca890a1d439e7203ba329fcd4a7ce58e4be9bcf"
+        }
+      ]
+    },
+    {
+      "item": "C18-EXERCICIO-01",
+      "titulo": "Mais uma pergunta",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quatro perguntas corretas, quatro pontos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C18-quarta-pergunta",
+          "sb3_sha256": "5e96f791abc321e692276a809c1d60bae082fa92ef96c532bc4f14f294ef7581"
+        }
+      ]
+    },
+    {
+      "item": "C18-EXERCICIO-02",
+      "titulo": "Mensagem de vitória",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Mensagens diferentes com três e dois acertos",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C18-mensagem-vitoria",
+          "sb3_sha256": "dc78ad287be2080f75532fdfb2072994d1631d9424acd6409cd6869fdffd71be"
+        }
+      ]
+    },
+    {
+      "item": "C18-EXERCICIO-03",
+      "titulo": "Som de acerto e erro",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Collect → Oops → Collect",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C18-quiz-sons",
+          "sb3_sha256": "ceadde04651000b003aceb36fef9be5ac3431fac69aa070da9d47dbb76328317"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "3/3 janelas com sinal",
+          "registro": "tmp/retestes/audio/C18-quiz-sons.wav",
+          "sb3_sha256": "ceadde04651000b003aceb36fef9be5ac3431fac69aa070da9d47dbb76328317",
+          "projeto": "C18-quiz-sons"
+        }
+      ]
+    },
+    {
+      "item": "C19-CODIGO-01",
+      "titulo": "Andando",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quatro setas, contato com parede, retorno e vitória temporizada com parada",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C19-labirinto-base",
+          "sb3_sha256": "4b7dddb25574dbeedf0867ed1277ad50a7f6829a8e629f09960aa8cf095bab85"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Entrada à meta inteiramente pelo teclado, pelo corredor inferior",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C19-labirinto-base",
+          "sb3_sha256": "4b7dddb25574dbeedf0867ed1277ad50a7f6829a8e629f09960aa8cf095bab85"
+        }
+      ]
+    },
+    {
+      "item": "C19-CODIGO-02",
+      "titulo": "Vigiando as cores",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quatro setas, contato com parede, retorno e vitória temporizada com parada",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C19-labirinto-base",
+          "sb3_sha256": "4b7dddb25574dbeedf0867ed1277ad50a7f6829a8e629f09960aa8cf095bab85"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Entrada à meta inteiramente pelo teclado, pelo corredor inferior",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C19-labirinto-base",
+          "sb3_sha256": "4b7dddb25574dbeedf0867ed1277ad50a7f6829a8e629f09960aa8cf095bab85"
+        }
+      ]
+    },
+    {
+      "item": "C19-CODIGO-03",
+      "titulo": "Medindo o tempo",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Tempo: 0.522",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C19-cronometro",
+          "sb3_sha256": "4987e73ff6b8f283eb47fba945a72aba51a053585597e3001f0c478bc2737307"
+        }
+      ]
+    },
+    {
+      "item": "C19-DESAFIO-01",
+      "titulo": "Melhor tempo",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Recorde preservado em 0.391 s depois da tentativa mais lenta",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C19-recorde-inicializacao-unica",
+          "sb3_sha256": "bed6c0423ebb05bb5f21a12b25154e3405a84cbfe13b9acd7797641a5cad721b"
+        }
+      ]
+    },
+    {
+      "item": "C19-EXERCICIO-01",
+      "titulo": "Fantasma assustador",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Contato entre fantasias voltou à entrada do labirinto",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C19-fantasma",
+          "sb3_sha256": "1a65c3f446d2eabfb95d0d6f9ce8ecdeec590b1f5bb1b45a9d079d204367be10"
+        }
+      ]
+    },
+    {
+      "item": "C19-EXERCICIO-02",
+      "titulo": "Contador de tentativas",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Duas colisões reais com parede contaram duas batidas",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C19-batidas",
+          "sb3_sha256": "6fd3a66dc8f05fa5d0f46949e0c07265fa57f81c3ea8280d47d55403ac5678b2"
+        }
+      ]
+    },
+    {
+      "item": "C19-EXERCICIO-03",
+      "titulo": "Segunda fase",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Fase 1 → fase 2 → vitória → nova bandeira volta à fase 1",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C19-segunda-fase",
+          "sb3_sha256": "21ad22494c2a46f72d2576d511fa81440d2511b90297079fc19584e3099f1df0"
+        }
+      ]
+    },
+    {
+      "item": "C19-MISSAO-01",
+      "titulo": "Missão 19: Escape do labirinto",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Quatro setas, contato com parede, retorno e vitória temporizada com parada",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C19-labirinto-base",
+          "sb3_sha256": "4b7dddb25574dbeedf0867ed1277ad50a7f6829a8e629f09960aa8cf095bab85"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Entrada à meta inteiramente pelo teclado, pelo corredor inferior",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C19-labirinto-base",
+          "sb3_sha256": "4b7dddb25574dbeedf0867ed1277ad50a7f6829a8e629f09960aa8cf095bab85"
+        }
+      ]
+    },
+    {
+      "item": "C20-DESAFIO-01",
+      "titulo": "O jogo final: teste e melhore",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "As duas vitórias passaram; R só restaurou a largada depois da chegada",
+          "registro": "tmp/retestes/navegador-rodada-2.json",
+          "projeto": "C20-corrida-revisada",
+          "sb3_sha256": "696343a7668c5aa7e2c3c5699a52e2ce5c1e0aaf3403b1767553edb30bec4d86"
+        },
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Versão anterior apagou o progresso durante a corrida; contraprova da versão melhorada",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C20-jogo-final-corrida",
+          "sb3_sha256": "47676051a32e572221c42a0e6e709d2855f6a0ee4eab9f45f281250e3b2cd57c"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "1/1 janelas com sinal",
+          "registro": "tmp/retestes/audio/C20-jogo-final-corrida.wav",
+          "sb3_sha256": "47676051a32e572221c42a0e6e709d2855f6a0ee4eab9f45f281250e3b2cd57c",
+          "projeto": "C20-jogo-final-corrida"
+        }
+      ]
+    },
+    {
+      "item": "C20-MISSAO-01",
+      "titulo": "Missão 20: Crie o seu jogo",
+      "evidencias": [
+        {
+          "metodo": "Scratch VM e Scratch Render no navegador integrado",
+          "observado": "Versão anterior apagou o progresso durante a corrida; contraprova da versão melhorada",
+          "registro": "tmp/retestes/navegador-complementar.json",
+          "projeto": "C20-jogo-final-corrida",
+          "sb3_sha256": "47676051a32e572221c42a0e6e709d2855f6a0ee4eab9f45f281250e3b2cd57c"
+        },
+        {
+          "metodo": "Scratch Audio em WAV",
+          "observado": "1/1 janelas com sinal",
+          "registro": "tmp/retestes/audio/C20-jogo-final-corrida.wav",
+          "sb3_sha256": "47676051a32e572221c42a0e6e709d2855f6a0ee4eab9f45f281250e3b2cd57c",
+          "projeto": "C20-jogo-final-corrida"
+        }
+      ]
+    }
+  ]
+}

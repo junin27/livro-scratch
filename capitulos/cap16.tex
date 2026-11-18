@@ -22,15 +22,19 @@ Um bloco criado por você é uma \textbf{função} (ou \textbf{procedimento}): u
 
 \section{Criando o bloco}
 
+Adicione a extensão \textbf{Caneta}, como no capítulo 2. A pilha da bandeira limpa os traços uma vez. Cada bloco de desenho abaixa a caneta antes do laço e a levanta ao terminar. Assim, o gatinho pode mudar de lugar entre as figuras sem riscá-las.
+
 Em \bloco[scMyBlocks]{Meus Blocos}, clique em \textbf{Criar um bloco}, escreva o nome (por exemplo, \textbf{quadrado}) e confirme. Aparece um bloco \textbf{defina}, em rosa. Tudo que você encaixar embaixo dele é o que o bloco faz.
 
 \begin{codigo}[Definindo o bloco ``quadrado'']
 \begin{pilha}
 \bk[scMyBlocks]{defina \textbf{quadrado}}
+\bk[scPen]{abaixe a caneta}
 \sbc[scControl]{repita \entrada{4} vezes}
 \bk[scMotion]{mova \entrada{50} passos}
 \bk[scMotion]{gire \entrada{90} graus}
 \sbcend
+\bk[scPen]{levante a caneta}
 \end{pilha}
 \end{codigo}
 
@@ -39,8 +43,12 @@ Agora o bloco \bloco[scMyBlocks]{quadrado} aparece na paleta, pronto para usar e
 \begin{codigo}[Usando o bloco]
 \begin{pilha}
 \bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scPen]{levante a caneta}
+\bk[scPen]{apague tudo}
+\bk[scMotion]{aponte para a direção \entrada{90}}
+\bk[scMotion]{vá para x: \entrada{$-150$} y: \entrada{0}}
 \bk[scMyBlocks]{quadrado}
-\bk[scMotion]{mova \entrada{100} passos}
+\bk[scMotion]{vá para x: \entrada{0} y: \entrada{0}}
 \bk[scMyBlocks]{quadrado}
 \end{pilha}
 \end{codigo}
@@ -54,17 +62,20 @@ Ao criar o bloco, clique em \textbf{Adicionar uma entrada} e dê o nome \textbf{
 \begin{codigo}[Quadrado de qualquer tamanho]
 \begin{pilha}
 \bk[scMyBlocks]{defina \textbf{quadrado} \variavel{tamanho}}
+\bk[scPen]{abaixe a caneta}
 \sbc[scControl]{repita \entrada{4} vezes}
 \bk[scMotion]{mova \variavel{tamanho} passos}
 \bk[scMotion]{gire \entrada{90} graus}
 \sbcend
+\bk[scPen]{levante a caneta}
 \end{pilha}
 \end{codigo}
 
+Use a mesma preparação da bandeira. A partir da primeira chamada, encaixe:
 \begin{codigo}[Dois quadrados diferentes]
 \begin{pilha}
-\bk[scEvents]{quando \bandeira\ for clicado}
 \bk[scMyBlocks]{quadrado \entrada{40}}
+\bk[scMotion]{vá para x: \entrada{0} y: \entrada{0}}
 \bk[scMyBlocks]{quadrado \entrada{100}}
 \end{pilha}
 \end{codigo}
@@ -105,12 +116,15 @@ Crie o bloco \textbf{triângulo} que desenha um triângulo de lados iguais com l
 \end{exercicio}
 
 \begin{solucao}
+Use a preparação da bandeira do quadrado e chame \bloco[scMyBlocks]{triângulo} uma vez.
 \begin{pilha}
 \bk[scMyBlocks]{defina \textbf{triângulo}}
+\bk[scPen]{abaixe a caneta}
 \sbc[scControl]{repita \entrada{3} vezes}
 \bk[scMotion]{mova \entrada{80} passos}
 \bk[scMotion]{gire \entrada{120} graus}
 \sbcend
+\bk[scPen]{levante a caneta}
 \end{pilha}
 \end{solucao}
 
@@ -130,16 +144,18 @@ Crie o bloco \textbf{dar pontos} com uma entrada \textbf{quantos}, que soma essa
 \end{solucao}
 
 \begin{desafio}[Polígono mágico]
-Crie o bloco \textbf{polígono} com duas entradas: \textbf{lados} e \textbf{tamanho}. Ele deve desenhar qualquer figura com lados iguais. Dica: o ângulo de giro é $360 \div \text{lados}$.
+Crie o bloco \textbf{polígono} com duas entradas, \textbf{lados} e \textbf{tamanho}. Ele deve desenhar um polígono regular, com lados e ângulos iguais. Use pelo menos 3 lados. O ângulo de giro é $360 \div \text{lados}$.
 \end{desafio}
 
 \begin{solucao}
 \begin{pilha}
 \bk[scMyBlocks]{defina \textbf{polígono} \variavel{lados} \variavel{tamanho}}
+\bk[scPen]{abaixe a caneta}
 \sbc[scControl]{repita \variavel{lados} vezes}
 \bk[scMotion]{mova \variavel{tamanho} passos}
 \bk[scMotion]{gire \reporter{\entrada{360} / \variavel{lados}} graus}
 \sbcend
+\bk[scPen]{levante a caneta}
 \end{pilha}
-Chamando \bloco[scMyBlocks]{polígono \entrada{5} \entrada{60}}, o gatinho desenha um pentágono.
+Use a preparação da bandeira do quadrado e chame \bloco[scMyBlocks]{polígono \entrada{5} \entrada{60}} para desenhar um pentágono.
 \end{solucao}

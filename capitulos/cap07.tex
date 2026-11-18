@@ -80,7 +80,7 @@ Dentro de um laço, o gatinho pode ficar de cabeça para baixo ao voltar! Para e
 
 O bloco \bloco[scControl]{repita até que} repete até que a pergunta lá dentro seja respondida com \textbf{verdadeiro}. Ele é como dizer ``continue andando \emph{até} chegar na parede''.
 
-\begin{codigo}[Andar até a parede]
+\begin{codigo}[Andar até a borda do palco]
 \begin{pilha}
 \bk[scEvents]{quando \bandeira\ for clicado}
 \sbc[scControl]{repita até que \booleano{tocando em \menu{borda}?}}
@@ -88,6 +88,8 @@ O bloco \bloco[scControl]{repita até que} repete até que a pergunta lá dentro
 \sbcend
 \end{pilha}
 \end{codigo}
+
+O sensor de borda detecta o limite do palco. Para detectar uma parede desenhada, veja o labirinto do capítulo 19.
 
 \section{Parando}
 
@@ -124,7 +126,7 @@ Faça o gatinho girar sem parar, 5 graus para a direita a cada 0.05 segundo.
 \end{solucao}
 
 \begin{exercicio}[Cinco batidas]
-Faça o gatinho tocar o som de tambor exatamente 5 vezes, com meio segundo entre cada batida.
+Adicione a extensão \textbf{Música}. Faça o gatinho tocar o tambor 5 vezes. Depois de cada batida, espere meio segundo. Essa pausa começa quando o bloco de tambor termina.
 \end{exercicio}
 
 \begin{solucao}
@@ -137,7 +139,7 @@ Faça o gatinho tocar o som de tambor exatamente 5 vezes, com meio segundo entre
 \end{pilha}
 \end{solucao}
 
-\begin{desafio}[Corrida até a parede]
+\begin{desafio}[Corrida até a borda do palco]
 Faça o gatinho correr (mudando de fantasia a cada passo) até encostar na borda do palco e então dizer ``Cheguei!''.
 \end{desafio}
 

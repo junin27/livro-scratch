@@ -43,11 +43,12 @@ Escolha ou desenhe uma cesta. Coloque-a embaixo do palco e faça-a andar com as 
 
 \section{Passo 2: as variáveis}
 
-Crie \textbf{pontos} e \textbf{vidas} (para todos os atores). Ao começar o jogo, zere os pontos e dê 3 vidas.
+Crie \textbf{pontos} e \textbf{vidas} (para todos os atores). Dê ao Palco dois cenários, \textbf{Jogo} e \textbf{Fim de jogo}. Ao começar, volte ao cenário Jogo, zere os pontos e dê 3 vidas.
 
 \begin{codigo}[No Palco]
 \begin{pilha}
 \bk[scEvents]{quando \bandeira\ for clicado}
+\bk[scLooks]{mude o cenário para \menu{Jogo}}
 \bk[scVariables]{defina \menu{pontos} para \entrada{0}}
 \bk[scVariables]{defina \menu{vidas} para \entrada{3}}
 \end{pilha}
@@ -100,7 +101,7 @@ Quando as vidas acabam, o Palco avisa que o jogo terminou e para tudo.
 \begin{codigo}[No Palco]
 \begin{pilha}
 \bk[scEvents]{quando \bandeira\ for clicado}
-\sbc[scControl]{repita até que \booleano{\variavel{vidas} = \entrada{0}}}
+\sbc[scControl]{repita até que \booleano{\variavel{vidas} $<$ \entrada{1}}}
 \bk[scControl]{espere \entrada{0.1} segundos}
 \sbcend
 \bk[scLooks]{mude o cenário para \menu{Fim de jogo}}
@@ -152,11 +153,11 @@ Dentro do \bloco[scControl]{se \booleano{tocando em \menu{Cesta}?} então}, ante
 \end{solucao}
 
 \begin{desafio}[Sua versão]
-Troque a maçã por outra coisa (estrelas, moedas, peixes\ldots) e a cesta por um personagem seu. Acrescente um cronômetro de 30 segundos: ao acabar, o jogo mostra os pontos.
+Troque a maçã por outra coisa (estrelas, moedas, peixes\ldots) e a cesta por um personagem seu. Acrescente um cronômetro de 30 segundos. A partida termina quando o tempo ou as vidas acabam, o que vier primeiro. A pontuação fica visível no final.
 \end{desafio}
 
 \begin{solucao}
-Crie a variável \textbf{tempo} e use o mesmo padrão do capítulo de Variáveis:
+Mantenha a pilha que verifica as vidas. Marque a caixinha da variável \textbf{pontos} na categoria Variáveis para deixar o placar visível. Crie \textbf{tempo} e acrescente esta pilha ao Palco:
 \begin{pilha}
 \bk[scEvents]{quando \bandeira\ for clicado}
 \bk[scVariables]{defina \menu{tempo} para \entrada{30}}
@@ -164,6 +165,7 @@ Crie a variável \textbf{tempo} e use o mesmo padrão do capítulo de Variáveis
 \bk[scControl]{espere \entrada{1} segundos}
 \bk[scVariables]{mude \menu{tempo} em \entrada{$-1$}}
 \sbcend
+\bk[scLooks]{mude o cenário para \menu{Fim de jogo}}
 \bk[scControl]{pare \menu{tudo}}
 \end{pilha}
 \end{solucao}

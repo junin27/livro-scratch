@@ -1,0 +1,1861 @@
+[
+  {
+    "id": "C01-CODIGO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C01-CODIGO-01.sb3",
+    "itens": [
+      "C01-CODIGO-01",
+      "C01-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": [
+        "C01-MISSAO-01"
+      ]
+    }
+  },
+  {
+    "id": "C01-CODIGO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C01-CODIGO-02.sb3",
+    "itens": [
+      "C01-CODIGO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": []
+    }
+  },
+  {
+    "id": "C01-CODIGO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C01-CODIGO-03.sb3",
+    "itens": [
+      "C01-CODIGO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": []
+    }
+  },
+  {
+    "id": "C01-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C01-EXERCICIO-01.sb3",
+    "itens": [
+      "C01-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": []
+    }
+  },
+  {
+    "id": "C01-EXERCICIO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C01-EXERCICIO-02.sb3",
+    "itens": [
+      "C01-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": []
+    }
+  },
+  {
+    "id": "C01-DESAFIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C01-DESAFIO-01.sb3",
+    "itens": [
+      "C01-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": []
+    }
+  },
+  {
+    "id": "C02-CODIGO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C02-CODIGO-01.sb3",
+    "itens": [
+      "C02-CODIGO-01",
+      "C02-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": [
+        "C02-MISSAO-01"
+      ]
+    }
+  },
+  {
+    "id": "C02-CODIGO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C02-CODIGO-02.sb3",
+    "itens": [
+      "C02-CODIGO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C02-EXERCICIO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C02-EXERCICIO-03.sb3",
+    "itens": [
+      "C02-EXERCICIO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C02-DESAFIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C02-DESAFIO-01.sb3",
+    "itens": [
+      "C02-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C02-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C02-EXERCICIO-01.sb3",
+    "itens": [
+      "C02-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C02-EXERCICIO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C02-EXERCICIO-02.sb3",
+    "itens": [
+      "C02-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C03-CODIGO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C03-CODIGO-01.sb3",
+    "itens": [
+      "C03-CODIGO-01",
+      "C03-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": [
+        "C03-MISSAO-01"
+      ]
+    }
+  },
+  {
+    "id": "C03-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C03-EXERCICIO-01.sb3",
+    "itens": [
+      "C03-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C03-EXERCICIO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C03-EXERCICIO-02.sb3",
+    "itens": [
+      "C03-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "pendente": "Conferir tamanho renderizado no editor"
+    }
+  },
+  {
+    "id": "C03-EXERCICIO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C03-EXERCICIO-03.sb3",
+    "itens": [
+      "C03-EXERCICIO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C03-DESAFIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C03-DESAFIO-01.sb3",
+    "itens": [
+      "C03-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C05-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C05-EXERCICIO-01.sb3",
+    "itens": [
+      "C05-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C05-dialogo",
+    "arquivo": "tmp/testes-scratch/projetos/C05-dialogo.sb3",
+    "itens": [
+      "C05-CODIGO-01",
+      "C05-CODIGO-02",
+      "C05-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C05-dois-amigos",
+    "arquivo": "tmp/testes-scratch/projetos/C05-dois-amigos.sb3",
+    "itens": [
+      "C05-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C06-setas",
+    "arquivo": "tmp/testes-scratch/projetos/C06-setas.sb3",
+    "itens": [
+      "C06-CODIGO-01",
+      "C06-CODIGO-02",
+      "C06-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C06-setas-direcao-alterada",
+    "arquivo": "tmp/testes-scratch/projetos/C06-setas-direcao-alterada.sb3",
+    "itens": [
+      "C06-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C06-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C06-EXERCICIO-01.sb3",
+    "itens": [
+      "C06-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C06-EXERCICIO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C06-EXERCICIO-02.sb3",
+    "itens": [
+      "C06-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C06-cadeia",
+    "arquivo": "tmp/testes-scratch/projetos/C06-cadeia.sb3",
+    "itens": [
+      "C06-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C06-aviso",
+    "arquivo": "tmp/testes-scratch/projetos/C06-aviso.sb3",
+    "itens": [
+      "C06-CODIGO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C07-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C07-EXERCICIO-01.sb3",
+    "itens": [
+      "C07-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C07-EXERCICIO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C07-EXERCICIO-02.sb3",
+    "itens": [
+      "C07-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C08-CODIGO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C08-CODIGO-02.sb3",
+    "itens": [
+      "C08-CODIGO-02",
+      "C08-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": [
+        "C08-MISSAO-01"
+      ]
+    }
+  },
+  {
+    "id": "C08-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C08-EXERCICIO-01.sb3",
+    "itens": [
+      "C08-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": []
+    }
+  },
+  {
+    "id": "C08-EXERCICIO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C08-EXERCICIO-02.sb3",
+    "itens": [
+      "C08-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C09-CODIGO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C09-CODIGO-01.sb3",
+    "itens": [
+      "C09-CODIGO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C09-CODIGO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C09-CODIGO-02.sb3",
+    "itens": [
+      "C09-CODIGO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C09-CODIGO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C09-CODIGO-03.sb3",
+    "itens": [
+      "C09-CODIGO-03",
+      "C09-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": [
+        "C09-MISSAO-01"
+      ]
+    }
+  },
+  {
+    "id": "C09-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C09-EXERCICIO-01.sb3",
+    "itens": [
+      "C09-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C09-EXERCICIO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C09-EXERCICIO-02.sb3",
+    "itens": [
+      "C09-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C09-EXERCICIO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C09-EXERCICIO-03.sb3",
+    "itens": [
+      "C09-EXERCICIO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "pendente": "Conferir tamanho renderizado no editor"
+    }
+  },
+  {
+    "id": "C09-DESAFIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C09-DESAFIO-01.sb3",
+    "itens": [
+      "C09-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C10-falas",
+    "arquivo": "tmp/testes-scratch/projetos/C10-falas.sb3",
+    "itens": [
+      "C10-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C10-falas-exemplo",
+    "arquivo": "tmp/testes-scratch/projetos/C10-falas-exemplo.sb3",
+    "itens": [
+      "C10-CODIGO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C10-cenas",
+    "arquivo": "tmp/testes-scratch/projetos/C10-cenas.sb3",
+    "itens": [
+      "C10-CODIGO-01",
+      "C10-CODIGO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C10-duas-cenas",
+    "arquivo": "tmp/testes-scratch/projetos/C10-duas-cenas.sb3",
+    "itens": [
+      "C10-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C10-EXERCICIO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C10-EXERCICIO-03.sb3",
+    "itens": [
+      "C10-EXERCICIO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C11-CODIGO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C11-CODIGO-02.sb3",
+    "itens": [
+      "C11-CODIGO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C11-CODIGO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C11-CODIGO-03.sb3",
+    "itens": [
+      "C11-CODIGO-03",
+      "C11-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": [
+        "C11-MISSAO-01"
+      ]
+    }
+  },
+  {
+    "id": "C11-EXERCICIO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C11-EXERCICIO-02.sb3",
+    "itens": [
+      "C11-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C11-DESAFIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C11-DESAFIO-01.sb3",
+    "itens": [
+      "C11-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C12-CODIGO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C12-CODIGO-01.sb3",
+    "itens": [
+      "C12-CODIGO-01",
+      "C12-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "refs": [
+        "C12-MISSAO-01"
+      ]
+    }
+  },
+  {
+    "id": "C12-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C12-EXERCICIO-01.sb3",
+    "itens": [
+      "C12-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C12-idade-17",
+    "arquivo": "tmp/testes-scratch/projetos/C12-idade-17.sb3",
+    "itens": [
+      "C12-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C12-idade-18",
+    "arquivo": "tmp/testes-scratch/projetos/C12-idade-18.sb3",
+    "itens": [
+      "C12-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C12-EXERCICIO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C12-EXERCICIO-03.sb3",
+    "itens": [
+      "C12-EXERCICIO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C12-faixa-10",
+    "arquivo": "tmp/testes-scratch/projetos/C12-faixa-10.sb3",
+    "itens": [
+      "C12-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C12-faixa-11",
+    "arquivo": "tmp/testes-scratch/projetos/C12-faixa-11.sb3",
+    "itens": [
+      "C12-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C12-faixa-19",
+    "arquivo": "tmp/testes-scratch/projetos/C12-faixa-19.sb3",
+    "itens": [
+      "C12-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C12-faixa-20",
+    "arquivo": "tmp/testes-scratch/projetos/C12-faixa-20.sb3",
+    "itens": [
+      "C12-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-EXERCICIO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C13-EXERCICIO-02.sb3",
+    "itens": [
+      "C13-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-EXERCICIO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C13-EXERCICIO-03.sb3",
+    "itens": [
+      "C13-EXERCICIO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-DESAFIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C13-DESAFIO-01.sb3",
+    "itens": [
+      "C13-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-CODIGO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C13-CODIGO-02.sb3",
+    "itens": [
+      "C13-CODIGO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "variables": {
+        "pontos": 10
+      }
+    }
+  },
+  {
+    "id": "C14-sorteio",
+    "arquivo": "tmp/testes-scratch/projetos/C14-sorteio.sb3",
+    "itens": [
+      "C14-CODIGO-01",
+      "C14-CODIGO-02",
+      "C14-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C14-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C14-EXERCICIO-01.sb3",
+    "itens": [
+      "C14-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C14-EXERCICIO-02",
+    "arquivo": "tmp/testes-scratch/projetos/C14-EXERCICIO-02.sb3",
+    "itens": [
+      "C14-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "lists": {
+        "amigos": [
+          "Ana",
+          "Bruno",
+          "Carla"
+        ]
+      }
+    }
+  },
+  {
+    "id": "C14-EXERCICIO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C14-EXERCICIO-03.sb3",
+    "itens": [
+      "C14-EXERCICIO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C14-DESAFIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C14-DESAFIO-01.sb3",
+    "itens": [
+      "C14-DESAFIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "lists": {
+        "amigos": [
+          "Ana",
+          "Bruno",
+          "Carla"
+        ]
+      }
+    }
+  },
+  {
+    "id": "C15-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C15-EXERCICIO-01.sb3",
+    "itens": [
+      "C15-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C15-clone-some",
+    "arquivo": "tmp/testes-scratch/projetos/C15-clone-some.sb3",
+    "itens": [
+      "C15-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C15-EXERCICIO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C15-EXERCICIO-03.sb3",
+    "itens": [
+      "C15-EXERCICIO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C16-quadrado-simples",
+    "arquivo": "tmp/testes-scratch/projetos/C16-quadrado-simples.sb3",
+    "itens": [
+      "C16-CODIGO-01",
+      "C16-CODIGO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C16-quadrado-parametro",
+    "arquivo": "tmp/testes-scratch/projetos/C16-quadrado-parametro.sb3",
+    "itens": [
+      "C16-CODIGO-03",
+      "C16-CODIGO-04",
+      "C16-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C16-EXERCICIO-01",
+    "arquivo": "tmp/testes-scratch/projetos/C16-EXERCICIO-01.sb3",
+    "itens": [
+      "C16-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C16-EXERCICIO-03",
+    "arquivo": "tmp/testes-scratch/projetos/C16-EXERCICIO-03.sb3",
+    "itens": [
+      "C16-EXERCICIO-03"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C16-triangulo",
+    "arquivo": "tmp/testes-scratch/projetos/C16-triangulo.sb3",
+    "itens": [
+      "C16-EXERCICIO-02"
+    ],
+    "adaptacoes": [
+      "Pilha de teste chama o bloco triângulo; a resolução fornece só a definição."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C16-poligono",
+    "arquivo": "tmp/testes-scratch/projetos/C16-poligono.sb3",
+    "itens": [
+      "C16-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Chamada polígono 5 60 transcrita do texto após a pilha."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C18-pilhas-separadas",
+    "arquivo": "tmp/testes-scratch/projetos/C18-pilhas-separadas.sb3",
+    "itens": [
+      "C18-CODIGO-01",
+      "C18-CODIGO-02",
+      "C18-MISSAO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C18-integrado-todos-acertos",
+    "arquivo": "tmp/testes-scratch/projetos/C18-integrado-todos-acertos.sb3",
+    "itens": [
+      "C18-CODIGO-02"
+    ],
+    "adaptacoes": [
+      "Conectado O jogo ao final de Cadastrando as perguntas. Essa ligação não é explicitada no passo 2."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C18-integrado-um-erro",
+    "arquivo": "tmp/testes-scratch/projetos/C18-integrado-um-erro.sb3",
+    "itens": [
+      "C18-CODIGO-02"
+    ],
+    "adaptacoes": [
+      "Conectado O jogo ao final de Cadastrando as perguntas. Essa ligação não é explicitada no passo 2."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C18-integrado-sem-acertos",
+    "arquivo": "tmp/testes-scratch/projetos/C18-integrado-sem-acertos.sb3",
+    "itens": [
+      "C18-CODIGO-02"
+    ],
+    "adaptacoes": [
+      "Conectado O jogo ao final de Cadastrando as perguntas. Essa ligação não é explicitada no passo 2."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C20-tela-inicial",
+    "arquivo": "tmp/testes-scratch/projetos/C20-tela-inicial.sb3",
+    "itens": [
+      "C20-EXERCICIO-01"
+    ],
+    "adaptacoes": [],
+    "condicoes": {}
+  },
+  {
+    "id": "C20-reinicio-sem-receptor",
+    "arquivo": "tmp/testes-scratch/projetos/C20-reinicio-sem-receptor.sb3",
+    "itens": [
+      "C20-EXERCICIO-02"
+    ],
+    "adaptacoes": [],
+    "condicoes": {
+      "variables": {
+        "pontos": 9
+      }
+    }
+  },
+  {
+    "id": "C17-jogo-base",
+    "arquivo": "tmp/testes-scratch/projetos/C17-jogo-base.sb3",
+    "itens": [
+      "C17-MISSAO-01",
+      "C17-CODIGO-01",
+      "C17-CODIGO-02",
+      "C17-CODIGO-03",
+      "C17-CODIGO-04",
+      "C17-CODIGO-05"
+    ],
+    "adaptacoes": [
+      "Cesta e maçã desenhadas em SVG para os atores que o livro pede escolher/desenhar.",
+      "Cenários Jogo e Fim de jogo preparados; sem alterações na lógica."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Jogo",
+        "Fim de jogo"
+      ],
+      "costumes": [
+        "boa",
+        "podre"
+      ]
+    }
+  },
+  {
+    "id": "C05-dialogo-distinto",
+    "arquivo": "tmp/testes-scratch/projetos/C05-dialogo-distinto.sb3",
+    "itens": [
+      "C05-MISSAO-01",
+      "C05-CODIGO-01",
+      "C05-CODIGO-02"
+    ],
+    "adaptacoes": [
+      "Atores separados no palco e fantasia de robô para distinguir o amigo."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C05-historia-dupla",
+    "arquivo": "tmp/testes-scratch/projetos/C05-historia-dupla.sb3",
+    "itens": [
+      "C05-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Robô desenhado para o exemplo. Em cada ator, a espera de seis segundos vem após a fala inicial; falas criadas para a segunda cena."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "casa",
+        "festa"
+      ]
+    }
+  },
+  {
+    "id": "C05-cenario-biblioteca",
+    "arquivo": "tmp/testes-scratch/projetos/C05-cenario-biblioteca.sb3",
+    "itens": [
+      "C05-EXERCICIO-01"
+    ],
+    "adaptacoes": [
+      "Um cenário inicial, para adicionar o segundo pela biblioteca do editor."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "início"
+      ]
+    }
+  },
+  {
+    "id": "C05-dois-amigos-distintos",
+    "arquivo": "tmp/testes-scratch/projetos/C05-dois-amigos-distintos.sb3",
+    "itens": [
+      "C05-EXERCICIO-02"
+    ],
+    "adaptacoes": [
+      "Atores separados em posições iniciais observáveis."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C05-camadas",
+    "arquivo": "tmp/testes-scratch/projetos/C05-camadas.sb3",
+    "itens": [
+      "C05-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "Gato começa na camada da frente; atores se sobrepõem parcialmente para revelar a troca."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C07-repita-quatro",
+    "arquivo": "tmp/testes-scratch/projetos/C07-repita-quatro.sb3",
+    "itens": [
+      "C07-CODIGO-01"
+    ],
+    "adaptacoes": [
+      "Cada comportamento executado isoladamente, com posição inicial indicada no projeto."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C07-sempre",
+    "arquivo": "tmp/testes-scratch/projetos/C07-sempre.sb3",
+    "itens": [
+      "C07-CODIGO-01"
+    ],
+    "adaptacoes": [
+      "Cada comportamento executado isoladamente, com posição inicial indicada no projeto."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C07-patrulha",
+    "arquivo": "tmp/testes-scratch/projetos/C07-patrulha.sb3",
+    "itens": [
+      "C07-MISSAO-01",
+      "C07-CODIGO-02"
+    ],
+    "adaptacoes": [
+      "Cada comportamento executado isoladamente, com posição inicial indicada no projeto."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C07-parede",
+    "arquivo": "tmp/testes-scratch/projetos/C07-parede.sb3",
+    "itens": [
+      "C07-CODIGO-03"
+    ],
+    "adaptacoes": [
+      "Cada comportamento executado isoladamente, com posição inicial indicada no projeto."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C07-corrida",
+    "arquivo": "tmp/testes-scratch/projetos/C07-corrida.sb3",
+    "itens": [
+      "C07-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Cada comportamento executado isoladamente, com posição inicial indicada no projeto."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C07-batidas-medidas",
+    "arquivo": "tmp/testes-scratch/projetos/C07-batidas-medidas.sb3",
+    "itens": [
+      "C07-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "Extensão Música habilitada e tambor 1 selecionado. Um cronômetro registra o início de cada iteração imediatamente antes do bloco de tambor. Tempo padrão de 60 bpm."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C04-miau",
+    "arquivo": "tmp/testes-scratch/projetos/C04-miau.sb3",
+    "itens": [
+      "C04-MISSAO-01",
+      "C04-CODIGO-01"
+    ],
+    "adaptacoes": [
+      "Miau é o som Meow da biblioteca oficial, com nome igual ao livro. Os monitores de teste exibem pontos, tempo de espera ou volume quando aplicáveis."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C04-espera-miau",
+    "arquivo": "tmp/testes-scratch/projetos/C04-espera-miau.sb3",
+    "itens": [
+      "C04-EXERCICIO-01"
+    ],
+    "adaptacoes": [
+      "Miau é o som Meow da biblioteca oficial, com nome igual ao livro. Os monitores de teste exibem pontos, tempo de espera ou volume quando aplicáveis."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C04-volume-miau",
+    "arquivo": "tmp/testes-scratch/projetos/C04-volume-miau.sb3",
+    "itens": [
+      "C04-EXERCICIO-02"
+    ],
+    "adaptacoes": [
+      "Miau é o som Meow da biblioteca oficial, com nome igual ao livro. Os monitores de teste exibem pontos, tempo de espera ou volume quando aplicáveis."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C06-espaco-miau",
+    "arquivo": "tmp/testes-scratch/projetos/C06-espaco-miau.sb3",
+    "itens": [
+      "C06-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "Miau é o som Meow da biblioteca oficial, com nome igual ao livro. Os monitores de teste exibem pontos, tempo de espera ou volume quando aplicáveis."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-cliques-com-som",
+    "arquivo": "tmp/testes-scratch/projetos/C13-cliques-com-som.sb3",
+    "itens": [
+      "C13-CODIGO-01"
+    ],
+    "adaptacoes": [
+      "Miau é o som Meow da biblioteca oficial, com nome igual ao livro. Os monitores de teste exibem pontos, tempo de espera ou volume quando aplicáveis."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C04-notas",
+    "arquivo": "tmp/testes-scratch/projetos/C04-notas.sb3",
+    "itens": [
+      "C04-CODIGO-02"
+    ],
+    "adaptacoes": [
+      "O monitor de teste anota a conclusão de cada bloco de nota ou, no desafio, a fantasia após cada batida."
+    ],
+    "condicoes": {
+      "costumes": [
+        "passo 1",
+        "passo 2"
+      ]
+    }
+  },
+  {
+    "id": "C04-parabens",
+    "arquivo": "tmp/testes-scratch/projetos/C04-parabens.sb3",
+    "itens": [
+      "C04-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "O monitor de teste anota a conclusão de cada bloco de nota ou, no desafio, a fantasia após cada batida."
+    ],
+    "condicoes": {
+      "costumes": [
+        "passo 1",
+        "passo 2"
+      ]
+    }
+  },
+  {
+    "id": "C04-danca",
+    "arquivo": "tmp/testes-scratch/projetos/C04-danca.sb3",
+    "itens": [
+      "C04-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "O monitor de teste anota a conclusão de cada bloco de nota ou, no desafio, a fantasia após cada batida."
+    ],
+    "condicoes": {
+      "costumes": [
+        "passo 1",
+        "passo 2"
+      ]
+    }
+  },
+  {
+    "id": "C08-assustado",
+    "arquivo": "tmp/testes-scratch/projetos/C08-assustado.sb3",
+    "itens": [
+      "C08-CODIGO-01"
+    ],
+    "adaptacoes": [
+      "Posição inicial e, quando necessário, cenário de teste para acionar o sensor."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C08-borda",
+    "arquivo": "tmp/testes-scratch/projetos/C08-borda.sb3",
+    "itens": [
+      "C08-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "Posição inicial e, quando necessário, cenário de teste para acionar o sensor."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C08-vermelho",
+    "arquivo": "tmp/testes-scratch/projetos/C08-vermelho.sb3",
+    "itens": [
+      "C08-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Posição inicial e, quando necessário, cenário de teste para acionar o sensor."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C08-vermelho-limpa",
+    "arquivo": "tmp/testes-scratch/projetos/C08-vermelho-limpa.sb3",
+    "itens": [
+      "C08-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Contraprova com diga vazio no senão, conforme a dica textual da resolução."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C09-passeio-integrado",
+    "arquivo": "tmp/testes-scratch/projetos/C09-passeio-integrado.sb3",
+    "itens": [
+      "C09-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Setas horizontais da missão, pulo do desafio e estilo de rotação esquerda-direita, conforme o aviso do capítulo."
+    ],
+    "condicoes": {
+      "costumes": [
+        "passo 1",
+        "passo 2"
+      ]
+    }
+  },
+  {
+    "id": "C09-danca-contada",
+    "arquivo": "tmp/testes-scratch/projetos/C09-danca-contada.sb3",
+    "itens": [
+      "C09-EXERCICIO-01"
+    ],
+    "adaptacoes": [
+      "Monitor de observação conta uma troca após cada execução de próxima fantasia, sem mudar as pausas."
+    ],
+    "condicoes": {
+      "costumes": [
+        "passo 1",
+        "passo 2"
+      ]
+    }
+  },
+  {
+    "id": "C10-historia-literal",
+    "arquivo": "tmp/testes-scratch/projetos/C10-historia-literal.sb3",
+    "itens": [
+      "C10-MISSAO-01",
+      "C10-CODIGO-02"
+    ],
+    "adaptacoes": [
+      "Cenários de teste e atores A e B separados no palco. Blocos do Palco e das falas conforme impressos."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C10-historia-com-despedida",
+    "arquivo": "tmp/testes-scratch/projetos/C10-historia-com-despedida.sb3",
+    "itens": [
+      "C10-MISSAO-01"
+    ],
+    "adaptacoes": [
+      "Contraprova: A recebe a mensagem cena 2 do Palco e se despede."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C10-chegou-de-surpresa",
+    "arquivo": "tmp/testes-scratch/projetos/C10-chegou-de-surpresa.sb3",
+    "itens": [
+      "C10-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "Pilha auxiliar no Palco envia entrar pela tecla E. Os blocos do ator seguem a resolução do exercício."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C10-historia-com-musica",
+    "arquivo": "tmp/testes-scratch/projetos/C10-historia-com-musica.sb3",
+    "itens": [
+      "C10-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Roteiro próprio: Praça, Jardim e Casa. Gato pergunta ou comenta; Robô responde depois. Robô é um ator desenhado para o teste.",
+      "Faixa Dance Chill Out em uma pilha independente de som até o fim. Monitor chamado voltas da trilha registra as iterações concluídas."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Praça",
+        "Jardim",
+        "Casa"
+      ]
+    }
+  },
+  {
+    "id": "C11-guarda-chuva",
+    "arquivo": "tmp/testes-scratch/projetos/C11-guarda-chuva.sb3",
+    "itens": [
+      "C11-EXERCICIO-01"
+    ],
+    "adaptacoes": [
+      "Cenário de teste com uma região azul e outra branca. A posição é controlada pelos campos do editor."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C11-borda",
+    "arquivo": "tmp/testes-scratch/projetos/C11-borda.sb3",
+    "itens": [
+      "C11-CODIGO-01"
+    ],
+    "adaptacoes": [
+      "O gato começa perto da borda direita, orientado a 90 graus."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C11-ping-pong",
+    "arquivo": "tmp/testes-scratch/projetos/C11-ping-pong.sb3",
+    "itens": [
+      "C11-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "O gato começa perto da borda direita, orientado a 90 graus."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C11-condicoes-encaixadas",
+    "arquivo": "tmp/testes-scratch/projetos/C11-condicoes-encaixadas.sb3",
+    "itens": [
+      "C11-CODIGO-04"
+    ],
+    "adaptacoes": [
+      "Condições mantidas na ordem do livro."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C11-condicoes-invertidas",
+    "arquivo": "tmp/testes-scratch/projetos/C11-condicoes-invertidas.sb3",
+    "itens": [
+      "C11-CODIGO-04"
+    ],
+    "adaptacoes": [
+      "Contraprova: inverte somente as condições da borda e da tecla."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-cliques",
+    "arquivo": "tmp/testes-scratch/projetos/C13-cliques.sb3",
+    "itens": [
+      "C13-MISSAO-01",
+      "C13-CODIGO-01"
+    ],
+    "adaptacoes": [
+      "Monitores de variáveis habilitados para observação."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-vitoria-dez",
+    "arquivo": "tmp/testes-scratch/projetos/C13-vitoria-dez.sb3",
+    "itens": [
+      "C13-CODIGO-02"
+    ],
+    "adaptacoes": [
+      "Monitores de variáveis habilitados para observação."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-vitoria-cinco",
+    "arquivo": "tmp/testes-scratch/projetos/C13-vitoria-cinco.sb3",
+    "itens": [
+      "C13-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Monitores de variáveis habilitados para observação."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-vidas",
+    "arquivo": "tmp/testes-scratch/projetos/C13-vidas.sb3",
+    "itens": [
+      "C13-EXERCICIO-01"
+    ],
+    "adaptacoes": [
+      "Monitores de variáveis habilitados para observação."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-tempo",
+    "arquivo": "tmp/testes-scratch/projetos/C13-tempo.sb3",
+    "itens": [
+      "C13-EXERCICIO-02"
+    ],
+    "adaptacoes": [
+      "Monitores de variáveis habilitados para observação."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-soma",
+    "arquivo": "tmp/testes-scratch/projetos/C13-soma.sb3",
+    "itens": [
+      "C13-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "Monitores de variáveis habilitados para observação."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C13-vitoria-cinco-espera",
+    "arquivo": "tmp/testes-scratch/projetos/C13-vitoria-cinco-espera.sb3",
+    "itens": [
+      "C13-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Contraprova: espera 2 segundos entre dizer Vitória! e parar tudo."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C16-quadrados-com-caneta",
+    "arquivo": "tmp/testes-scratch/projetos/C16-quadrados-com-caneta.sb3",
+    "itens": [
+      "C16-MISSAO-01",
+      "C16-CODIGO-03",
+      "C16-CODIGO-04"
+    ],
+    "adaptacoes": [
+      "Contraprova com a extensão Caneta: limpar e baixar antes das chamadas quadrado 40 e quadrado 100; levantar ao final. Os movimentos da definição ficam intactos."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C16-pontos",
+    "arquivo": "tmp/testes-scratch/projetos/C16-pontos.sb3",
+    "itens": [
+      "C16-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "Monitor da variável pontos habilitado para observação."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C17-colisao-controlada",
+    "arquivo": "tmp/testes-scratch/projetos/C17-colisao-controlada.sb3",
+    "itens": [
+      "C17-MISSAO-01",
+      "C17-CODIGO-01",
+      "C17-CODIGO-02",
+      "C17-CODIGO-03",
+      "C17-CODIGO-04",
+      "C17-CODIGO-05"
+    ],
+    "adaptacoes": [
+      "Teste de ramo: posição de nascimento fixada em x=0 no lugar do sorteio para tornar a colisão/queda repetível. Não valida a aleatoriedade.",
+      "Mesmos blocos de coleta, vidas e fim de jogo do exemplo base."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Jogo",
+        "Fim de jogo"
+      ],
+      "costumes": [
+        "boa",
+        "podre"
+      ]
+    }
+  },
+  {
+    "id": "C17-queda-controlada",
+    "arquivo": "tmp/testes-scratch/projetos/C17-queda-controlada.sb3",
+    "itens": [
+      "C17-MISSAO-01",
+      "C17-CODIGO-01",
+      "C17-CODIGO-02",
+      "C17-CODIGO-03",
+      "C17-CODIGO-04",
+      "C17-CODIGO-05"
+    ],
+    "adaptacoes": [
+      "Teste de ramo: posição de nascimento fixada em x=150 no lugar do sorteio para tornar a colisão/queda repetível. Não valida a aleatoriedade.",
+      "Mesmos blocos de coleta, vidas e fim de jogo do exemplo base."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Jogo",
+        "Fim de jogo"
+      ],
+      "costumes": [
+        "boa",
+        "podre"
+      ]
+    }
+  },
+  {
+    "id": "C17-pop-coleta",
+    "arquivo": "tmp/testes-scratch/projetos/C17-pop-coleta.sb3",
+    "itens": [
+      "C17-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "A maçã nasce em x=0. O monitor conta passagens pelo bloco de som imediatamente antes de apagar o clone."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Jogo",
+        "Fim de jogo"
+      ],
+      "costumes": [
+        "boa",
+        "podre"
+      ]
+    }
+  },
+  {
+    "id": "C17-pop-sem-coleta",
+    "arquivo": "tmp/testes-scratch/projetos/C17-pop-sem-coleta.sb3",
+    "itens": [
+      "C17-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "A maçã nasce em x=150. O monitor conta passagens pelo bloco de som imediatamente antes de apagar o clone."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Jogo",
+        "Fim de jogo"
+      ],
+      "costumes": [
+        "boa",
+        "podre"
+      ]
+    }
+  },
+  {
+    "id": "C17-podre-controlada",
+    "arquivo": "tmp/testes-scratch/projetos/C17-podre-controlada.sb3",
+    "itens": [
+      "C17-EXERCICIO-02"
+    ],
+    "adaptacoes": [
+      "Fantasia 2 e x=0 fixados para testar ramo podre.",
+      "Condição de fantasia transcrita do texto da resolução e encaixada na colisão, como orientado."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Jogo",
+        "Fim de jogo"
+      ],
+      "costumes": [
+        "boa",
+        "podre"
+      ]
+    }
+  },
+  {
+    "id": "C17-fantasias-sorteadas",
+    "arquivo": "tmp/testes-scratch/projetos/C17-fantasias-sorteadas.sb3",
+    "itens": [
+      "C17-EXERCICIO-02"
+    ],
+    "adaptacoes": [
+      "Mantém x=0 para que todas as maçãs caiam na cesta e restaura o sorteio entre as fantasias 1 e 2 conforme a resolução."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Jogo",
+        "Fim de jogo"
+      ],
+      "costumes": [
+        "boa",
+        "podre"
+      ]
+    }
+  },
+  {
+    "id": "C17-velocidade",
+    "arquivo": "tmp/testes-scratch/projetos/C17-velocidade.sb3",
+    "itens": [
+      "C17-EXERCICIO-01"
+    ],
+    "adaptacoes": [
+      "Teste controlado: 0 e 1 no teclado fixam, respectivamente, 0 e 10 pontos e aplicam 10 vezes o bloco de queda da resolução, a partir de y=170. Não usa colisões."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Jogo",
+        "Fim de jogo"
+      ],
+      "costumes": [
+        "boa",
+        "podre"
+      ]
+    }
+  },
+  {
+    "id": "C15-chuva",
+    "arquivo": "tmp/testes-scratch/projetos/C15-chuva.sb3",
+    "itens": [
+      "C15-MISSAO-01",
+      "C15-CODIGO-01",
+      "C15-CODIGO-02"
+    ],
+    "adaptacoes": [
+      "Fantasia de maçã acrescida. Os blocos do original e do clone seguem a missão."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C15-estrelas",
+    "arquivo": "tmp/testes-scratch/projetos/C15-estrelas.sb3",
+    "itens": [
+      "C15-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "Fantasia de estrela como no título do exercício. Sem mudanças nas pilhas."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C15-cesta-pega",
+    "arquivo": "tmp/testes-scratch/projetos/C15-cesta-pega.sb3",
+    "itens": [
+      "C15-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Cesta usa a movimentação por setas do capítulo 17 para completar o desafio aberto. O ramo do clone substitui a pilha original de queda. Nascimento fixado em x=0 para controlar colisão ou queda."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C15-cesta-perde",
+    "arquivo": "tmp/testes-scratch/projetos/C15-cesta-perde.sb3",
+    "itens": [
+      "C15-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Cesta usa a movimentação por setas do capítulo 17 para completar o desafio aberto. O ramo do clone substitui a pilha original de queda. Nascimento fixado em x=150 para controlar colisão ou queda."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C17-tempo-sem-coletas",
+    "arquivo": "tmp/testes-scratch/projetos/C17-tempo-sem-coletas.sb3",
+    "itens": [
+      "C17-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Gato coletor e estrela, com x=150 fixado para repetir o ramo. O cronômetro é acrescentado no Palco, preservando a regra de vidas do jogo original.",
+      "Monitores de tempo, pontos e vidas visíveis para observar o desfecho."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Jogo",
+        "Fim de jogo"
+      ],
+      "costumes": [
+        "boa",
+        "podre"
+      ]
+    }
+  },
+  {
+    "id": "C17-tempo-com-coletas",
+    "arquivo": "tmp/testes-scratch/projetos/C17-tempo-com-coletas.sb3",
+    "itens": [
+      "C17-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Gato coletor e estrela, com x=0 fixado para repetir o ramo. O cronômetro é acrescentado no Palco, preservando a regra de vidas do jogo original.",
+      "Monitores de tempo, pontos e vidas visíveis para observar o desfecho."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "Jogo",
+        "Fim de jogo"
+      ],
+      "costumes": [
+        "boa",
+        "podre"
+      ]
+    }
+  },
+  {
+    "id": "C19-fantasma",
+    "arquivo": "tmp/testes-scratch/projetos/C19-fantasma.sb3",
+    "itens": [
+      "C19-EXERCICIO-01"
+    ],
+    "adaptacoes": [
+      "Cenários do labirinto de referência. O fantasma começa na faixa inferior livre e o ramo de contato foi acrescentado ao sempre do gato."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "labirinto 1",
+        "labirinto 2"
+      ]
+    }
+  },
+  {
+    "id": "C19-labirinto-base",
+    "arquivo": "tmp/testes-scratch/projetos/C19-labirinto-base.sb3",
+    "itens": [
+      "C19-MISSAO-01",
+      "C19-CODIGO-01",
+      "C19-CODIGO-02"
+    ],
+    "adaptacoes": [
+      "Labirinto de referência desenhado com paredes pretas e meta verde, corredores mais largos que o gato.",
+      "Sensores usam exatamente #000000 e #00ff00, como pede o uso do conta-gotas."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "labirinto 1",
+        "labirinto 2"
+      ]
+    }
+  },
+  {
+    "id": "C19-cronometro",
+    "arquivo": "tmp/testes-scratch/projetos/C19-cronometro.sb3",
+    "itens": [
+      "C19-CODIGO-03"
+    ],
+    "adaptacoes": [
+      "Reset do cronômetro no começo e fala Tempo na vitória antes de pare tudo, conforme instrução textual."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "labirinto 1",
+        "labirinto 2"
+      ]
+    }
+  },
+  {
+    "id": "C19-batidas",
+    "arquivo": "tmp/testes-scratch/projetos/C19-batidas.sb3",
+    "itens": [
+      "C19-EXERCICIO-02"
+    ],
+    "adaptacoes": [
+      "Inicialização de batidas no início; ramo de colisão substituído pelo da resolução, evitando dois testes de parede em sequência."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "labirinto 1",
+        "labirinto 2"
+      ]
+    }
+  },
+  {
+    "id": "C19-segunda-fase",
+    "arquivo": "tmp/testes-scratch/projetos/C19-segunda-fase.sb3",
+    "itens": [
+      "C19-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "Ramo de vitória substituído pelo da resolução para trocar a fase; cenários de referência preparados."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "labirinto 1",
+        "labirinto 2"
+      ]
+    }
+  },
+  {
+    "id": "C18-quiz-sons",
+    "arquivo": "tmp/testes-scratch/projetos/C18-quiz-sons.sb3",
+    "itens": [
+      "C18-EXERCICIO-03"
+    ],
+    "adaptacoes": [
+      "O trecho O jogo foi encaixado ao final do cadastro, como na contraprova L04.",
+      "Collect e Oops escolhidos para os dois ramos. O monitor registra a passagem pelo bloco de som de cada ramo imediatamente depois de iniciar o efeito."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C18-quarta-pergunta",
+    "arquivo": "tmp/testes-scratch/projetos/C18-quarta-pergunta.sb3",
+    "itens": [
+      "C18-EXERCICIO-01"
+    ],
+    "adaptacoes": [
+      "O trecho O jogo foi encaixado ao final do cadastro, como na contraprova L04.",
+      "Novo par encaixado depois do cadastro original e antes do laço."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C18-mensagem-vitoria",
+    "arquivo": "tmp/testes-scratch/projetos/C18-mensagem-vitoria.sb3",
+    "itens": [
+      "C18-EXERCICIO-02"
+    ],
+    "adaptacoes": [
+      "O trecho O jogo foi encaixado ao final do cadastro, como na contraprova L04.",
+      "Condição encaixada após a fala da pontuação final."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C18-placar-visual",
+    "arquivo": "tmp/testes-scratch/projetos/C18-placar-visual.sb3",
+    "itens": [
+      "C18-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "O trecho O jogo foi encaixado ao final do cadastro, como na contraprova L04.",
+      "Acrescentado o envio descrito na resolução imediatamente após pontuar. O segundo ator começa na fantasia triste, uma condição de preparação explícita do teste."
+    ],
+    "condicoes": {}
+  },
+  {
+    "id": "C19-recorde-inicializacao-na-bandeira",
+    "arquivo": "tmp/testes-scratch/projetos/C19-recorde-inicializacao-na-bandeira.sb3",
+    "itens": [
+      "C19-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Interpretação sob teste: colocar a inicialização para 999 sob a bandeira, como nas outras variáveis. Não é indicação expressa do livro.",
+      "Atualização de recorde colocada na vitória antes da parada."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "labirinto 1",
+        "labirinto 2"
+      ]
+    }
+  },
+  {
+    "id": "C19-recorde-inicializacao-unica",
+    "arquivo": "tmp/testes-scratch/projetos/C19-recorde-inicializacao-unica.sb3",
+    "itens": [
+      "C19-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Contraprova: recorde inicializado uma única vez com 999 nos dados do projeto; bandeira só zera o cronômetro.",
+      "Atualização de recorde colocada na vitória antes da parada."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "labirinto 1",
+        "labirinto 2"
+      ],
+      "variables": {
+        "recorde": 999
+      }
+    }
+  },
+  {
+    "id": "C20-reinicio-literal",
+    "arquivo": "tmp/testes-scratch/projetos/C20-reinicio-literal.sb3",
+    "itens": [
+      "C20-EXERCICIO-02"
+    ],
+    "adaptacoes": [
+      "Atores e cenário de referência com x=80 e pontos=9 para representar estado de partida em andamento. Pilha da tecla R igual à resolução."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "início",
+        "jogo"
+      ],
+      "variables": {
+        "pontos": 9
+      }
+    }
+  },
+  {
+    "id": "C20-corrida-referencia",
+    "arquivo": "tmp/testes-scratch/projetos/C20-corrida-referencia.sb3",
+    "itens": [
+      "C20-MISSAO-01",
+      "C20-EXERCICIO-01",
+      "C20-EXERCICIO-02"
+    ],
+    "adaptacoes": [
+      "Protótipo de corrida escolhido para integrar os exercícios. Uma seta muda x e soma um ponto como forma de observar o reinício. Ainda não inclui regras de vitória, bloqueio das setas na tela inicial ou publicação.",
+      "Receptor acrescentado como contraprova. Ele zera os pontos e restaura a posição ao receber começar."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "início",
+        "jogo"
+      ],
+      "variables": {
+        "pontos": 9
+      }
+    }
+  },
+  {
+    "id": "C20-jogo-final-corrida",
+    "arquivo": "tmp/testes-scratch/projetos/C20-jogo-final-corrida.sb3",
+    "itens": [
+      "C20-MISSAO-01",
+      "C20-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Jogo escolhido: corrida local para duas pessoas, com Gato (A) e Robô (L). Ganha quem chega à linha primeiro; o outro perde. A variável partida controla o menu, a corrida e o fim.",
+      "Espaço abre a corrida. R reinicia após sair do menu. O vencedor dispara o efeito Collect e o anúncio. Compartilhamento, teste com três pessoas e revisão a partir do retorno delas são etapas externas."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "início",
+        "jogo",
+        "fim"
+      ],
+      "costumes": [
+        "passo 1",
+        "passo 2"
+      ]
+    }
+  },
+  {
+    "id": "C20-corrida-revisada",
+    "arquivo": "tmp/testes-scratch/projetos/C20-corrida-revisada.sb3",
+    "itens": [
+      "C20-DESAFIO-01"
+    ],
+    "adaptacoes": [
+      "Variante do desafio final. A tecla R só reinicia após a chegada."
+    ],
+    "condicoes": {
+      "backdrops": [
+        "início",
+        "jogo",
+        "fim"
+      ],
+      "costumes": [
+        "passo 1",
+        "passo 2"
+      ]
+    }
+  }
+]
